@@ -1,17 +1,14 @@
 # comisi-n-2-grupo-6-Avalon
 
-Avalon es un ecomerse de Buenos Aires, creada por *******  interesados en la creacion de una pagina web que publique componentes de todo tipo y precio, juegos y demas productos funcionales para la comunidad gamer de argentina.
-Como gamers aficionados que somos creemos que la comunidad merece ser tomada en serio y que los deportes electronicos deben ser conciderados como tales.
+Avalon es un ecommerce de Buenos Aires, creada por Emiliano Rivarola, Agustina Zingariello,Ronaldo Vaca y Luciano Diosque, 4 amigos interesados en la creación de una pagina web que publique componentes de todo tipo y precio, juegos y demás productos funcionales para la comunidad gamer de argentina.
+Como gamers aficionados que somos creemos que la comunidad merece ser tomada en serio y que los deportes electrónicos deben ser considerados como tales.
 
+En el invierno del 2020 y en el medio de una pandemia los cuatro creadores se conocieron y pusieron en común su encanto por la computación y los videojuegos, pensaron entonces en que ninguna de las paginas vistas hasta ahora tomaba en serio a la comunidad, o les ofrecía una atención personalizada y se dispusieron a crear avalon, la isla de los gamers.
 
-En el invierno del 2020 y en el medio de una pandemia los cuatro creadores se conocieron y pusieron en comun su encanto por la computacion y los videojuiegos, pensaron entonces en que ninguna de las paginas vistas hasta ahora tomaba en serio a la comunidad, o les ofrecia una atencion personalisada y se dispucieron a crear avalon, la isla de los gamers.
+El nombre surge de la isla avalon, de la mitología celta, se trata de una isla donde viven 9 reinas hadas y el lugar de descanso final del rey arturo, es una isla donde crecen deliciosas manzanas todo el año.
+Creemos que esta idea nos representa, una isla donde podes encontrar componentes y juegos todo el año, a un buen precio y con una buena orientación para encontrar exactamente lo que buscas.
 
-
-El nombre surge de la isla avalon, de la mitologia celta, se trata de una isla donde viven 9 reinas hadas y el lugar de descanso final del rey arturo, es una isla donde crecen deliciozas manzanas todo el año.
-Creemos que esta idea nos representa, una isla donde podes encontrar componentes y juegos todo el año, a un buen precio y con una buena orientacion para encontrar exactamente lo que buscas.
-
-
-Creamos entonces la isla avalon donde vas a encontrar juegos, componentes de pc, consolas, perifericos y mucho mas, con asesoramiento de la misma comunidad.
+Creamos entonces la isla avalon donde vas a encontrar juegos, componentes de pc, consolas, periféricos y mucho mas, con asesoramiento de la misma comunidad.
 
 Habiendo aclarado eso, ahora toca hablar de quienes son los integrantes que llevaron a cabo este proyecto con algo más de profundidad.
 
