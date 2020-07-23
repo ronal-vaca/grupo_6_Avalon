@@ -1,3 +1,3 @@
-# comisi-n-2-grupo-6-Avalon
+# Comision-2-Grupo-6-Avalon
 
 
