@@ -25,7 +25,7 @@ Pagina dedicada al mundo Gamer.
 Para todo aquel/aquella que desee entrar al mundo del gaming y quiera seguridad y confianza a la hora de comprar sus productos.
 
 ## Servicios:
-Venta de hardware, armados de PC y asesoramiento a la hora de la compra (OPCIONAL).
+Venta de hardware, armados de PC y asesoramiento a la hora de la compra.
 
 ## Referencias:
 
