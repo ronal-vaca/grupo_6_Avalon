@@ -4,7 +4,7 @@
 }
 
 
-button{
+.comprar{
     border-radius: 4px;
     background-color:red;
     padding: 11px 25px;
@@ -20,6 +20,7 @@ button{
 .carrito-de-compras{
     background-color: black;
     color: white;
+    padding: 11px 25px;
 }
 .iconos{
     height: px;
@@ -55,12 +56,9 @@ button{
     bottom: 10px;
     color: deepskyblue;
 }
-
 .vis{
     color: blu;
 }
-
-
 .comprar{
     border-radius: 5px;
 
