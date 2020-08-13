@@ -25,7 +25,6 @@ PRODUCTOS
 .filtroProductos a{
     margin: 1px;
     width: 100%;
-    border: 1px solid silver;
 }
 .filtroProductos img{
     width: 100%;
@@ -94,6 +93,11 @@ BANNER SRVICIOS
 }
 .card h5{
     padding-top: 10px;
+}
+.efectoBox:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.4s;
+    width: 100%;
 }
 /*
 MARCAS

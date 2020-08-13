@@ -7,8 +7,9 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-var registroRouter = require('./routes/registro')//emi
+var registroRouter = require('./routes/registro');//emi
 var iniciarsesionRouter = require('./routes/iniciarsesion');//emi
+var productosRouter = require('./routes/productos');//emi
 
 var detalleProductoRouter = require('./routes/detalleProducto'); //ronal
 
@@ -29,6 +30,7 @@ app.use('/users', usersRouter);
 
 app.use('/registro', registroRouter);  //emi
 app.use('/iniciarsesion', iniciarsesionRouter);//emi
+app.use('/productos', productosRouter); //emi
 
 app.use('/detalleProducto', detalleProductoRouter);//ronal
 
