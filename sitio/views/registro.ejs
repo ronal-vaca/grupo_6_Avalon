@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('./partials/head') %>
+<link rel="stylesheet" href="/stylesheets/registro.css">
+<body>
+    <%- include('./partials/header') %> 
+
+    <section class="container cajaFormulario">
+        
+        <article class="formulario">
+            <form action="POST">
+                <i class="far fa-user icono"></i>
+                <h5>Registro de usuario</h5>
+                <div class="row">
+                    <div class="col-1"><i class="fas fa-envelope"></i></div>
+                    <div class="col-11"><input class="form-control" type="text" placeholder="Email"></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"><i class="fas fa-lock"></i></i></div>
+                    <div class="col-11"><input class="form-control" type="password" placeholder="Contraseña"></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"><i class="fas fa-lock"></i></div>
+                    <div class="col-11"><input class="form-control is-invalid" type="password" placeholder="Repetir contraseña"  id="validationServer03" aria-describedby="validationServer03Feedback" required>
+                    <div id="validationServer03Feedback" class="invalid-feedback">Las contraseñas no coinciden</div>    
+                    </div>
+                    
+                </div>
+                <h6>Información Personal</h6>
+                <div class="row">
+                    <div class="col-1"><i class="fas fa-user"></i></div>
+                    <div class="col-11"><input class="form-control" type="text" placeholder="Nombre"></div>
+                </div>   
+                <div class="row">
+                    <div class="col-1"><i class="fas fa-user"></i></div>
+                    <div class="col-11"><input class="form-control" type="text" placeholder="Apellido"></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"><i class="fas fa-id-card"></i></div>
+                    <div class="col-11"><input class="form-control" type="text" placeholder="DNI"></div>
+                </div> 
+                <div class="row">
+                    <div class="col-1"><i class="fas fa-phone-alt"></i></div>
+                    <div class="col-11"><input class="form-control" type="text" placeholder="Telefono"></div>
+                </div>               
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+
+            <p>
+                <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                ¿Porque debo registrarme?
+                </button>
+              </p>
+              <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    Registrandote podras realizar las compras que desees en nuestro sitio web. Tambien los utilizaremos para la confeccion de los productos. No utulizaremos tus datos para ningun otro fin, ni para enviarte informacion que no hayas solicitado. Para mas informacion mira nuestras politicas de privacidad. <br><b>RECORDA:</b>
+                    Es muy importante que coloques todos tus datos reales a la hora de registrar tu cuenta. Ante cualquier inconveniente vamos a estar comunicandonos con vos por telefono o via email.
+                </div>
+              </div>
+        </article>
+    </section>
+    <%- include('./partials/footer') %> 
+</body>
+</html>

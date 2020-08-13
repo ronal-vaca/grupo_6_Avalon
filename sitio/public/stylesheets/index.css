@@ -1,0 +1,149 @@
+/*
+BANNER
+*/
+.banner{
+    margin-top: 20px;
+}
+
+/*
+PRODUCTOS
+*/
+.filtroProductos{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.filtroProductos h4{
+    margin: 15px 0;
+    text-align: center;
+}
+.filtroProductos article{
+    padding: 0 15px;
+}
+.filtroProductos .cajaProductos{
+    padding: 0;
+}
+.filtroProductos a{
+    margin: 1px;
+    width: 100%;
+    border: 1px solid silver;
+}
+.filtroProductos img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.filtroProductos img:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.4s;
+    width: 101%;
+}
+
+/*
+BANNER SRVICIOS
+*/
+.cajaServicios{
+    background-color: black;
+    padding-left: 50px;
+    padding-bottom: 30px;
+}
+.cajaServicios h6{
+    margin-top: 20px;
+}
+.cajaServicios .cajaTarjetas{
+    padding: 0 30px;
+}
+.cajaServicios .imgAvalon img{
+    width: 100%;  
+}
+.cajaServicios .tarjeta{
+    height: 100px; 
+    width: 100%; 
+    background-color: white;
+    border-radius: 45px;
+    border: 1px solid silver;
+    margin-top: 25px;
+}
+.cajaServicios .tarjeta .tarjetaDato{
+    padding: 0 0 0 25px;
+}
+.cajaServicios .tarjeta .tarjetaDato p{
+    font-size: 13px;
+}
+.cajaServicios .tarjeta .credito{
+    border-radius: 0;
+    width: 100px;
+}
+.cajaServicios .tarjeta .creditoP{
+    border-radius: 0 0 25px 0;
+}
+.cajaServicios .tarjeta img{
+    border-radius: 50%;
+    width: 80px;
+    margin-top: 10px;
+    margin-left: -5px;
+}
+/*
+3 COLUMNAS
+*/
+.columnas{
+    margin-top: 20px;
+    border-bottom: 1px solid silver;
+    padding-bottom: 30px;
+}
+.card{
+    margin-bottom: 20px;
+}
+.card h5{
+    padding-top: 10px;
+}
+/*
+MARCAS
+*/
+.marcas{
+    padding-top: 1%;
+    background-color: silver;
+}
+.marcas img{
+    width: 100%;
+}
+.marcas .razer{
+    width: 60%;
+}
+.marcas .redragon{
+    width: 70%;
+}
+.marcas .republicGames{
+    width: 70%;
+}
+
+
+@media(min-width:375px){
+    .cajaBuscador input{
+        width: 87%;
+    }
+    .cajaServicios .imgAvalon img{
+        display: none;
+    }
+    .Banners{
+        display: none;
+    }
+}
+@media(min-width:768px){
+    .cajaBuscador input{
+        width: 93%;
+    }
+}
+@media(min-width:992px){
+    .cajaLogo{
+        text-align: left;
+    }
+    .Banners{
+        display: block;
+    }
+    .cajaBuscador input{
+        width: 95%;
+    }
+    .cajaServicios .imgAvalon img{
+        display: block;
+    }
+    
+}

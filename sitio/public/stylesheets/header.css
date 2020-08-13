@@ -1,0 +1,105 @@
+
+.cajaHeader{
+    padding-top: 10px;
+    padding-right: 20px;
+}
+.cajaHeader nav ul{
+    padding-top: 6px;
+}
+.cajaHeader nav ul li{
+    margin-left: 15px;
+}
+.cajaHeader nav ul li a{
+    color: black;
+}
+.cajaHeader nav ul li a:hover{
+    text-decoration: none;
+    border-bottom: 1px solid red;
+}
+.navbar{
+    padding: 0;
+}
+.botonMnu{
+    margin: 0;
+    border: 1px solid silver;
+    border-radius: 2px;
+    background-color: white;
+}
+.botonMnu i{
+    padding: 0;
+}
+.cajaLogo{
+    text-align: center;
+}
+.cajaLogo a{
+    color: black;
+}
+.cajaLogo a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+.cajaIconos{
+    padding: 0;
+    text-align: end;
+    padding-top: 5px;
+}
+.cajaIconos .m{
+    display: inline;
+}
+.cajaIconos a i{
+    padding: 0;
+    margin-left: 20px;
+    color: black;
+}
+.cajaIconos a:hover{
+    border-bottom: none;
+}
+
+.cajaBuscador{
+    margin-top: 10px;
+    border: 1px solid silver;
+    border-radius: 5px;
+    padding-top: 4px;
+    height: 40px;
+    width: 100%;
+}
+.cajaBuscador input{
+    margin: 0;
+    border: 0;
+    border-right: 1px solid silver;
+    height: 30px;
+    width: 87%;
+    outline: none;
+    padding-left: 10px;
+}
+.cajaBuscador button{
+    margin: 0;
+    border: 0;
+    margin-left: 5px;
+    background-color: white;
+}
+.cajaBuscador button i{
+    padding: 0;
+}
+
+
+
+@media(min-width:375px){
+    .cajaBuscador input{
+        width: 87%;
+    }
+}
+@media(min-width:768px){
+    .cajaBuscador input{
+        width: 93%;
+    }
+}
+@media(min-width:992px){
+    .cajaLogo{
+        text-align: left;
+    }
+    .cajaBuscador input{
+        width: 95%;
+    }
+}
