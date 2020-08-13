@@ -1,10 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('./partials/head') %> 
+    <link rel="stylesheet" href="../stylesheets/estilos.css">
 <body>
     <%- include('./partials/header') %> 
-    <h1>contenido que hizo ronal</h1>
-
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <img class="imagen-principal img-thumbnail" src="../images/unnamed.png" alt="">
+            </div>
+            <div class="col-12 col-md-6">
+                <h2>Producto</h2>
+                <p>codigo:485569</p>
+                <ul class="iconos">
+                    <i class="vis fab fa-cc-visa"></i>
+                    <i class="master fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                </ul>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia explicabo quibusdam unde! Labore, perspiciatis. Ab, quisquam temporibus est totam repellat veritatis nemo dolorum, dolores, animi ut nisi maxime dignissimos dolor.</p>
+                <h3 class="ofertita">OFERTA!</h3>
+                <button class="comprar">Comprar</button> 
+                <h2 class="precio">$00.000</h2>
+                <label>cantidad</label>
+                <input type="number" value="">
+                <p>garantia: 36 meses</p>
+                <button class="carrito-de-compras"><i class="fas fa-cart-plus"></i> Agregar al carrito</button>
+                <i class="facebook fab fa-facebook-square"></i>
+                <i class="insta fab fa-instagram-square"></i>
+                <i class="twit fab fa-twitter-square"></i>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <img class="imagenes float-righ" src="../images/unnamed.png" alt="">
+                <img class="imagenes float-left" src="../images/unnamed.png" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p>
+                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                      Caracteristicas Tecnicas
+                    </a>
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                      Preguntas
+                    </button>
+                    
+                  </p>
+                  <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                        <ul>
+                            <li>Caracteristica del producto</li>
+                            <li>Caracteristica del producto</li>
+                            <li>Caracteristica del producto</li>
+                            <li>Caracteristica del producto</li>
+                            <li>Caracteristica del producto</li>
+                            <li>Caracteristica del producto</li>
+                            <li>Caracteristica del producto</li>
+                            <li>Caracteristica del producto</li>
+                        </ul>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <hr>
+        <h2>Productos Similares</h2>
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="../images/unnamed.png" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#">Producto</a>
+                </h4>
+                <h5>$00.000</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+              </div>
+            </div>
+          </div>
+            <div class="col-12 col-md-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="../images/unnamed.png" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#">Producto</a>
+                  </h4>
+                  <h5>$00.000</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="../images/unnamed.png" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#">Producto</a>
+                  </h4>
+                  <h5>$00.000</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                </div>
+              </div>
+            </div>
+    </div>
     <%- include('./partials/footer') %> 
 </body>
 </html>

@@ -1,0 +1,88 @@
+
+
+
+button{
+    border-radius: 4px;
+    background-color:red;
+    padding: 11px 25px;
+    color: white;
+}
+.precio{
+    display: inline;
+    margin: 5px;
+}
+.ofertita{
+    color: royalblue;
+}
+.carrito-de-compras{
+    background-color: black;
+    color: white;
+}
+.iconos{
+    height: px;
+    font-size: 40px;
+    right: 20px;
+}
+
+
+.imagenes{
+    width: 100px;
+    align-items: center;
+    margin: 10px;
+    right: 10px;
+}
+.imagen-principal{
+    width: 100%
+}
+.facebook{
+    font-size: 40px;
+    margin-top: 10px;
+    bottom: 10px;
+    color: blue;
+}
+.insta{
+    font-size: 40px;
+    margin-top: 10px;
+    bottom: 10px;
+    color: violet;
+}
+.twit{
+    font-size: 40px;
+    margin-top: 10px;
+    bottom: 10px;
+    color: deepskyblue;
+}
+
+.vis{
+    color: blu;
+}
+
+
+.comprar{
+    border-radius: 5px;
+
+}
+.comprar:hover{
+    background-color: rgba(6, 0 , 0 , 0);
+    color: black;
+}
+
+.carrito-de-compras:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+#carouselExampleControls{
+    height: 50%;
+}
+.image{
+    width: 50px;
+    height: 200px;
+}
+.core-i7{
+    height: 350px;
+    width: 150px;
+}
+
+.logo{
+    width: 200px;
+    height: 200px;
+}
