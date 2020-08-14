@@ -1,0 +1,133 @@
+body {
+  padding: 0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding-left: 3%;
+  padding-right:3%;
+}
+
+
+/* SECTIOn*/
+
+.contenedorSection{
+  padding: 0%;
+  margin: 0%;
+}
+.primerDiv{
+  padding: 0%;
+}
+/* primer row de la primer div*/
+.primeraRow{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 5%;
+ 
+}
+.articulo{
+  text-align: left;  
+  font-size: 200%;
+}
+.b{
+  color:grey
+}
+
+/* segunda row del primer div*/
+.segundaRow{
+ padding-left: 5%;
+ padding-right: 5%;
+ height: 65px;
+  
+}
+
+.imagenUsuario{
+  padding: 0%;
+}
+
+.pe1{
+  margin: 0%;
+  margin-bottom: 5%;
+  margin-left: 15px;
+  color: black;
+  font-weight:bold;
+  font-size: larger;
+}
+.pe2{
+  margin: 0%;
+  margin-left: 15px;
+}
+
+/*tercera row del primer div*/
+
+.terceraRow{
+  
+  margin-top: 0%;
+
+}
+.cajaDeArchivo{
+  border:solid black 1px;
+  border-radius: 5px;
+  width: 95%;
+    margin-left: 3%;
+    height: 35%;
+    display: flex;
+    align-items: center;
+}
+
+.agregarFoto{
+  margin-left: 25%;
+}
+
+
+
+.contenedorSegundoDiv{
+   margin-top: 15%;
+   border: solid 1px black;
+   border-radius: 5px;
+  
+}
+.vistaPrev{
+  font-size: 25px;
+  font-weight: bold;
+}
+.vistaPrevia{
+  text-align: center;
+  border: solid 5px grey;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.textos{
+  padding: 1%;
+  text-align: left;
+  color: grey;
+}
+.botOn{
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 3%;
+}
+.cuadrado{
+  border: solid green 1px;
+  width: 95%;
+  margin-left: 3%;
+  height: 55%;
+  display: flex;
+  align-items: center;
+}
+
+
+
+.margen{
+  margin-bottom: 10px;
+}
+.bordeTo{
+  border-top: solid 1px black;
+}
+.bordee{
+  border-bottom: solid 1px black;
+}
+
+

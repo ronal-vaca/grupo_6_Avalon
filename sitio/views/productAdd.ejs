@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('./partials/head') %> 
+
+<link rel="stylesheet" href="/stylesheets/style.css">
+
+<body>
+
+    <%- include('./partials/header') %> 
+
+  <!-- Sectiooon -->
+  <section class="container-fluid contenedorSection">
+    <div class="row">
+      <div class="col-12 col-lg-4 primerDiv">
+        <!-- comienzo primera linea -->
+        <div class="row primeraRow">
+          <div class="col-12 ">
+            <b class="b">Marketplace</b>
+          </div>
+          <div class="col-7">
+            <h1 class="articulo ">Articulo en venta</h1>
+          </div>
+          <div class="col-5">
+            <button type="button" class="btn btn-dark btn-lg">Guardar</button>
+          </div>
+        </div>
+        <!-- comienzo de la segunda linea -->
+
+        <div class="row segundaRow">
+          <div class="col-1 imagenUsuario">
+            <img src="/images/usuario.jpg" alt="" width="50px" height="50px" class="rounded-circle m-1">
+          </div>
+          <div class="col-11 ">
+            <p class="pe1">Nombre de usuario </p>
+            <p class="pe2">Publicacion en market. <i class="fas fa-globe-americas"></i> Publico</p>
+          </div>
+
+
+        </div>
+        <!-- comienzo de la tercera linea -->
+        <div class="row terceraRow">
+          <form class="col-12">
+            <div class="col-12">
+              <span>Fotos- 0/10 - Puedes agregar un maximo de 10 fotos</span>
+            </div>
+            <div class="form-group cajaDeArchivo">
+              <label for="exampleFormControlFile1"></label>
+              <input type="file" class="form-control-file agregarFoto" id="exampleFormControlFile1">
+            </div>
+            <div class="col-12">
+              <p class="text-center">Los campos con * son obligatorios.</p>
+            </div>
+            <div class="col-12 margen">
+              <input type="text" class="form-control is-invalid" placeholder="Titulo*">
+            </div>
+            <div class="col-12 margen">
+              <input type="number" class="form-control is-invalid" placeholder="Precio*">
+            </div>
+            <div class="col-12 margen">
+              <select name="categoria" class="custom-select">
+                <option selected>Categoria</option>
+                <option value="pc">PC</option>
+                <option value="componentes">Componentes</option>
+                <option value="juegos">Juegos</option>
+              </select>
+            </div>
+            <div class="col-12 margen">
+              <select name="estado" class="custom-select">
+                <option selected>Estado</option>
+                <option value="nuevo">Nuevo</option>
+                <option value="usado">Usado</option>
+              </select>
+            </div>
+            <div class="col-12 margen">
+              <select name="marca" class="custom-select">
+                <option selected>Marca</option>
+                <option value="intel">intel</option>
+                <option value="amd">amd</option>
+                <option value="otro">otro</option>
+              </select>
+            </div>
+            <div class="col-12 margen h-50">
+              <textarea class="form-control h-100 is-valid" placeholder="Descripcion*" required></textarea>
+            </div>
+            <div class="col-12 margen">
+              <input type="text" class="form-control is-valid" placeholder="Ubicacion*">
+            </div>
+            <div class="col-12 margen">
+              <select name="disponibilidad" class="custom-select">
+                <option selected>Disponibilidad</option>
+                <option value="unico">articulo unico</option>
+                <option value="stock">articulo en stock</option>
+              </select>
+            </div>
+          </form>
+
+        </div>
+      </div>
+
+      <!-- segundo Div -->
+
+      <div class="col-lg-8 d-none d-lg-block d-xl-block">
+        <div class="container contenedorSegundoDiv">
+          <div class="row">
+            <div class="col-12 vistaPrev">
+              <p>Vista Previa:</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 vistaPrevia">
+              <div>
+                <p class="font-weight-bold">Vista previa de tu publicacion</p>
+                <p>A medida que completes tu publicacion, podras ver una vista previa de tu producto en la tienda</p>
+              </div>
+            </div>
+            <div class="col-6 margen">
+              <div class="row textos">
+                <div class="col-12 ">
+                  <h3>Titulo</h3>
+                </div>
+              </div>
+              <div class="row textos">
+                <div class="col-12">
+                  <h5>Precio</h5>
+                </div>
+              </div>
+              <div class="row textos">
+                <div class="col-12">
+                  <p>Publicado hace unos segundos en ubicacion</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 botOn">
+                  <button type="button" class="btn btn-primary w-25"><i class="fas fa-shopping-cart"></i></button>
+                  <button class="btn btn-primary w-25" type="submit"><i class="fas fa-share"> </i> </button>
+                  <button class="btn btn-primary w-25" type="submit"><i class="fas fa-bookmark"></i></button>
+                </div>
+              </div>
+              <div class="row textos">
+                <div class="col-12">
+                  <h5>Detalles</h5>
+                  <p>La descripcion aparecera aqui</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 ">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105073.26495831858!2d-58.503510519545564!3d-34.615803637657514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20CABA!5e0!3m2!1ses-419!2sar!4v1597170210819!5m2!1ses-419!2sar" width="280" height="150" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+              </div>
+              <div class="row textos">
+                <div class="col-12 bordee">
+                  <p class="font-weight-bold m-0 ">Buenos Aires</p>
+                  <p>La ubicacion es aproximada</p>
+                </div>
+              </div>
+              <div class="row textos">
+                <div class="col-12 p-0">
+                  <div class="col-12"><p class="m-0">Info del vendedor</p></div>
+                  <div class="col-12 mb-5 mt-2"> <i src="/images/usuario.png" alt="" width="50px" height="50px" class="rounded-circle p-0"><span class="ml-3 font-weight-bold">Usuario</span> </div>
+                 
+                </div>
+              </div>
+              <div class="row textos bordeTo">
+                <div class="col-12">
+                  <p>Envia un mensaje al vendedor</p>
+                  <button type="button" class="btn btn-primary btn-lg btn-block">¿Sigue estando disponible?</button>
+                  <button type="button" class="btn btn-primary btn-lg btn-block">Enviar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <%- include('./partials/footer') %> 
+
+
+</body>
+
+</html>
