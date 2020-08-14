@@ -1,41 +1,41 @@
 /* SECTIOn*/
 
-.contenedorSection{
+.productosContenedorSection{
   padding: 0%;
   margin: 0%;
 }
-.primerDiv{
-  padding: 0%;
+.productosPrimerDiv{
+  padding: 2%;
 }
 /* primer row de la primer div*/
-.primeraRow{
+.productosPrimeraRow{
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   padding: 5%;
  
 }
-.articulo{
+.productosArticulo{
   text-align: left;  
   font-size: 200%;
 }
-.b{
+.productosB{
   color:grey
 }
 
 /* segunda row del primer div*/
-.segundaRow{
+.productosSegundaRow{
  padding-left: 5%;
  padding-right: 5%;
  height: 65px;
   
 }
 
-.imagenUsuario{
+.productosImagenUsuario{
   padding: 0%;
 }
 
-.pe1{
+.productosPe1{
   margin: 0%;
   margin-bottom: 5%;
   margin-left: 15px;
@@ -43,19 +43,19 @@
   font-weight:bold;
   font-size: larger;
 }
-.pe2{
+.productosPe2{
   margin: 0%;
   margin-left: 15px;
 }
 
 /*tercera row del primer div*/
 
-.terceraRow{
+.productosTerceraRow{
   
   margin-top: 0%;
 
 }
-.cajaDeArchivo{
+.productosCajaDeArchivo{
   border:solid black 1px;
   border-radius: 5px;
   width: 95%;
@@ -65,23 +65,32 @@
     align-items: center;
 }
 
-.agregarFoto{
+.productosMargen{
+  margin-bottom: 10px;
+}
+
+
+
+
+
+.productosAgregarFoto{
   margin-left: 25%;
 }
 
 
 
-.contenedorSegundoDiv{
+.productosContenedorSegundoDiv{
    margin-top: 15%;
    border: solid 1px black;
    border-radius: 5px;
+   padding: 2%;
   
 }
-.vistaPrev{
+.productosVistaPrev{
   font-size: 25px;
   font-weight: bold;
 }
-.vistaPrevia{
+.productosVistaPrevia{
   text-align: center;
   border: solid 5px grey;
   display: flex;
@@ -91,35 +100,55 @@
 }
 
 
-.textos{
+.productosTextos{
   padding: 1%;
   text-align: left;
   color: grey;
 }
-.botOn{
+.productosBotOn{
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 3%;
 }
-.cuadrado{
-  border: solid green 1px;
-  width: 95%;
-  margin-left: 3%;
-  height: 55%;
-  display: flex;
-  align-items: center;
-}
 
 
 
-.margen{
-  margin-bottom: 10px;
-}
-.bordeTo{
+
+
+.productosBordeTo{
   border-top: solid 1px black;
 }
-.bordee{
+.productosBordee{
   border-bottom: solid 1px black;
 }
 
+@media(min-width:375px){
+  .productosContenedorSection{
+    margin-bottom: 110%;
+  }
+}
+@media(min-width:768px){
+  .productosContenedorSection{
+    margin-bottom: 50%;
+  }
+  .productosSpan{
+    margin-top: 4%;
+  }
+}
+@media(min-width:992px){
+  .productosContenedorSection{
+    margin-bottom: 25%;
+  }
+}
 
+@media(min-width:1024px){
+  .productosContenedorSection{
+    margin-bottom: 20%;
+  }
+}
+
+@media(min-width:1440px){
+  .productosContenedorSection{
+    margin-bottom: 10%;
+  }
+}
