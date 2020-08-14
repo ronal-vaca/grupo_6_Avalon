@@ -14,6 +14,8 @@ var productosRouter = require('./routes/productos');//emi
 
 var detalleProductoRouter = require('./routes/detalleProducto'); //ronal
 
+var cargaProductoRouter= require('./routes/productAdd');//lusho
+
 var app = express();
 
 // view engine setup
@@ -36,7 +38,7 @@ app.use('/productos', productosRouter); //emi
 
 app.use('/detalleProducto', detalleProductoRouter);//ronal
 
-
+app.use('/cargaProducto',cargaProductoRouter);//lusho
 
 
 // catch 404 and forward to error handler

@@ -1,0 +1,152 @@
+/* SECTIOn*/
+
+.productosContenedorSection{
+  padding: 0%;
+  margin: 0%;
+}
+.productosPrimerDiv{
+  padding: 2%;
+}
+/* primer row de la primer div*/
+.productosPrimeraRow{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 5%;
+ 
+}
+.productosArticulo{
+  text-align: left;  
+  font-size: 200%;
+}
+.productosB{
+  color:grey
+}
+
+/* segunda row del primer div*/
+.productosSegundaRow{
+ padding-left: 5%;
+ padding-right: 5%;
+ height: 65px;
+  
+}
+
+.productosImagenUsuario{
+  padding: 0%;
+}
+
+.productosPe1{
+  margin: 0%;
+  margin-bottom: 5%;
+  margin-left: 15px;
+  color: black;
+  font-weight:bold;
+  font-size: larger;
+}
+.productosPe2{
+  margin: 0%;
+  margin-left: 15px;
+}
+
+/*tercera row del primer div*/
+
+.productosTerceraRow{
+  
+  margin-top: 0%;
+
+}
+.productosCajaDeArchivo{
+  border:solid black 1px;
+  border-radius: 5px;
+  width: 95%;
+    margin-left: 3%;
+    height: 35%;
+    display: flex;
+    align-items: center;
+}
+
+.productosMargen{
+  margin-bottom: 10px;
+}
+
+
+
+.productosAgregarFoto{
+  margin-left: 25%;
+}
+
+
+
+.productosContenedorSegundoDiv{
+   margin-top: 15%;
+   border: solid 1px black;
+   border-radius: 5px;
+   padding: 2%;
+  
+}
+.productosVistaPrev{
+  font-size: 25px;
+  font-weight: bold;
+}
+.productosVistaPrevia{
+  text-align: center;
+  border: solid 5px grey;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.productosTextos{
+  padding: 1%;
+  text-align: left;
+  color: grey;
+}
+.productosBotOn{
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 3%;
+}
+
+
+
+
+
+.productosBordeTo{
+  border-top: solid 1px black;
+}
+.productosBordee{
+  border-bottom: solid 1px black;
+}
+
+@media(min-width:375px){
+  .productosContenedorSection{
+    margin-bottom: 110%;
+  }
+}
+@media(min-width:768px){
+  .productosContenedorSection{
+    margin-bottom: 50%;
+  }
+  .productosSpan{
+    margin-top: 4%;
+  }
+}
+@media(min-width:992px){
+  .productosContenedorSection{
+    margin-bottom: 25%;
+  }
+}
+
+@media(min-width:1024px){
+  .productosContenedorSection{
+    margin-bottom: 20%;
+  }
+}
+
+@media(min-width:1440px){
+  .productosContenedorSection{
+    margin-bottom: 10%;
+  }
+}
