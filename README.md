@@ -1,3 +1,5 @@
+<img src="Desing/logo.jpg" width=900px height=500px>
+
 # AVALON
 Avalon es un ecommerce de Buenos Aires, creada por Emiliano Rivarola, Agustina Zingariello,Ronaldo Vaca y Luciano Diosque, 4 amigos interesados en la creación de una pagina web que publique componentes de todo tipo y precio, juegos y demás productos funcionales para la comunidad gamer de argentina.
 Como gamers aficionados que somos creemos que la comunidad merece ser tomada en serio y que los deportes electrónicos deben ser considerados como tales.
