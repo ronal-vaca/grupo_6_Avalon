@@ -1,11 +1,7 @@
 var express = require('express');
 var router = express.Router();
+const controller = require('../controllers/indexController')
 
-/* GET home page. */
-router.get('/', function(req, res, next) {    //siempre en ese orden req, res, next con sus respectivos espacios sino da error nose porqe by:emi
-  res.render('index', {
-    title: "Avalon"
-  });
-});
+router.get('/', controller.home);
 
 module.exports = router;
