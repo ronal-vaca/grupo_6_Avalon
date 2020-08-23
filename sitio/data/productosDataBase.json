@@ -1,0 +1,82 @@
+[{
+    "id": 1,
+    "nombre": "Mouse Corsair HARPOON",
+    "precio": 9400,
+    "descuento": 0,
+    "categoriaProducto": "mouse",
+    "descripcion": "El mejor aliado para lo que necesites. Usá tu Corsair Harpoon RGB Gaming en la oficina, en tu casa o donde quieras y navegá en tus dispositivos sin límites.\nEl mouse de juego te ofrecerá la posibilidad de marcar la diferencia y sacar ventajas en tus partidas. Su conectividad y sensor suave ayudará a que te desplaces rápido por la pantalla. Además, su sistema de detección de movimiento óptico te permitirá mover el cursor de una manera más precisa y sensible que en los sistemas tradicionales. Con sus 6 botones podrás tener mayor control e independencia para ejecutar.",
+    "imagen": "mouseCorsair.jpg",
+    "categoria": "mas-vendido"
+},{
+    "id": 2,
+    "nombre": "Mouse Razer Naga Trinity",
+    "precio": 12600,
+    "descuento": 0,
+    "categoriaProducto": "mouse",
+    "descripcion": "El nuevo mouse para juegos Razer Naga Trinity se postula como el más versátil del mercado, gracias al uso de tres laterales intercambiables que proporcionan diferentes botoneras y con distintas disposiciones, de manera que el usuario podrá poner y quitar la que quiera dependiendo del uso que vaya a darle cada momento.",
+    "imagen": "mouseRazer.jpg",
+    "categoria": "mejor-producto"
+},{
+    "id": 3,
+    "nombre": "Mouse Logitech G502 Proteus Spectrum",
+    "precio": 8200,
+    "descuento": 20,
+    "categoriaProducto": "mouse",
+    "descripcion": "Obtén la máxima precisión de seguimiento de nuestro sensor óptico con mejor capacidad de respuesta (PMW3366). La exclusiva tecnología de sensor óptico Logitech G Delta Zero™ minimiza la aceleración del ratón y aumenta la fiabilidad al apuntar. Cambia sobre la marcha el valor de dpi con cinco valores a elegir: de 200 a 12.000 dpi.",
+    "imagen": "mouseLogitech.jpg",
+    "categoria": "oferta"
+},{
+    "id": 4,
+    "nombre": "Teclado Razer Blackwidow Elite",
+    "precio": 22000,
+    "descuento": 0,
+    "categoriaProducto": "teclado",
+    "descripcion": "Si deseas un teclado gaming, el Razer BlackWidow siempre ha sido una de las mejores opciones, y a partir de ahora o será más aún gracias a la llegada del nuevo Razer BlackWidow Elite, el cual quiere hacer aún más grande la leyenda de la marca californiana. Veamos todos los secretos que esconde esta nueva genialidad.",
+    "imagen": "tecladoRazer.jpg",
+    "categoria": "mas-vendido"
+},{
+    "id": 5,
+    "nombre": "Teclado Logitech G513",
+    "precio": 17200,
+    "descuento": 30,
+    "categoriaProducto": "teclado",
+    "descripcion": "Logitech G513 es uno de los mejores teclados mecánicos que podemos encontrar en el mercado, se trata de un modelo equipado con los avanzados switches Romer-G, que se han diseñado de forma específica para los videojuegos, o los nuevos GX Blue.",
+    "imagen": "tecladoLogitech.jpg",
+    "categoria": "oferta"
+},{
+    "id": 6,
+    "nombre": "Teclado Corsair K95 RGB Platinum",
+    "precio": 28000,
+    "descuento": 0,
+    "categoriaProducto": "teclado",
+    "descripcion": "¡Cómo nos gusta probar teclados! ¡Y más cuando son exclusivas! Hemos recibido el Corsair K95 RGB Platinum uno de los mejores teclados del mercado. Con un diseño renovado, con interruptores Cherry MX RGB Speed y una calidad de construcción impecable. ¿Quieres saber más? ¡No te pierdas nuestro análisis!",
+    "imagen": "tecladoCorsair.jpg",
+    "categoria": "mejor-producto"
+},{
+    "id": 7,
+    "nombre": "ASUS CERBERUS- GTX – 1050TI – O4G",
+    "precio": 23500,
+    "descuento": 0,
+    "categoriaProducto": "grafica",
+    "descripcion": "Diseñada para ofrecer un alto rendimiento y poder jugar sin descanso. Olvídate de sobre calentamientos. Lleva incorporado un procesador gráfico GeForce GTX 1050 Ti con una frecuencia de 1366 MHz.",
+    "imagen": "Asus.jpg",
+    "categoria": "mas-vendido"
+},{
+    "id": 8,
+    "nombre": "MSI V809-2000R NVIDIA GeForce GT 710 2GB",
+    "precio": 10000,
+    "descuento": 10,
+    "categoriaProducto": "grafica",
+    "descripcion": "Esta MSI V809 externa de 200 gramos familia de la marca NVIDIA, ha sido especialmente pensada para revivir un equipo antiguo y darle unos años más de vida.",
+    "imagen": "msi.jpg",
+    "categoria": "oferta"
+},{
+    "id": 9,
+    "nombre": "Gigabyte GV-RX580 – GAMING-8GD",
+    "precio": 35000,
+    "descuento": 0,
+    "categoriaProducto": "grafica",
+    "descripcion": "Esta Gigabyte GV-RX580 pertenece a la familia de los procesadores gráficos AMD. En concreto, el procesador gráfico que lleva integrado es el Radeon RX 580 de una frecuencia de 1355 MHz, pudiendo obtener una máxima resolución de 7680 x 4320 pixeles.",
+    "imagen": "Gygabite.jpg",
+    "categoria": "mejor-producto"
+}]

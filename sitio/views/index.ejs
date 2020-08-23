@@ -116,93 +116,49 @@
           <div class="row">
             <div class="col-12 col-lg-4">
               <h4>Ofertas</h4>
-              <div class="card efectoBox">
+              <% ofertas.forEach(oferta => { %>
+               <div class="card efectoBox">
                 <div class="row no-gutters efectoBoxH">
-                  <div class="col-5 col-md-2 col-lg-5"><a href="/productos/detalleProducto"><img src="images/productoMuestra.png" class="card-img" alt=""></a></div>
-                  <div class="col-7 col-md-10 col-lg-6">
-                    <h5 class="card-title">Titulo del producto</h5>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, at?</p>
+                  <div class="col-5 col-md-2 col-lg-5"><a href="/productos/detalleProducto/<%= oferta.id %> "><img src="images/imagenProducto/<%- oferta.imagen %> " class="card-img" alt=""></a></div>
+                  <div class="col-7 col-md-10 col-lg-6 tarjetaContenido">
+                    <h5 class="card-title"><%- oferta.nombre %> </h5>
+                    <p>$<%- (oferta.precio - oferta.precio * oferta.descuento / 100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %></p>
+                    <% if (oferta.descuento != 0) { %>
+                      <span><%- oferta.descuento %>% OFF</span>
+                    <% } %>
                   </div>
                 </div>
               </div>
-              <div class="card efectoBox">
-                <div class="row no-gutters efectoBoxH">
-                  <div class="col-5 col-md-2 col-lg-5"><a href="/detalleProducto"><img src="images/productoMuestra.png" class="card-img" alt=""></a></div>
-                  <div class="col-7 col-md-10 col-lg-6">
-                    <h5 class="card-title">Titulo del producto</h5>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, at?</p>
-                  </div>
-                </div>
-              </div>
-              <div class="card efectoBox">
-                <div class="row no-gutters efectoBoxH">
-                  <div class="col-5 col-md-2 col-lg-5"><a href="/detalleProducto"><img src="images/productoMuestra.png" class="card-img" alt=""></a></div>
-                  <div class="col-7 col-md-10 col-lg-6">
-                    <h5 class="card-title">Titulo del producto</h5>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, at?</p>
-                  </div>
-                </div>
-              </div>
+              <% }) %>
             </div><!--tarjeta izquierda-->
             <div class="col-12 col-lg-4">
               <h4>Mejores Productos</h4>
-              <div class="card efectoBox">
+              <% mejorProducto.forEach(producto => { %>
+               <div class="card efectoBox">
                 <div class="row no-gutters efectoBoxH">
-                  <div class="col-5 col-md-2 col-lg-5"><a href="/productos/detalleProducto"><img src="images/productoMuestra.png" class="card-img" alt=""></a></div>
-                  <div class="col-7 col-md-10 col-lg-6">
-                    <h5 class="card-title">Titulo del producto</h5>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, at?</p>
+                  <div class="col-5 col-md-2 col-lg-5"><a href="/productos/detalleProducto/<%= producto.id %>"><img src="images/imagenProducto/<%- producto.imagen %> " class="card-img" alt=""></a></div>
+                  <div class="col-7 col-md-10 col-lg-6 tarjetaContenido">
+                    <h5 class="card-title"><%- producto.nombre %> </h5>
+                    <p style="margin:0;">$<%- (producto.precio - producto.precio * producto.descuento / 100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %></p>
                   </div>
                 </div>
               </div>
-              <div class="card efectoBox">
-                <div class="row no-gutters efectoBoxH">
-                  <div class="col-5 col-md-2 col-lg-5"><a href="/productos/detalleProducto"><img src="images/productoMuestra.png" class="card-img" alt=""></a></div>
-                  <div class="col-7 col-md-10 col-lg-6">
-                    <h5 class="card-title">Titulo del producto</h5>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, at?</p>
-                  </div>
-                </div>
-              </div>
-              <div class="card efectoBox">
-                <div class="row no-gutters efectoBoxH">
-                  <div class="col-5 col-md-2 col-lg-5"><a href="/productos/detalleProducto"><img src="images/productoMuestra.png" class="card-img" alt=""></a></div>
-                  <div class="col-7 col-md-10 col-lg-6">
-                    <h5 class="card-title">Titulo del producto</h5>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, at?</p>
-                  </div>
-                </div>
-              </div>
+              <% }) %>
             </div><!--tarjeta medio-->
             <div class="col-12 col-lg-4">
               <h4>Mas Vendidos</h4>
-              <div class="card efectoBox">
+              <% masVendido.forEach(producto => { %>
+               <div class="card efectoBox">
                 <div class="row no-gutters efectoBoxH">
-                  <div class="col-5 col-md-2 col-lg-5"><a href="/productos/detalleProducto"><img src="images/productoMuestra.png" class="card-img" alt=""></a></div>
-                  <div class="col-7 col-md-10 col-lg-6">
-                    <h5 class="card-title">Titulo del producto</h5>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, at?</p>
+                  <div class="col-5 col-md-2 col-lg-5"><a href="/productos/detalleProducto/<%= producto.id %>"><img src="images/imagenProducto/<%- producto.imagen %> " class="card-img" alt=""></a></div>
+                  <div class="col-7 col-md-10 col-lg-6 tarjetaContenido">
+                    <h5 class="card-title"><%- producto.nombre %> </h5>
+                    <p style="margin:0;">$<%- (producto.precio - producto.precio * producto.descuento / 100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %></p>
                   </div>
                 </div>
               </div>
-              <div class="card efectoBox">
-                <div class="row no-gutters efectoBoxH">
-                  <div class="col-5 col-md-2 col-lg-5"><a href="/productos/detalleProducto"><img src="images/productoMuestra.png" class="card-img" alt=""></a></div>
-                  <div class="col-7 col-md-10 col-lg-6">
-                    <h5 class="card-title">Titulo del producto</h5>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, at?</p>
-                  </div>
-                </div>
-              </div>
-              <div class="card efectoBox">
-                <div class="row no-gutters efectoBoxH">
-                  <div class="col-5 col-md-2 col-lg-5"><a href="/productos/detalleProducto"><img src="images/productoMuestra.png" class="card-img" alt=""></a></div>
-                  <div class="col-7 col-md-10 col-lg-6">
-                    <h5 class="card-title">Titulo del producto</h5>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, at?</p>
-                  </div>
-                </div>
-              </div>
+              <% }) %>
+              
             </div><!--tarjeta derecha-->
           </div>
         </div>
