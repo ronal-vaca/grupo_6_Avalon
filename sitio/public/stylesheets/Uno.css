@@ -1,0 +1,703 @@
+/* REGISTRO.CSS */
+li{
+    list-style: none;
+}
+.formulario h5{
+    width: 100%;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(151, 151, 151);
+
+}
+.formulario h6{
+    margin-top: 15px;
+}
+.cajaFormulario{
+   margin-top: 30px;
+   margin-bottom: 50px;
+}
+.formulario{
+    margin: auto;
+    width: 400px;
+    text-align: center;
+}
+.formulario .icono{
+    padding: 0;
+    padding-top: 10px;
+    width: 80px;
+    height: 80px;
+    font-size: 50px;
+    margin-bottom: 15px;
+    border: 1px solid rgb(151, 151, 151);
+    border-radius: 50%;
+}
+.formulario input{
+    margin-top: 15px;
+    padding: 0px;
+}
+.formulario i{
+    padding-top: 25px;
+}
+.formulario button{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+/* FOOTER.CSS */
+
+.footer{
+    background-color: black;
+    padding: 30px 0 10px 0 ;
+}
+.footerBoton h6{
+    color: #900d0d;
+}
+.footerBoton{
+    text-align: center;
+}
+.footerBoton a{
+    color: silver;
+    display: block;
+}
+.footerBoton a:hover{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(49, 49, 49);
+}
+.footerImgP{
+    padding: 0;
+    /*padding-right: 100px;*/
+}
+.footerImg{
+    width: 100%;
+    padding: 0;
+}
+.icono{
+    text-align: center;
+    position: relative;
+    z-index: 100;
+}
+.icono i{
+    font-size: 50px;
+    color:white;
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    padding-top: 10px;
+    background-color: #900d0d;
+}
+.colorS{
+    color: silver;
+}
+.texto{
+    background-color: #900d0d;
+    border-radius: 5px;
+    padding: 40px 20px 5px 20px;
+    text-align: center;
+    top: -32px;
+    position: relative;
+}
+.texto p{
+    margin: 0;
+}
+.texto a{
+    color: white;
+}
+.texto .redTw:hover{
+    color: turquoise;
+    transition: 0.5s;
+}
+.texto .redFb:hover{
+    color: #254281;
+    transition: 0.5s;
+}
+.texto .redIg:hover{
+    color: rgb(194, 3, 194);
+    transition: 0.5s;
+}
+.texto a i{
+    margin-top: 5px;
+    font-size: 30px;
+}
+.texto .tituloFooter{
+    color: black;
+    font-weight: 600;
+}
+.texto .cajitaRedes{
+    border-top: 1px solid silver;
+    margin-top:5px; 
+}
+
+.footerTarjeta p{
+    color: white;
+}
+
+@media(min-width:375px){
+    .footerImgP, .footerTarjeta{
+        display: none;
+    }
+}
+@media(min-width:1024px){
+    .footerImgP, .footerTarjeta{
+        display: block;
+    }
+}
+
+
+
+/* HEADER.CSS */
+
+.cajaHeader{
+    padding-top: 10px;
+    padding-right: 20px;
+}
+.cajaHeader nav ul{
+    padding-top: 6px;
+}
+.cajaHeader nav ul li{
+    margin-left: 15px;
+}
+.cajaHeader nav ul li a{
+    color: black;
+}
+.cajaHeader nav ul li a:hover{
+    text-decoration: none;
+    border-bottom: 1px solid red;
+}
+.navbar{
+    padding: 0;
+}
+.botonMnu{
+    margin: 0;
+    border: 1px solid silver;
+    border-radius: 2px;
+    background-color: white;
+}
+.botonMnu i{
+    padding: 0;
+}
+.cajaLogo{
+    text-align: center;
+}
+.cajaLogo a{
+    color: black;
+}
+.cajaLogo a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+.cajaIconos{
+    padding: 0;
+    text-align: end;
+    padding-top: 5px;
+}
+.cajaIconos .m{
+    display: inline;
+}
+.cajaIconos a i{
+    padding: 0;
+    margin-left: 20px;
+    color: black;
+}
+.cajaIconos a:hover{
+    border-bottom: none;
+}
+
+.cajaBuscador{
+    margin-top: 10px;
+    border: 1px solid silver;
+    border-radius: 5px;
+    padding-top: 4px;
+    height: 40px;
+    width: 100%;
+}
+.cajaBuscador input{
+    margin: 0;
+    border: 0;
+    border-right: 1px solid silver;
+    height: 30px;
+    width: 87%;
+    outline: none;
+    padding-left: 10px;
+}
+.cajaBuscador button{
+    margin: 0;
+    border: 0;
+    margin-left: 5px;
+    background-color: white;
+}
+.cajaBuscador button i{
+    padding: 0;
+}
+
+
+
+@media(min-width:375px){
+    .cajaBuscador input{
+        width: 87%;
+    }
+}
+@media(min-width:768px){
+    .cajaBuscador input{
+        width: 93%;
+    }
+}
+@media(min-width:992px){
+    .cajaLogo{
+        text-align: left;
+    }
+    .cajaBuscador input{
+        width: 95%;
+    }
+}
+
+
+
+
+/* INDEX.CSS */
+
+/*
+BANNER
+*/
+.banner{
+    margin-top: 20px;
+}
+
+/*
+PRODUCTOS
+*/
+.filtroProductos{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.filtroProductos h4{
+    margin: 15px 0;
+    text-align: center;
+}
+.filtroProductos article{
+    padding: 0 15px;
+}
+.filtroProductos .cajaProductos{
+    padding: 0;
+}
+.filtroProductos a{
+    margin: 1px;
+    width: 100%;
+}
+.filtroProductos img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.filtroProductos img:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.4s;
+    width: 101%;
+}
+/*
+/productos/  =   discos/ram/mouse/teclado etc
+*/
+.tarjetaDeProducto{
+    border:1px solid silver;
+    border-radius: 5px;
+    padding: 5px;
+}
+.tarjetaDeProducto h1{
+    font-size: 15px;
+}
+.tarjetaDeProducto figure{
+    border: 1px solid silver;
+    height: 200px;
+    overflow: hidden;
+}
+
+/*
+BANNER SRVICIOS
+*/
+.cajaServicios{
+    background-color: black;
+    padding-left: 50px;
+    padding-bottom: 30px;
+}
+.cajaServicios h6{
+    margin-top: 20px;
+}
+.cajaServicios .cajaTarjetas{
+    padding: 0 30px;
+}
+.cajaServicios .imgAvalon img{
+    width: 100%;  
+}
+.cajaServicios .tarjeta{
+    height: 100px; 
+    width: 100%; 
+    background-color: white;
+    border-radius: 45px;
+    border: 1px solid silver;
+    margin-top: 25px;
+}
+.cajaServicios .tarjeta .tarjetaDato{
+    padding: 0 0 0 25px;
+}
+.cajaServicios .tarjeta .tarjetaDato p{
+    font-size: 13px;
+}
+.cajaServicios .tarjeta .credito{
+    border-radius: 0;
+    width: 100px;
+}
+.cajaServicios .tarjeta .creditoP{
+    border-radius: 0 0 25px 0;
+}
+.cajaServicios .tarjeta img{
+    border-radius: 50%;
+    width: 80px;
+    margin-top: 10px;
+    margin-left: -5px;
+}
+/*
+3 COLUMNAS
+*/
+.columnas{
+    margin-top: 20px;
+    border-bottom: 1px solid silver;
+    padding-bottom: 30px;
+}
+.card{
+    margin-bottom: 20px;
+}
+.efectoBox:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.4s;
+    width: 100%;
+}
+.efectoBox p{
+    margin: 0;
+    font-size: 30px;
+}
+.efectoBox .card-title{
+    margin: 0;
+    font-size: 16px;
+}
+.efectoBox span{
+    color: green;
+}
+.efectoBox .tarjetaContenido{
+    padding: 10px;
+}
+/*
+MARCAS
+*/
+.marcas{
+    padding-top: 1%;
+    background-color: silver;
+}
+.marcas img{
+    width: 100%;
+}
+.marcas .razer{
+    width: 60%;
+}
+.marcas .redragon{
+    width: 70%;
+}
+.marcas .republicGames{
+    width: 70%;
+}
+
+
+@media(min-width:375px){
+    .cajaBuscador input{
+        width: 87%;
+    }
+    .cajaServicios .imgAvalon img{
+        display: none;
+    }
+    .Banners{
+        display: none;
+    }
+}
+@media(min-width:768px){
+    .cajaBuscador input{
+        width: 93%;
+    }
+}
+@media(min-width:992px){
+    .cajaLogo{
+        text-align: left;
+    }
+    .Banners{
+        display: block;
+    }
+    .cajaBuscador input{
+        width: 95%;
+    }
+    .cajaServicios .imgAvalon img{
+        display: block;
+    }
+    
+}
+
+
+
+/* PRODUCTADD.CSS */
+
+/* SECTIOn*/
+
+.productosContenedorSection{
+    padding: 0%;
+    margin: 0%;
+  }
+  .productosPrimerDiv{
+    padding: 2%;
+  }
+  /* primer row de la primer div*/
+  .productosPrimeraRow{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 5%;
+   
+  }
+  .productosArticulo{
+    text-align: left;  
+    font-size: 200%;
+  }
+  .productosB{
+    color:grey
+  }
+  
+  /* segunda row del primer div*/
+  .productosSegundaRow{
+   padding-left: 5%;
+   padding-right: 5%;
+   height: 65px;
+    
+  }
+  
+  .productosImagenUsuario{
+    padding: 0%;
+  }
+  
+  .productosPe1{
+    margin: 0%;
+    margin-bottom: 5%;
+    margin-left: 15px;
+    color: black;
+    font-weight:bold;
+    font-size: larger;
+  }
+  .productosPe2{
+    margin: 0%;
+    margin-left: 15px;
+  }
+  
+  /*tercera row del primer div*/
+  
+  .productosTerceraRow{
+    
+    margin-top: 0%;
+  
+  }
+  .productosCajaDeArchivo{
+    border:solid black 1px;
+    border-radius: 5px;
+    width: 95%;
+      margin-left: 3%;
+      height: 35%;
+      display: flex;
+      align-items: center;
+  }
+  
+  .productosMargen{
+    margin-bottom: 10px;
+  }
+  
+  
+  
+  .productosAgregarFoto{
+    margin-left: 25%;
+  }
+  
+  
+  
+  .productosContenedorSegundoDiv{
+     margin-top: 15%;
+     border: solid 1px black;
+     border-radius: 5px;
+     padding: 2%;
+    
+  }
+  .productosVistaPrev{
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .productosVistaPrevia{
+    text-align: center;
+    border: solid 5px grey;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  
+  .productosTextos{
+    padding: 1%;
+    text-align: left;
+    color: grey;
+  }
+  .productosBotOn{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 3%;
+  }
+  
+  
+  
+  
+  
+  .productosBordeTo{
+    border-top: solid 1px black;
+  }
+  .productosBordee{
+    border-bottom: solid 1px black;
+  }
+  
+  @media(min-width:375px){
+    .productosContenedorSection{
+      margin-bottom: 110%;
+    }
+  }
+  @media(min-width:768px){
+    .productosContenedorSection{
+      margin-bottom: 50%;
+    }
+    .productosSpan{
+      margin-top: 4%;
+    }
+  }
+  @media(min-width:992px){
+    .productosContenedorSection{
+      margin-bottom: 25%;
+    }
+  }
+  
+  @media(min-width:1024px){
+    .productosContenedorSection{
+      margin-bottom: 20%;
+    }
+  }
+  
+  @media(min-width:1440px){
+    .productosContenedorSection{
+      margin-bottom: 10%;
+    }
+  }
+
+
+
+
+/* ESTILOS.CSS */
+
+  .bigboss{
+    margin-top: 50px ;
+    margin-bottom: 50px;
+}
+
+
+.comprar{
+    border-radius: 4px;
+    background-color:red;
+    padding: 11px 25px;
+    color: white;
+}
+.precio{
+    display: inline;
+    margin: 5px;
+}
+.ofertita{
+    color: royalblue;
+}
+.carrito-de-compras{
+    background-color: black;
+    color: white;
+    padding: 11px 25px;
+}
+.iconos{
+    height: px;
+    font-size: 40px;
+    right: 20px;
+}
+
+
+.imagenes{
+    width: 100px;
+    align-items: center;
+    margin: 10px;
+    right: 10px;
+}
+.imagen-principal{
+    width: 100%
+}
+.facebook{
+    font-size: 40px;
+    margin-top: 10px;
+    bottom: 10px;
+    color: blue;
+}
+.insta{
+    font-size: 40px;
+    margin-top: 10px;
+    bottom: 10px;
+    color: violet;
+}
+.twit{
+    font-size: 40px;
+    margin-top: 10px;
+    bottom: 10px;
+    color: deepskyblue;
+}
+.vis{
+    color: blu;
+}
+.comprar{
+    border-radius: 5px;
+
+}
+.comprar:hover{
+    background-color: rgba(6, 0 , 0 , 0);
+    color: black;
+}
+
+.carrito-de-compras:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+#carouselExampleControls{
+    height: 50%;
+}
+.image{
+    width: 50px;
+    height: 200px;
+}
+.core-i7{
+    height: 350px;
+    width: 150px;
+}
+
+.logo{
+    width: 200px;
+    height: 200px;
+}
+
+
+
+/* STYLE */
+
+body {
+    padding: 50px;
+    font: 14px Helvetica;
+  }
+  
