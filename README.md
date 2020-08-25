@@ -11,6 +11,9 @@ En el invierno del 2020 y en el medio de una pandemia los cuatro creadores se co
 El nombre surge de la isla avalon, de la mitología celta, se trata de una isla donde viven 9 reinas hadas y el lugar de descanso final del rey arturo, es una isla donde crecen deliciosas manzanas todo el año.
 Creemos que esta idea nos representa, una isla donde podes encontrar componentes y juegos todo el año, a un buen precio y con una buena orientación para encontrar exactamente lo que buscas.
 
+## Trello :
+https://trello.com/b/jTNZHmIl/avalon-agus-lucho-emi-ronaldo
+
 ## Integrantes :
 
 - **_Agustina Zingariello_** : Llena de imaginación y creatividad con gran capacidad de proyección de ideas a causa de un gran manejo con el diseño gráfico. Posee una atracción hacía la programación ya que desea dedicarse a ello a largo plazo. Persona persistente y capaz de moldearse para superar cualquier tipo de problema.
