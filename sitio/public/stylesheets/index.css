@@ -35,6 +35,22 @@ PRODUCTOS
     transition: 0.4s;
     width: 101%;
 }
+/*
+/productos/  =   discos/ram/mouse/teclado etc
+*/
+.tarjetaDeProducto{
+    border:1px solid silver;
+    border-radius: 5px;
+    padding: 5px;
+}
+.tarjetaDeProducto h1{
+    font-size: 15px;
+}
+.tarjetaDeProducto figure{
+    border: 1px solid silver;
+    height: 200px;
+    overflow: hidden;
+}
 
 /*
 BANNER SRVICIOS
