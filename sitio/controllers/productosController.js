@@ -39,7 +39,7 @@ module.exports={
     catProducto:function(req,res){
         let catProducto = req.params.catProducto
         res.render('catProductos',{
-            title:catProducto.toUpperCase(),
+            title:"Avalon",
             catProducto:catProducto,
             dbProducto:dbProducto
         })

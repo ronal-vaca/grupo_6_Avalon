@@ -192,7 +192,7 @@
     "nombre": "Motherboard ASRock B550 Phantom Gaming Velocita",
     "precio": 44100,
     "descuento": 0,
-    "categoriaProducto": "mother",
+    "categoriaProducto": "motherboard",
     "descripcion": "Esta placa de ASRock puede ser la más polivalente que presenta el fabricante para este chipset de gama media. Nos propone una placa con un elegante diseño gaming propio de una gama alta también con características bastante similares a una X570. Será gran opción para aquellos que no puedan permitirse la serie PG con X570 pero quieran si espectacular diseño.",
     "imagen": "asrockb550.jpg",
     "categoria": ""
@@ -201,7 +201,7 @@
     "nombre": "Motherboard B550I AORUS PRO AX",
     "precio": 44100,
     "descuento": 0,
-    "categoriaProducto": "mother",
+    "categoriaProducto": "motherboard",
     "descripcion": "Esta pequeña maravilla de AORUS cuenta con potencia suficiente para albergar las CPU más potentes de AMD gracias a un VRM de 8 fases a 90A con MOSFETS que equipa la AORUS Master, por ejemplo. Tampoco se ha descuidado la conectividad, ya que cuenta con doble ranura M.2, la ranura de expansión x16 con refuerzo de acero y dos buenos puertos de vídeo integrados para una posible APU Ryzen 4000G. Y nunca debe faltar conexión Wi-Fi 6 integrada, LAN 2,5G y tarjeta de sonido ALC1220 de gama alta.",
     "imagen": "aorusb550.jpg",
     "categoria": ""
@@ -210,7 +210,7 @@
     "nombre": "Motherboard MSI MPG B550 Gaming Carbon Wi-Fi",
     "precio": 44100,
     "descuento": 0,
-    "categoriaProducto": "mother",
+    "categoriaProducto": "motherboard",
     "descripcion": "Una de las placas que mayor velocidad de memorias RAM soporta en esta plataforma B550 llegando hasta los 5100 MHz gracias a DDR4 BOOST. La Gaming Carbon Wi-Fi es otra placa clásica en la lista de los gamers, al unir una brutal estética, altas prestaciones sin faltarle un detalle, y un precio algo por debajo de la competencia, por ejemplo, la ROG Strix Gaming-E de Asus.",
     "imagen": "msib550.jpg",
     "categoria": ""

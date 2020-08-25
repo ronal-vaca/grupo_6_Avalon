@@ -45,7 +45,7 @@
               <div class="col-6 col-md-4 col-lg-2"><a href="/productos/disco"><img src="images/filtroProductos/almacenamiento.jpeg" alt=""></a></div>
               <div class="col-6 col-md-4 col-lg-2"><a href="/productos/procesador"><img src="images/filtroProductos/procesador.jpeg" alt=""></a></div>
               <div class="col-6 col-md-4 col-lg-2"><a href="/productos/fuente"><img src="images/filtroProductos/fuente.jpeg" alt=""></a></div>
-              <div class="col-6 col-md-4 col-lg-2"><a href="/productos/mother"><img src="images/filtroProductos/motherboard.jpeg" alt=""></a></div>
+              <div class="col-6 col-md-4 col-lg-2"><a href="/productos/motherboard"><img src="images/filtroProductos/motherboard.jpeg" alt=""></a></div>
               <div class="col-6 col-md-4 col-lg-2"><a href="/productos/gabinete"><img src="images/filtroProductos/gabinete.jpeg" alt=""></a></div>
               <div class="col-6 col-md-4 col-lg-2"><a href="/productos/memoria"><img src="images/filtroProductos/ram.jpeg" alt=""></a></div>
               <div class="col-6 col-md-4 col-lg-2"><a href="/productos/grafica"><img src="images/filtroProductos/placaVideo.jpeg" alt=""></a></div>
@@ -119,13 +119,18 @@
               <% ofertas.forEach(oferta => { %>
                <div class="card efectoBox">
                 <div class="row no-gutters efectoBoxH">
-                  <div class="col-5 col-md-2 col-lg-5"><a href="/productos/detalleProducto/<%= oferta.id %> "><img src="images/imagenProducto/<%- oferta.imagen %> " class="card-img" alt=""></a></div>
+                  <div class="col-5 col-md-2 col-lg-5">
+                    <figure class="d-flex justify-content-center d-flex align-items-center">
+                      <a href="/productos/detalleProducto/<%= oferta.id %> "><img src="images/imagenProducto/<%- oferta.imagen %> " class="card-img" alt=""></a>
+                    </figure>
+                  </div>
                   <div class="col-7 col-md-10 col-lg-6 tarjetaContenido">
                     <h5 class="card-title"><%- oferta.nombre %> </h5>
                     <p>$<%- (oferta.precio - oferta.precio * oferta.descuento / 100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %></p>
                     <% if (oferta.descuento != 0) { %>
                       <span><%- oferta.descuento %>% OFF</span>
                     <% } %>
+                    
                   </div>
                 </div>
               </div>
