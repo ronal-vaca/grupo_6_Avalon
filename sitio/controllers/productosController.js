@@ -6,8 +6,22 @@ let dbProducto = require('../data/database')
 module.exports={
     listar:function(req, res){
         res.render('productos',{
-            title:"Nuestros productos"
+            title:"Nuestros productos",
+            dbProducto:dbProducto
         });
+    },
+    buscar:function(req,res){
+        let buscar = req.query.buscar;
+        let resultados = [];
+        dbProducto.forEach(function(producto){
+            if(producto.nombre.toLowerCase().includes(buscar.toLowerCase())){
+                resultados.push(producto)
+            }
+        })
+        res.render('productos',{
+            title:"Resultados de la busqueda",
+            dbProducto:resultados
+        })
     },
     cargaProducto:function(req, res) {
         res.render('productAdd', { title: 'Avalon Productos' });
@@ -24,8 +38,8 @@ module.exports={
     },
     catProducto:function(req,res){
         let catProducto = req.params.catProducto
-        res.render('productos',{
-            title:catProducto.toUpperCase(),
+        res.render('catProductos',{
+            title:"Avalon",
             catProducto:catProducto,
             dbProducto:dbProducto
         })

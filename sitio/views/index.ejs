@@ -12,9 +12,8 @@
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
               </ol>
-              <div class="carousel-inner">
+              <div class="carousel-inner d-flex align-items-center" style="height:650px;">
                 <div class="carousel-item active">
                   <img src="images/banners/slider1.jpg" class="d-block w-100"alt="...">
                 </div>
@@ -45,14 +44,14 @@
               <div class="col-6 col-md-4 col-lg-2"><a href="/productos/disco"><img src="images/filtroProductos/almacenamiento.jpeg" alt=""></a></div>
               <div class="col-6 col-md-4 col-lg-2"><a href="/productos/procesador"><img src="images/filtroProductos/procesador.jpeg" alt=""></a></div>
               <div class="col-6 col-md-4 col-lg-2"><a href="/productos/fuente"><img src="images/filtroProductos/fuente.jpeg" alt=""></a></div>
-              <div class="col-6 col-md-4 col-lg-2"><a href="/productos/mother"><img src="images/filtroProductos/motherboard.jpeg" alt=""></a></div>
+              <div class="col-6 col-md-4 col-lg-2"><a href="/productos/motherboard"><img src="images/filtroProductos/motherboard.jpeg" alt=""></a></div>
               <div class="col-6 col-md-4 col-lg-2"><a href="/productos/gabinete"><img src="images/filtroProductos/gabinete.jpeg" alt=""></a></div>
               <div class="col-6 col-md-4 col-lg-2"><a href="/productos/memoria"><img src="images/filtroProductos/ram.jpeg" alt=""></a></div>
               <div class="col-6 col-md-4 col-lg-2"><a href="/productos/grafica"><img src="images/filtroProductos/placaVideo.jpeg" alt=""></a></div>
               <div class="col-6 col-md-4 col-lg-2"><a href="/productos/monitor"><img src="images/filtroProductos/monitor.jpeg" alt=""></a></div>
-              <div class="col-6 col-md-4 col-lg-2"><a href="/productos/mouse"><img src="images/filtroProductos/mouse.jpeg" alt=""></a></div>
+              <div class="col-6 col-md-4 col-lg-2"><a href="/productos/mouse"><img src="images/filtroProductos/mousee.jpeg" alt=""></a></div>
               <div class="col-6 col-md-4 col-lg-2"><a href="/productos/teclado"><img src="images/filtroProductos/teclado.jpeg" alt=""></a></div>
-              <div class="col-6 col-md-4 col-lg-2"><a href="/productos/auricular"><img src="images/filtroProductos/auricular.jpeg" alt=""></a></div>
+              <div class="col-6 col-md-4 col-lg-2"><a href="/productos/auricular"><img src="images/filtroProductos/auricularr.jpeg" alt=""></a></div>
             </div>
           </section>
         </div>
@@ -119,13 +118,18 @@
               <% ofertas.forEach(oferta => { %>
                <div class="card efectoBox">
                 <div class="row no-gutters efectoBoxH">
-                  <div class="col-5 col-md-2 col-lg-5"><a href="/productos/detalleProducto/<%= oferta.id %> "><img src="images/imagenProducto/<%- oferta.imagen %> " class="card-img" alt=""></a></div>
+                  <div class="col-5 col-md-2 col-lg-5">
+                    <figure class="d-flex justify-content-center d-flex align-items-center">
+                      <a href="/productos/detalleProducto/<%= oferta.id %> "><img src="images/imagenProducto/<%- oferta.imagen %> " class="card-img" alt=""></a>
+                    </figure>
+                  </div>
                   <div class="col-7 col-md-10 col-lg-6 tarjetaContenido">
                     <h5 class="card-title"><%- oferta.nombre %> </h5>
                     <p>$<%- (oferta.precio - oferta.precio * oferta.descuento / 100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %></p>
                     <% if (oferta.descuento != 0) { %>
                       <span><%- oferta.descuento %>% OFF</span>
                     <% } %>
+
                   </div>
                 </div>
               </div>

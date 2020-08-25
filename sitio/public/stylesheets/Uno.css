@@ -312,6 +312,9 @@ PRODUCTOS
     height: 200px;
     overflow: hidden;
 }
+.tarjetaDeProducto .btnComprar{
+    margin-left: 5px;
+}
 
 /*
 BANNER SRVICIOS
@@ -439,7 +442,6 @@ MARCAS
     }
     
 }
-
 
 
 /* PRODUCTADD.CSS */
