@@ -6,7 +6,7 @@ const controller = require('../controllers/productosController');
 
 router.get('/', controller.listar);
 
-
+router.get('/buscar',controller.buscar)
 
 router.get('/cargaProducto', controller.cargaProducto);
 
