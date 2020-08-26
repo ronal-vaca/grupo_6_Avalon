@@ -1,261 +1,7 @@
-/* REGISTRO.CSS */
-li{
-    list-style: none;
+/* STYLE */
+body {
+    font: 14px Helvetica;
 }
-.formulario h5{
-    width: 100%;
-    margin-bottom: 15px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid rgb(151, 151, 151);
-
-}
-.formulario h6{
-    margin-top: 15px;
-}
-.cajaFormulario{
-   margin-top: 30px;
-   margin-bottom: 50px;
-}
-.formulario{
-    margin: auto;
-    width: 400px;
-    text-align: center;
-}
-.formulario .icono{
-    padding: 0;
-    padding-top: 10px;
-    width: 80px;
-    height: 80px;
-    font-size: 50px;
-    margin-bottom: 15px;
-    border: 1px solid rgb(151, 151, 151);
-    border-radius: 50%;
-}
-.formulario input{
-    margin-top: 15px;
-    padding: 0px;
-}
-.formulario i{
-    padding-top: 25px;
-}
-.formulario button{
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-
-/* FOOTER.CSS */
-
-.footer{
-    background-color: black;
-    padding: 30px 0 10px 0 ;
-}
-.footerBoton h6{
-    color: #900d0d;
-}
-.footerBoton{
-    text-align: center;
-}
-.footerBoton a{
-    color: silver;
-    display: block;
-}
-.footerBoton a:hover{
-    text-decoration: none;
-    color: white;
-    background-color: rgb(49, 49, 49);
-}
-.footerImgP{
-    padding: 0;
-    /*padding-right: 100px;*/
-}
-.footerImg{
-    width: 100%;
-    padding: 0;
-}
-.icono{
-    text-align: center;
-    position: relative;
-    z-index: 100;
-}
-.icono i{
-    font-size: 50px;
-    color:white;
-    border: 2px solid black;
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
-    padding-top: 10px;
-    background-color: #900d0d;
-}
-.colorS{
-    color: silver;
-}
-.texto{
-    background-color: #900d0d;
-    border-radius: 5px;
-    padding: 40px 20px 5px 20px;
-    text-align: center;
-    top: -32px;
-    position: relative;
-}
-.texto p{
-    margin: 0;
-}
-.texto a{
-    color: white;
-}
-.texto .redTw:hover{
-    color: turquoise;
-    transition: 0.5s;
-}
-.texto .redFb:hover{
-    color: #254281;
-    transition: 0.5s;
-}
-.texto .redIg:hover{
-    color: rgb(194, 3, 194);
-    transition: 0.5s;
-}
-.texto a i{
-    margin-top: 5px;
-    font-size: 30px;
-}
-.texto .tituloFooter{
-    color: black;
-    font-weight: 600;
-}
-.texto .cajitaRedes{
-    border-top: 1px solid silver;
-    margin-top:5px; 
-}
-
-.footerTarjeta p{
-    color: white;
-}
-
-@media(min-width:375px){
-    .footerImgP, .footerTarjeta{
-        display: none;
-    }
-}
-@media(min-width:1024px){
-    .footerImgP, .footerTarjeta{
-        display: block;
-    }
-}
-
-
-
-/* HEADER.CSS */
-
-.cajaHeader{
-    padding-top: 10px;
-    padding-right: 20px;
-}
-.cajaHeader nav ul{
-    padding-top: 6px;
-}
-.cajaHeader nav ul li{
-    margin-left: 15px;
-}
-.cajaHeader nav ul li a{
-    color: black;
-}
-.cajaHeader nav ul li a:hover{
-    text-decoration: none;
-    border-bottom: 1px solid red;
-}
-.navbar{
-    padding: 0;
-}
-.botonMnu{
-    margin: 0;
-    border: 1px solid silver;
-    border-radius: 2px;
-    background-color: white;
-}
-.botonMnu i{
-    padding: 0;
-}
-.cajaLogo{
-    text-align: center;
-}
-.cajaLogo a{
-    color: black;
-}
-.cajaLogo a:hover{
-    text-decoration: none;
-    color: black;
-}
-
-.cajaIconos{
-    padding: 0;
-    text-align: end;
-    padding-top: 5px;
-}
-.cajaIconos .m{
-    display: inline;
-}
-.cajaIconos a i{
-    padding: 0;
-    margin-left: 20px;
-    color: black;
-}
-.cajaIconos a:hover{
-    border-bottom: none;
-}
-
-.cajaBuscador{
-    margin-top: 10px;
-    border: 1px solid silver;
-    border-radius: 5px;
-    padding-top: 4px;
-    height: 40px;
-    width: 100%;
-}
-.cajaBuscador input{
-    margin: 0;
-    border: 0;
-    border-right: 1px solid silver;
-    height: 30px;
-    width: 87%;
-    outline: none;
-    padding-left: 10px;
-}
-.cajaBuscador button{
-    margin: 0;
-    border: 0;
-    margin-left: 5px;
-    background-color: white;
-}
-.cajaBuscador button i{
-    padding: 0;
-}
-
-
-
-@media(min-width:375px){
-    .cajaBuscador input{
-        width: 87%;
-    }
-}
-@media(min-width:768px){
-    .cajaBuscador input{
-        width: 93%;
-    }
-}
-@media(min-width:992px){
-    .cajaLogo{
-        text-align: left;
-    }
-    .cajaBuscador input{
-        width: 95%;
-    }
-}
-
-
-
 
 /* INDEX.CSS */
 
@@ -442,6 +188,266 @@ MARCAS
     }
     
 }
+/* REGISTRO.CSS */
+li{
+    list-style: none;
+}
+.formulario h5{
+    width: 100%;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(151, 151, 151);
+
+}
+.formulario h6{
+    margin-top: 15px;
+}
+.cajaFormulario{
+   margin-top: 30px;
+   margin-bottom: 50px;
+}
+.formulario{
+    margin: auto;
+    width: 400px;
+    text-align: center;
+}
+.formulario .icono{
+    padding: 0;
+    padding-top: 10px;
+    width: 80px;
+    height: 80px;
+    font-size: 50px;
+    margin-bottom: 15px;
+    border: 1px solid rgb(151, 151, 151);
+    border-radius: 50%;
+}
+.formulario input{
+    margin-top: 15px;
+    padding: 0px;
+}
+.formulario i{
+    padding-top: 25px;
+}
+.formulario button{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+/* FOOTER.CSS */
+
+.footer{
+    background-color: black;
+    padding: 20px 0 10px 0 ;
+}
+.footerBoton h6{
+    color: #900d0d;
+    font-weight: 500;
+}
+.footerBoton{
+    text-align: center;
+}
+.footerBoton a{
+    color: silver;
+    display: block;
+    margin-bottom: 5px;
+}
+.footerBoton a:hover{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(49, 49, 49);
+}
+.footerImgP{
+    padding: 0;
+}
+.footerImg{
+    width: 100%;
+    padding: 0;
+}
+.icono{
+    text-align: center;
+    position: relative;
+    z-index: 100;
+}
+.icono i{
+    font-size: 50px;
+    color:white;
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    padding-top: 10px;
+    background-color: #900d0d;
+}
+.colorS{
+    color: silver;
+}
+.texto{
+    background-color: #900d0d;
+    border-radius: 5px;
+    padding: 40px 20px 5px 20px;
+    text-align: center;
+    top: -32px;
+    position: relative;
+}
+.texto p{
+    margin-bottom: 5px;
+}
+.texto a{
+    color: white;
+}
+.texto .redTw:hover{
+    color: turquoise;
+    transition: 0.5s;
+}
+.texto .redFb:hover{
+    color: #254281;
+    transition: 0.5s;
+}
+.texto .redIg:hover{
+    color: rgb(194, 3, 194);
+    transition: 0.5s;
+}
+.texto a i{
+    margin-top: 5px;
+    font-size: 30px;
+}
+.texto .tituloFooter{
+    color: black;
+    font-weight: 600;
+}
+.texto .cajitaRedes{
+    border-top: 1px solid silver;
+    margin-top:5px; 
+}
+
+.footerTarjeta p{
+    color: white;
+}
+
+@media(min-width:375px){
+    .footerImgP, .footerTarjeta{
+        display: none;
+    }
+}
+@media(min-width:1024px){
+    .footerImgP, .footerTarjeta{
+        display: block;
+    }
+}
+
+
+
+/* HEADER.CSS */
+
+.cajaHeader{
+    padding-top: 10px;
+    padding-right: 20px;
+}
+.cajaHeader nav ul{
+    padding-top: 6px;
+}
+.cajaHeader nav ul li{
+    margin-left: 15px;
+}
+.cajaHeader nav ul li a{
+    color: black;
+}
+.cajaHeader nav ul li a:hover{
+    text-decoration: none;
+    border-bottom: 1px solid red;
+}
+.navbar{
+    padding: 0;
+}
+.botonMnu{
+    margin: 0;
+    border: 1px solid silver;
+    border-radius: 2px;
+    background-color: white;
+}
+.botonMnu i{
+    padding: 0;
+}
+.cajaLogo{
+    text-align: center;
+}
+.cajaLogo a{
+    color: black;
+}
+.cajaLogo a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+.cajaIconos{
+    padding: 0;
+    text-align: end;
+    padding-top: 5px;
+}
+.cajaIconos .m{
+    display: inline;
+}
+.cajaIconos a i{
+    padding: 0;
+    margin-left: 20px;
+    color: black;
+}
+.cajaIconos a:hover{
+    border-bottom: none;
+}
+
+.cajaBuscador{
+    margin-top: 10px;
+    border: 1px solid silver;
+    border-radius: 5px;
+    padding-top: 4px;
+    height: 40px;
+    width: 100%;
+}
+.cajaBuscador input{
+    margin: 0;
+    border: 0;
+    border-right: 1px solid silver;
+    height: 30px;
+    width: 87%;
+    outline: none;
+    padding-left: 10px;
+}
+.cajaBuscador button{
+    margin: 0;
+    border: 0;
+    margin-left: 5px;
+    background-color: white;
+}
+.cajaBuscador button i{
+    padding: 0;
+}
+
+
+
+@media(min-width:375px){
+    .cajaBuscador input{
+        width: 87%;
+    }
+}
+@media(min-width:768px){
+    .cajaBuscador input{
+        width: 93%;
+    }
+}
+@media(min-width:992px){
+    .cajaLogo{
+        text-align: left;
+    }
+    .cajaBuscador input{
+        width: 95%;
+    }
+}
+
+
+
+
 
 
 /* PRODUCTADD.CSS */
@@ -696,10 +702,5 @@ MARCAS
 
 
 
-/* STYLE */
 
-body {
-    padding: 50px;
-    font: 14px Helvetica;
-  }
   
