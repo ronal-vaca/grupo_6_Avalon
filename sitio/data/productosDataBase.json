@@ -1,325 +1,362 @@
-[{
-    "id": 1,
-    "nombre": "Mouse Corsair HARPOON",
-    "precio": 9400,
-    "descuento": 0,
-    "categoriaProducto": "mouse",
-    "descripcion": "El mejor aliado para lo que necesites. Usá tu Corsair Harpoon RGB Gaming en la oficina, en tu casa o donde quieras y navegá en tus dispositivos sin límites.\nEl mouse de juego te ofrecerá la posibilidad de marcar la diferencia y sacar ventajas en tus partidas. Su conectividad y sensor suave ayudará a que te desplaces rápido por la pantalla. Además, su sistema de detección de movimiento óptico te permitirá mover el cursor de una manera más precisa y sensible que en los sistemas tradicionales. Con sus 6 botones podrás tener mayor control e independencia para ejecutar.",
-    "imagen": "mouseCorsair.jpg",
-    "categoria": "mas-vendido"
-},{
-    "id": 2,
-    "nombre": "Mouse Razer Naga Trinity",
-    "precio": 12600,
-    "descuento": 0,
-    "categoriaProducto": "mouse",
-    "descripcion": "El nuevo mouse para juegos Razer Naga Trinity se postula como el más versátil del mercado, gracias al uso de tres laterales intercambiables que proporcionan diferentes botoneras y con distintas disposiciones, de manera que el usuario podrá poner y quitar la que quiera dependiendo del uso que vaya a darle cada momento.",
-    "imagen": "mouseRazer.jpg",
-    "categoria": "mejor-producto"
-},{
-    "id": 3,
-    "nombre": "Mouse Logitech G502 Proteus Spectrum",
-    "precio": 8200,
-    "descuento": 20,
-    "categoriaProducto": "mouse",
-    "descripcion": "Obtén la máxima precisión de seguimiento de nuestro sensor óptico con mejor capacidad de respuesta (PMW3366). La exclusiva tecnología de sensor óptico Logitech G Delta Zero™ minimiza la aceleración del ratón y aumenta la fiabilidad al apuntar. Cambia sobre la marcha el valor de dpi con cinco valores a elegir: de 200 a 12.000 dpi.",
-    "imagen": "mouseLogitech.jpg",
-    "categoria": "oferta"
-},{
-    "id": 4,
-    "nombre": "Teclado Razer Blackwidow Elite",
-    "precio": 22000,
-    "descuento": 0,
-    "categoriaProducto": "teclado",
-    "descripcion": "Si deseas un teclado gaming, el Razer BlackWidow siempre ha sido una de las mejores opciones, y a partir de ahora o será más aún gracias a la llegada del nuevo Razer BlackWidow Elite, el cual quiere hacer aún más grande la leyenda de la marca californiana. Veamos todos los secretos que esconde esta nueva genialidad.",
-    "imagen": "tecladoRazer.jpg",
-    "categoria": "mas-vendido"
-},{
-    "id": 5,
-    "nombre": "Teclado Logitech G513",
-    "precio": 17200,
-    "descuento": 30,
-    "categoriaProducto": "teclado",
-    "descripcion": "Logitech G513 es uno de los mejores teclados mecánicos que podemos encontrar en el mercado, se trata de un modelo equipado con los avanzados switches Romer-G, que se han diseñado de forma específica para los videojuegos, o los nuevos GX Blue.",
-    "imagen": "tecladoLogitech.jpg",
-    "categoria": "oferta"
-},{
-    "id": 6,
-    "nombre": "Teclado Corsair K95 RGB Platinum",
-    "precio": 28000,
-    "descuento": 0,
-    "categoriaProducto": "teclado",
-    "descripcion": "¡Cómo nos gusta probar teclados! ¡Y más cuando son exclusivas! Hemos recibido el Corsair K95 RGB Platinum uno de los mejores teclados del mercado. Con un diseño renovado, con interruptores Cherry MX RGB Speed y una calidad de construcción impecable. ¿Quieres saber más? ¡No te pierdas nuestro análisis!",
-    "imagen": "tecladoCorsair.jpg",
-    "categoria": "mejor-producto"
-},{
-    "id": 7,
-    "nombre": "ASUS CERBERUS- GTX – 1050TI – O4G",
-    "precio": 23500,
-    "descuento": 0,
-    "categoriaProducto": "grafica",
-    "descripcion": "Diseñada para ofrecer un alto rendimiento y poder jugar sin descanso. Olvídate de sobre calentamientos. Lleva incorporado un procesador gráfico GeForce GTX 1050 Ti con una frecuencia de 1366 MHz.",
-    "imagen": "Asus.jpg",
-    "categoria": "mas-vendido"
-},{
-    "id": 8,
-    "nombre": "MSI V809-2000R NVIDIA GeForce GT 710 2GB",
-    "precio": 10000,
-    "descuento": 10,
-    "categoriaProducto": "grafica",
-    "descripcion": "Esta MSI V809 externa de 200 gramos familia de la marca NVIDIA, ha sido especialmente pensada para revivir un equipo antiguo y darle unos años más de vida.",
-    "imagen": "msi.jpg",
-    "categoria": "oferta"
-},{
-    "id": 9,
-    "nombre": "Gigabyte GV-RX580 – GAMING-8GD",
-    "precio": 35000,
-    "descuento": 0,
-    "categoriaProducto": "grafica",
-    "descripcion": "Esta Gigabyte GV-RX580 pertenece a la familia de los procesadores gráficos AMD. En concreto, el procesador gráfico que lleva integrado es el Radeon RX 580 de una frecuencia de 1355 MHz, pudiendo obtener una máxima resolución de 7680 x 4320 pixeles.",
-    "imagen": "Gygabite.jpg",
-    "categoria": "mejor-producto"
-},{
-    "id": 10,
-    "nombre": "Procesador Ryzen 9 3900x",
-    "precio": 56800,
-    "descuento": 0,
-    "categoriaProducto": "procesador",
-    "descripcion": "El mejor procesador del momento es el Ryzen 9 3900X, que está más orientado a prosumidores y gente que tenga el dinero para gastarse en obtener el mejor procesador para una plataforma generalista para juegos. Sus doce núcleos con multihilo son estupendos para tareas de codificación de vídeo mientras se juega, para renderizado y todo tipo de tareas profesionales.",
-    "imagen": "ryzen93900x.jpg",
-    "categoria": ""
-},{
-    "id": 11,
-    "nombre": "Procesador Core i7-10700k",
-    "precio": 44400,
-    "descuento": 0,
-    "categoriaProducto": "procesador",
-    "descripcion": "Productividad y entretenimiento, todo disponible en computadoras de escritorio. La superioridad tecnológica de Intel es un beneficio para todo tipo de profesionales. Asegura el mejor rendimiento de las aplicaciones, de la transferencia de datos y la conexión con otros elementos tecnológicos.",
-    "imagen": "corei710700k.jpg",
-    "categoria": ""
-},{
-    "id": 12,
-    "nombre": "Procesador Ryzen 7 3700x",
-    "precio": 44100,
-    "descuento": 0,
-    "categoriaProducto": "procesador",
-    "descripcion": "Clave en el rendimiento de computadoras de escritorio, ya no tenés que pensar en cómo distribuir el tiempo y acciones: ahora todas las tareas en simultáneo son posibles. AMD cuenta con un catálogo de productos que se adaptan a los requerimientos de todo tipo de usuarios: juegos en línea, edición a gran escala, contenido en múltiples plataformas y más.",
-    "imagen": "ryzen73700x.jpg",
-    "categoria": ""
-},{
-    "id": 13,
-    "nombre": "Disco Seagate Barracuda",
-    "precio": 44100,
-    "descuento": 0,
-    "categoriaProducto": "disco",
-    "descripcion": "Almacene más, realice procesos computacionales más rápido y trabaje con mayor confianza gracias a la fiabilidad que proporcionan las unidades de disco duro internas BarraCuda",
-    "imagen": "seagatebarracuda.jpg",
-    "categoria": ""
-},{
-    "id": 14,
-    "nombre": "Disco Western Digital Blue",
-    "precio": 44100,
-    "descuento": 0,
-    "categoriaProducto": "disco",
-    "descripcion": "Los discos WD Blue proporcionan rendimiento, fiabilidad y capacidad, lo que los convierte en una excelente solución para los usuarios del día a día",
-    "imagen": "westerndigital.jpg",
-    "categoria": ""
-},{
-    "id": 15,
-    "nombre": "Disco Seagate FireCuda",
-    "precio": 44100,
-    "descuento": 0,
-    "categoriaProducto": "disco",
-    "descripcion": "Almacene videojuegos y juegue con ellos más rápidamente con una unidad SSHD interna que ofrece la capacidad de una unidad HDD y el rendimiento de una unidad SSD",
-    "imagen": "seagatefirecuda.jpg",
-    "categoria": ""
-},{
-    "id": 16,
-    "nombre": "Fuente NOX NX 750W",
-    "precio": 44100,
-    "descuento": 0,
-    "categoriaProducto": "fuente",
-    "descripcion": "Una fuente que, al igual que las demás pertenecientes a la NX Series, convierte el poder más extremo en un flujo de energía estable gracias, entre otras cosas, a su PFC activo.",
-    "imagen": "NOXNX750W.jpg",
-    "categoria": ""
-},{
-    "id": 17,
-    "nombre": "Fuente EVGA SuperNOVA 80 Plus Gold",
-    "precio": 44100,
-    "descuento": 0,
-    "categoriaProducto": "fuente",
-    "descripcion": "El poder de la EVGA SuperNOVA 750 G3, basada en la serie G2 ganadoras de premios fuentes de alimentación de EVGA, esta fuente de alimentación cuenta con 80 Plus Gold eficiencia nominal, y la energía limpia y continua de todos los componentes.",
-    "imagen": "evgasupernova.jpeg",
-    "categoria": ""
-},{
-    "id": 18,
-    "nombre": "Fuente Corsair VS650",
-    "precio": 44100,
-    "descuento": 0,
-    "categoriaProducto": "fuente",
-    "descripcion": "La fuente de alimentación CORSAIR VS650 es una gran elección si está montando un sistema doméstico o de oficina menos exigente, pero necesita la compatibilidad y la fiabilidad que han hecho célebres a CORSAIR.",
-    "imagen": "corsairvs650.png",
-    "categoria": ""
-},{
-    "id": 19,
-    "nombre": "Memoria Corsair Vengeance RGB Pro LED 16GB 3,200MHz",
-    "precio": 44100,
-    "descuento": 0,
-    "categoriaProducto": "memoria",
-    "descripcion": "Los kits de memoria Vengeance RGB Pro LED de Corsair son un punto medio perfecto entre su línea Platinum más visualmente impresionante y la gama LPX más discreta. Al igual que esos kits, ofrece un rendimiento fantástico y hay muchas opciones para elegir.",
-    "imagen": "corsairvengeance.jpeg",
-    "categoria": ""
-},{
-    "id": 20,
-    "nombre": "Memoria G.Skill TridentZ RGB 16GB 3,200MHz",
-    "precio": 44100,
-    "descuento": 0,
-    "categoriaProducto": "memoria",
-    "descripcion": "G.Skill fabrica excelentes productos de memoria y su línea TridentZ cubre toda la gama, desde la hermosa gama Royal con incrustaciones de joyas hasta las series de juegos más optimizadas.",
-    "imagen": "gskill.jpeg",
-    "categoria": ""
-},{
-    "id": 21,
-    "nombre": "Memoria Patriot Viper Elite 8GB 2,666MHz",
-    "precio": 44100,
-    "descuento": 0,
-    "categoriaProducto": "memoria",
-    "descripcion": "Viper Elite te ofrece un rendimiento DDR4 de nivel básico en un kit muy asequible. Por ser solo una tarjeta deja espacio para una actualización económica a 16 GB en el futuro.",
-    "imagen": "viperelite.jpeg",
-    "categoria": ""
-},{
-    "id": 22,
-    "nombre": "Motherboard ASRock B550 Phantom Gaming Velocita",
-    "precio": 44100,
-    "descuento": 0,
-    "categoriaProducto": "motherboard",
-    "descripcion": "Esta placa de ASRock puede ser la más polivalente que presenta el fabricante para este chipset de gama media. Nos propone una placa con un elegante diseño gaming propio de una gama alta también con características bastante similares a una X570. Será gran opción para aquellos que no puedan permitirse la serie PG con X570 pero quieran si espectacular diseño.",
-    "imagen": "asrockb550.jpg",
-    "categoria": ""
-},{
-    "id": 23,
-    "nombre": "Motherboard B550I AORUS PRO AX",
-    "precio": 44100,
-    "descuento": 0,
-    "categoriaProducto": "motherboard",
-    "descripcion": "Esta pequeña maravilla de AORUS cuenta con potencia suficiente para albergar las CPU más potentes de AMD gracias a un VRM de 8 fases a 90A con MOSFETS que equipa la AORUS Master, por ejemplo. Tampoco se ha descuidado la conectividad, ya que cuenta con doble ranura M.2, la ranura de expansión x16 con refuerzo de acero y dos buenos puertos de vídeo integrados para una posible APU Ryzen 4000G. Y nunca debe faltar conexión Wi-Fi 6 integrada, LAN 2,5G y tarjeta de sonido ALC1220 de gama alta.",
-    "imagen": "aorusb550.jpg",
-    "categoria": ""
-},{
-    "id": 24,
-    "nombre": "Motherboard MSI MPG B550 Gaming Carbon Wi-Fi",
-    "precio": 44100,
-    "descuento": 0,
-    "categoriaProducto": "motherboard",
-    "descripcion": "Una de las placas que mayor velocidad de memorias RAM soporta en esta plataforma B550 llegando hasta los 5100 MHz gracias a DDR4 BOOST. La Gaming Carbon Wi-Fi es otra placa clásica en la lista de los gamers, al unir una brutal estética, altas prestaciones sin faltarle un detalle, y un precio algo por debajo de la competencia, por ejemplo, la ROG Strix Gaming-E de Asus.",
-    "imagen": "msib550.jpg",
-    "categoria": ""
-},{
-    "id": 25,
-    "nombre": "Auricular Logitech G432 Gaming Surround",
-    "precio": 44100,
-    "descuento": 0,
-    "categoriaProducto": "auricular",
-    "descripcion": "Uno de los auriculares baratos más vendidos desde hace bastante es el Logitech G430, pero el modelo se ha actualizado ligeramente tanto en diseño como en prestaciones. Todavía sigue siendo un headset de tipo alámbrico totalmente compatible con PC y consola, ya que cuenta con entrada Jack 3,5 mm y adaptador USB con DAC gestionable desde software Gaming G HUB.",
-    "imagen": "logitechg432.jpg",
-    "categoria": ""
-},{
-    "id": 26,
-    "nombre": "Auricular Giants Gear H60",
-    "precio": 44100,
-    "descuento": 0,
-    "categoriaProducto": "auricular",
-    "descripcion":"No podía faltar la presencia de unos auriculares estéreo con drivers de 53 mm que aportan un sonido sorprendentemente bueno, claro y muy detallado. Su liviano peso y el diseño circumaural con diadema en doble puente, los hacen aptos para prácticamente cualquier usuario. Son realmente cómodos, tal y como demostraron en nuestro análisis que dejaremos más abajo.",
-    "imagen": "giantsgear.jpg",
-    "categoria": ""
-},{
-    "id": 27,
-    "nombre": "Auricular Corsair HS35",
-    "precio": 44100,
-    "descuento": 0,
-    "categoriaProducto": "auricular",
-    "descripcion": "Este headset es uno de los más económicos del fabricante, y aunque no es un portento en lo que a diseño se refiere, tenemos una muy buena calidad de sonido y conexión Jack para ofrecer compatibilidad prácticamente con cualquier plataforma.",
-    "imagen": "corsairhs35.jpg",
-    "categoria": ""
-},{
-    "id": 28,
-    "nombre": "Mouse Corsair NIGHTSWORD RGB",
-    "precio": 44100,
-    "descuento": 0,
-    "categoriaProducto": "mouse",
-    "descripcion": "Podemos decir sin lugar a duda que este es sustituto natural del Dark Core RGB, con un diseño bastante similar muy ergonómico y con el mejor sensor óptico de Pixart, el PMW 3391 de 18.000 DPI. Se hace ideal para juegos tipo MOBA/MMO debido a la gran cantidad botones que tiene, pero también a Shutter, por incorporar un botón Sniper. Todos ellos son personalizables mediante iCUE junto a su iluminación, y ofrece la posibilidad de modificar su peso. De los mejores de Corsair este año.",
-    "imagen": "corsairnightsword.jpg",
-    "categoria": ""
-},{
-    "id": 29,
-    "nombre": "Mouse Logitech G502 LightSpeed",
-    "precio": 44100,
-    "descuento": 0,
-    "categoriaProducto": "mouse",
-    "descripcion": "Otro de los ratones más trabajados en cuanto a diseño es también firma de Logitech, el aclamado G502 ha vuelto después de 5 largos años para llegar a otro nivel a experiencia gaming. Ahora tenemos un potente sensor óptico HERO 16K de 16.000 DPI en un ratón inalámbrico que funciona en la frecuencia de 2,4 GHz sin lag y de gran autonomía. Es más con solo 5 minuto de carga podemos usarlo durante 2 horas. A esto lo unimos la posibilidad de añadir o quitar peso y el incluir una tira RGB con mando.",
-    "imagen": "logitechg502.jpg",
-    "categoria": ""
-},{
-    "id": 30,
-    "nombre": "Mouse Razer Viper Ultimate",
-    "precio": 44100,
-    "descuento": 0,
-    "categoriaProducto": "mouse",
-    "descripcion": "Después del Mamba, el Viper sea el ratón más emblemático de Razer, y ahora viene con una versión inalámbrica de latencia cero para dejar claro que son la mejor opción para jugar. Este ratón es ambidiestro, y monta el sensor óptico Razer Focus+, con un rango personalizable de entre 100 y 20.000 DPI. Sus dos botones principales son ópticos para mejorar la respuesta y su peso es de tan solo 74g a pesar de tener una batería que dura bastante incluso con iluminación.",
-    "imagen": "razerviper.jpg",
-    "categoria": ""
-},{
-    "id": 31,
-    "nombre": "Gabinete Nox Hummer MC",
-    "precio": 44100,
-    "descuento": 0,
-    "categoriaProducto": "gabinete",
-    "descripcion": "Este chasis solo flojea en una cosa, y es que su ventana lateral es acrílica por lo que no tenemos cristal templado, así que cuidadito con los arañazos. Cuenta con iluminación LED de 7 colores en todo su frontal y en la zona interior. En su panel I/O tenemos dos botones para el control de velocidad de los ventiladores, de los cuales tenemos dos preinstalados de 120 mm.",
-    "imagen": "noxhummer.jpg",
-    "categoria": ""
-},{
-    "id": 32,
-    "nombre": "Gabinete Thermaltake Core V1",
-    "precio": 44100,
-    "descuento": 0,
-    "categoriaProducto": "gabinete",
-    "descripcion": "Como ves es un chasis de pequeñísimas dimensiones capaz de albergar mucho en su interior. Dispone de dos cámaras para separar cableado y componentes con un diseño muy particular pero muy personalizable. Tiene dos paneles intercambiables para elegir que queremos ver.",
-    "imagen": "thermaltake.jpg",
-    "categoria": ""
-},{
-    "id": 33,
-    "nombre": "Gabinete Antec P7",
-    "precio": 44100,
-    "descuento": 0,
-    "categoriaProducto": "gabinete",
-    "descripcion": "Ya nos gustó bastante la Antec P6 hasta el punto de recomendarla, y ahora no podemos dejar atrás esta nueva iteración con un aspectos mejorado, mucho más actual, refinado y con un frontal sobrio y muy elegante. Incluye una ventana de cristal templado ahumado, frontal completamente y un panel de puertos bastante original.",
-    "imagen": "antecp7.jpg",
-    "categoria": ""
-},{
-    "id": 34,
-    "nombre": "Monitor ViewSonic VA2719-SH",
-    "precio": 44100,
-    "descuento": 0,
-    "categoriaProducto": "monitor",
-    "descripcion": "Otro monitor bastante interesante es este que nos propone ViewSonic con un increíble precio para tener un panel IPS con tecnología Super Clear entregando 300 nits de brillo máximo. Incluye por supuesto tecnología Flicker Free, aunque no FreeSync, que sería ya una ventaja por este bajo coste.",
-    "imagen": "va2719.jpg",
-    "categoria": ""
-},{
-    "id": 35,
-    "nombre": "Monitor ASUS VZ279HE-W",
-    "precio": 44100,
-    "descuento": 0,
-    "categoriaProducto": "monitor",
-    "descripcion": "Este monitor ya lleva unas cuantas actualizaciones en su haber para estar siempre a la última en prestaciones y certificaciones de calidad pese a ser uno de los más económicos de la lista. Actualmente el mínimo que podemos pedir para un equipo que se precie es una pantalla de 27 pulgadas como esta, y además con marcos ultra delgados y un grosor de solamente 7 mm.",
-    "imagen": "vz279hew.jpg",
-    "categoria": ""
-},{
-    "id": 36,
-    "nombre": "Monitor HP 27fwa",
-    "precio": 44100,
-    "descuento": 0,
-    "categoriaProducto": "monitor",
-    "descripcion": "El siguiente monitor que vemos también es considerado de los básicos, estando en torno a los 200 euros con un panel de tipo IPS con 27 pulgadas. Al igual que el anterior, sus marcos se han reducido lo máximo posible hasta solo tener uno inferior físico.",
-    "imagen": "hp27fwa.jpg",
-    "categoria": ""
-}]
+[
+    {
+        "id": 1,
+        "nombre": "Mouse Corsair HARPOON",
+        "precio": 9400,
+        "descuento": 0,
+        "categoriaProducto": "mouse",
+        "descripcion": "El mejor aliado para lo que necesites. Usá tu Corsair Harpoon RGB Gaming en la oficina, en tu casa o donde quieras y navegá en tus dispositivos sin límites.\nEl mouse de juego te ofrecerá la posibilidad de marcar la diferencia y sacar ventajas en tus partidas. Su conectividad y sensor suave ayudará a que te desplaces rápido por la pantalla. Además, su sistema de detección de movimiento óptico te permitirá mover el cursor de una manera más precisa y sensible que en los sistemas tradicionales. Con sus 6 botones podrás tener mayor control e independencia para ejecutar.",
+        "imagen": "mouseCorsair.jpg",
+        "categoria": "mas-vendido"
+    },
+    {
+        "id": 2,
+        "nombre": "Mouse Razer Naga Trinity",
+        "precio": 12600,
+        "descuento": 0,
+        "categoriaProducto": "mouse",
+        "descripcion": "El nuevo mouse para juegos Razer Naga Trinity se postula como el más versátil del mercado, gracias al uso de tres laterales intercambiables que proporcionan diferentes botoneras y con distintas disposiciones, de manera que el usuario podrá poner y quitar la que quiera dependiendo del uso que vaya a darle cada momento.",
+        "imagen": "mouseRazer.jpg",
+        "categoria": "mejor-producto"
+    },
+    {
+        "id": 3,
+        "nombre": "Mouse Logitech G502 Proteus Spectrum",
+        "precio": 8200,
+        "descuento": 20,
+        "categoriaProducto": "mouse",
+        "descripcion": "Obtén la máxima precisión de seguimiento de nuestro sensor óptico con mejor capacidad de respuesta (PMW3366). La exclusiva tecnología de sensor óptico Logitech G Delta Zero™ minimiza la aceleración del ratón y aumenta la fiabilidad al apuntar. Cambia sobre la marcha el valor de dpi con cinco valores a elegir: de 200 a 12.000 dpi.",
+        "imagen": "mouseLogitech.jpg",
+        "categoria": "oferta"
+    },
+    {
+        "id": 4,
+        "nombre": "Teclado Razer Blackwidow Elite",
+        "precio": 22000,
+        "descuento": 0,
+        "categoriaProducto": "teclado",
+        "descripcion": "Si deseas un teclado gaming, el Razer BlackWidow siempre ha sido una de las mejores opciones, y a partir de ahora o será más aún gracias a la llegada del nuevo Razer BlackWidow Elite, el cual quiere hacer aún más grande la leyenda de la marca californiana. Veamos todos los secretos que esconde esta nueva genialidad.",
+        "imagen": "tecladoRazer.jpg",
+        "categoria": "mas-vendido"
+    },
+    {
+        "id": 5,
+        "nombre": "Teclado Logitech G513",
+        "precio": 17200,
+        "descuento": 30,
+        "categoriaProducto": "teclado",
+        "descripcion": "Logitech G513 es uno de los mejores teclados mecánicos que podemos encontrar en el mercado, se trata de un modelo equipado con los avanzados switches Romer-G, que se han diseñado de forma específica para los videojuegos, o los nuevos GX Blue.",
+        "imagen": "tecladoLogitech.jpg",
+        "categoria": "oferta"
+    },
+    {
+        "id": 6,
+        "nombre": "Teclado Corsair K95 RGB Platinum",
+        "precio": 28000,
+        "descuento": 0,
+        "categoriaProducto": "teclado",
+        "descripcion": "¡Cómo nos gusta probar teclados! ¡Y más cuando son exclusivas! Hemos recibido el Corsair K95 RGB Platinum uno de los mejores teclados del mercado. Con un diseño renovado, con interruptores Cherry MX RGB Speed y una calidad de construcción impecable. ¿Quieres saber más? ¡No te pierdas nuestro análisis!",
+        "imagen": "tecladoCorsair.jpg",
+        "categoria": "mejor-producto"
+    },
+    {
+        "id": 7,
+        "nombre": "ASUS CERBERUS- GTX – 1050TI – O4G",
+        "precio": 23500,
+        "descuento": 0,
+        "categoriaProducto": "grafica",
+        "descripcion": "Diseñada para ofrecer un alto rendimiento y poder jugar sin descanso. Olvídate de sobre calentamientos. Lleva incorporado un procesador gráfico GeForce GTX 1050 Ti con una frecuencia de 1366 MHz.",
+        "imagen": "Asus.jpg",
+        "categoria": "mas-vendido"
+    },
+    {
+        "id": 8,
+        "nombre": "MSI V809-2000R NVIDIA GeForce GT 710 2GB",
+        "precio": 10000,
+        "descuento": 10,
+        "categoriaProducto": "grafica",
+        "descripcion": "Esta MSI V809 externa de 200 gramos familia de la marca NVIDIA, ha sido especialmente pensada para revivir un equipo antiguo y darle unos años más de vida.",
+        "imagen": "msi.jpg",
+        "categoria": "oferta"
+    },
+    {
+        "id": 9,
+        "nombre": "Gigabyte GV-RX580 – GAMING-8GD",
+        "precio": 35000,
+        "descuento": 0,
+        "categoriaProducto": "grafica",
+        "descripcion": "Esta Gigabyte GV-RX580 pertenece a la familia de los procesadores gráficos AMD. En concreto, el procesador gráfico que lleva integrado es el Radeon RX 580 de una frecuencia de 1355 MHz, pudiendo obtener una máxima resolución de 7680 x 4320 pixeles.",
+        "imagen": "Gygabite.jpg",
+        "categoria": "mejor-producto"
+    },
+    {
+        "id": 10,
+        "nombre": "Procesador Ryzen 9 3900x",
+        "precio": 56800,
+        "descuento": 0,
+        "categoriaProducto": "procesador",
+        "descripcion": "El mejor procesador del momento es el Ryzen 9 3900X, que está más orientado a prosumidores y gente que tenga el dinero para gastarse en obtener el mejor procesador para una plataforma generalista para juegos. Sus doce núcleos con multihilo son estupendos para tareas de codificación de vídeo mientras se juega, para renderizado y todo tipo de tareas profesionales.",
+        "imagen": "ryzen93900x.jpg",
+        "categoria": ""
+    },
+    {
+        "id": 11,
+        "nombre": "Procesador Core i7-10700k",
+        "precio": 44400,
+        "descuento": 0,
+        "categoriaProducto": "procesador",
+        "descripcion": "Productividad y entretenimiento, todo disponible en computadoras de escritorio. La superioridad tecnológica de Intel es un beneficio para todo tipo de profesionales. Asegura el mejor rendimiento de las aplicaciones, de la transferencia de datos y la conexión con otros elementos tecnológicos.",
+        "imagen": "corei710700k.jpg",
+        "categoria": ""
+    },
+    {
+        "id": 12,
+        "nombre": "Procesador Ryzen 7 3700x",
+        "precio": 44100,
+        "descuento": 0,
+        "categoriaProducto": "procesador",
+        "descripcion": "Clave en el rendimiento de computadoras de escritorio, ya no tenés que pensar en cómo distribuir el tiempo y acciones: ahora todas las tareas en simultáneo son posibles. AMD cuenta con un catálogo de productos que se adaptan a los requerimientos de todo tipo de usuarios: juegos en línea, edición a gran escala, contenido en múltiples plataformas y más.",
+        "imagen": "ryzen73700x.jpg",
+        "categoria": ""
+    },
+    {
+        "id": 13,
+        "nombre": "Disco Seagate Barracuda",
+        "precio": 44100,
+        "descuento": 0,
+        "categoriaProducto": "disco",
+        "descripcion": "Almacene más, realice procesos computacionales más rápido y trabaje con mayor confianza gracias a la fiabilidad que proporcionan las unidades de disco duro internas BarraCuda",
+        "imagen": "seagatebarracuda.jpg",
+        "categoria": ""
+    },
+    {
+        "id": 14,
+        "nombre": "Disco Western Digital Blue",
+        "precio": 44100,
+        "descuento": 0,
+        "categoriaProducto": "disco",
+        "descripcion": "Los discos WD Blue proporcionan rendimiento, fiabilidad y capacidad, lo que los convierte en una excelente solución para los usuarios del día a día",
+        "imagen": "westerndigital.jpg",
+        "categoria": ""
+    },
+    {
+        "id": 15,
+        "nombre": "Disco Seagate FireCuda",
+        "precio": 44100,
+        "descuento": 0,
+        "categoriaProducto": "disco",
+        "descripcion": "Almacene videojuegos y juegue con ellos más rápidamente con una unidad SSHD interna que ofrece la capacidad de una unidad HDD y el rendimiento de una unidad SSD",
+        "imagen": "seagatefirecuda.jpg",
+        "categoria": ""
+    },
+    {
+        "id": 16,
+        "nombre": "Fuente NOX NX 750W",
+        "precio": 44100,
+        "descuento": 0,
+        "categoriaProducto": "fuente",
+        "descripcion": "Una fuente que, al igual que las demás pertenecientes a la NX Series, convierte el poder más extremo en un flujo de energía estable gracias, entre otras cosas, a su PFC activo.",
+        "imagen": "NOXNX750W.jpg",
+        "categoria": ""
+    },
+    {
+        "id": 17,
+        "nombre": "Fuente EVGA SuperNOVA 80 Plus Gold",
+        "precio": 44100,
+        "descuento": 0,
+        "categoriaProducto": "fuente",
+        "descripcion": "El poder de la EVGA SuperNOVA 750 G3, basada en la serie G2 ganadoras de premios fuentes de alimentación de EVGA, esta fuente de alimentación cuenta con 80 Plus Gold eficiencia nominal, y la energía limpia y continua de todos los componentes.",
+        "imagen": "evgasupernova.jpeg",
+        "categoria": ""
+    },
+    {
+        "id": 18,
+        "nombre": "Fuente Corsair VS650",
+        "precio": 44100,
+        "descuento": 0,
+        "categoriaProducto": "fuente",
+        "descripcion": "La fuente de alimentación CORSAIR VS650 es una gran elección si está montando un sistema doméstico o de oficina menos exigente, pero necesita la compatibilidad y la fiabilidad que han hecho célebres a CORSAIR.",
+        "imagen": "corsairvs650.png",
+        "categoria": ""
+    },
+    {
+        "id": 19,
+        "nombre": "Memoria Corsair Vengeance RGB Pro LED 16GB 3,200MHz",
+        "precio": 44100,
+        "descuento": 0,
+        "categoriaProducto": "memoria",
+        "descripcion": "Los kits de memoria Vengeance RGB Pro LED de Corsair son un punto medio perfecto entre su línea Platinum más visualmente impresionante y la gama LPX más discreta. Al igual que esos kits, ofrece un rendimiento fantástico y hay muchas opciones para elegir.",
+        "imagen": "corsairvengeance.jpeg",
+        "categoria": ""
+    },
+    {
+        "id": 20,
+        "nombre": "Memoria G.Skill TridentZ RGB 16GB 3,200MHz",
+        "precio": 44100,
+        "descuento": 0,
+        "categoriaProducto": "memoria",
+        "descripcion": "G.Skill fabrica excelentes productos de memoria y su línea TridentZ cubre toda la gama, desde la hermosa gama Royal con incrustaciones de joyas hasta las series de juegos más optimizadas.",
+        "imagen": "gskill.jpeg",
+        "categoria": ""
+    },
+    {
+        "id": 21,
+        "nombre": "Memoria Patriot Viper Elite 8GB 2,666MHz",
+        "precio": 44100,
+        "descuento": 0,
+        "categoriaProducto": "memoria",
+        "descripcion": "Viper Elite te ofrece un rendimiento DDR4 de nivel básico en un kit muy asequible. Por ser solo una tarjeta deja espacio para una actualización económica a 16 GB en el futuro.",
+        "imagen": "viperelite.jpeg",
+        "categoria": ""
+    },
+    {
+        "id": 22,
+        "nombre": "Motherboard ASRock B550 Phantom Gaming Velocita",
+        "precio": 44100,
+        "descuento": 0,
+        "categoriaProducto": "motherboard",
+        "descripcion": "Esta placa de ASRock puede ser la más polivalente que presenta el fabricante para este chipset de gama media. Nos propone una placa con un elegante diseño gaming propio de una gama alta también con características bastante similares a una X570. Será gran opción para aquellos que no puedan permitirse la serie PG con X570 pero quieran si espectacular diseño.",
+        "imagen": "asrockb550.jpg",
+        "categoria": ""
+    },
+    {
+        "id": 23,
+        "nombre": "Motherboard B550I AORUS PRO AX",
+        "precio": 44100,
+        "descuento": 0,
+        "categoriaProducto": "motherboard",
+        "descripcion": "Esta pequeña maravilla de AORUS cuenta con potencia suficiente para albergar las CPU más potentes de AMD gracias a un VRM de 8 fases a 90A con MOSFETS que equipa la AORUS Master, por ejemplo. Tampoco se ha descuidado la conectividad, ya que cuenta con doble ranura M.2, la ranura de expansión x16 con refuerzo de acero y dos buenos puertos de vídeo integrados para una posible APU Ryzen 4000G. Y nunca debe faltar conexión Wi-Fi 6 integrada, LAN 2,5G y tarjeta de sonido ALC1220 de gama alta.",
+        "imagen": "aorusb550.jpg",
+        "categoria": ""
+    },
+    {
+        "id": 24,
+        "nombre": "Motherboard MSI MPG B550 Gaming Carbon Wi-Fi",
+        "precio": 44100,
+        "descuento": 0,
+        "categoriaProducto": "motherboard",
+        "descripcion": "Una de las placas que mayor velocidad de memorias RAM soporta en esta plataforma B550 llegando hasta los 5100 MHz gracias a DDR4 BOOST. La Gaming Carbon Wi-Fi es otra placa clásica en la lista de los gamers, al unir una brutal estética, altas prestaciones sin faltarle un detalle, y un precio algo por debajo de la competencia, por ejemplo, la ROG Strix Gaming-E de Asus.",
+        "imagen": "msib550.jpg",
+        "categoria": ""
+    },
+    {
+        "id": 25,
+        "nombre": "Auricular Logitech G432 Gaming Surround",
+        "precio": 44100,
+        "descuento": 0,
+        "categoriaProducto": "auricular",
+        "descripcion": "Uno de los auriculares baratos más vendidos desde hace bastante es el Logitech G430, pero el modelo se ha actualizado ligeramente tanto en diseño como en prestaciones. Todavía sigue siendo un headset de tipo alámbrico totalmente compatible con PC y consola, ya que cuenta con entrada Jack 3,5 mm y adaptador USB con DAC gestionable desde software Gaming G HUB.",
+        "imagen": "logitechg432.jpg",
+        "categoria": ""
+    },
+    {
+        "id": 26,
+        "nombre": "Auricular Giants Gear H60",
+        "precio": 44100,
+        "descuento": 0,
+        "categoriaProducto": "auricular",
+        "descripcion": "No podía faltar la presencia de unos auriculares estéreo con drivers de 53 mm que aportan un sonido sorprendentemente bueno, claro y muy detallado. Su liviano peso y el diseño circumaural con diadema en doble puente, los hacen aptos para prácticamente cualquier usuario. Son realmente cómodos, tal y como demostraron en nuestro análisis que dejaremos más abajo.",
+        "imagen": "giantsgear.jpg",
+        "categoria": ""
+    },
+    {
+        "id": 27,
+        "nombre": "Auricular Corsair HS35",
+        "precio": 44100,
+        "descuento": 0,
+        "categoriaProducto": "auricular",
+        "descripcion": "Este headset es uno de los más económicos del fabricante, y aunque no es un portento en lo que a diseño se refiere, tenemos una muy buena calidad de sonido y conexión Jack para ofrecer compatibilidad prácticamente con cualquier plataforma.",
+        "imagen": "corsairhs35.jpg",
+        "categoria": ""
+    },
+    {
+        "id": 28,
+        "nombre": "Mouse Corsair NIGHTSWORD RGB",
+        "precio": 44100,
+        "descuento": 0,
+        "categoriaProducto": "mouse",
+        "descripcion": "Podemos decir sin lugar a duda que este es sustituto natural del Dark Core RGB, con un diseño bastante similar muy ergonómico y con el mejor sensor óptico de Pixart, el PMW 3391 de 18.000 DPI. Se hace ideal para juegos tipo MOBA/MMO debido a la gran cantidad botones que tiene, pero también a Shutter, por incorporar un botón Sniper. Todos ellos son personalizables mediante iCUE junto a su iluminación, y ofrece la posibilidad de modificar su peso. De los mejores de Corsair este año.",
+        "imagen": "corsairnightsword.jpg",
+        "categoria": ""
+    },
+    {
+        "id": 29,
+        "nombre": "Mouse Logitech G502 LightSpeed",
+        "precio": 44100,
+        "descuento": 0,
+        "categoriaProducto": "mouse",
+        "descripcion": "Otro de los ratones más trabajados en cuanto a diseño es también firma de Logitech, el aclamado G502 ha vuelto después de 5 largos años para llegar a otro nivel a experiencia gaming. Ahora tenemos un potente sensor óptico HERO 16K de 16.000 DPI en un ratón inalámbrico que funciona en la frecuencia de 2,4 GHz sin lag y de gran autonomía. Es más con solo 5 minuto de carga podemos usarlo durante 2 horas. A esto lo unimos la posibilidad de añadir o quitar peso y el incluir una tira RGB con mando.",
+        "imagen": "logitechg502.jpg",
+        "categoria": ""
+    },
+    {
+        "id": 30,
+        "nombre": "Mouse Razer Viper Ultimate",
+        "precio": 44100,
+        "descuento": 0,
+        "categoriaProducto": "mouse",
+        "descripcion": "Después del Mamba, el Viper sea el ratón más emblemático de Razer, y ahora viene con una versión inalámbrica de latencia cero para dejar claro que son la mejor opción para jugar. Este ratón es ambidiestro, y monta el sensor óptico Razer Focus+, con un rango personalizable de entre 100 y 20.000 DPI. Sus dos botones principales son ópticos para mejorar la respuesta y su peso es de tan solo 74g a pesar de tener una batería que dura bastante incluso con iluminación.",
+        "imagen": "razerviper.jpg",
+        "categoria": ""
+    },
+    {
+        "id": 31,
+        "nombre": "Gabinete Nox Hummer MC",
+        "precio": 44100,
+        "descuento": 0,
+        "categoriaProducto": "gabinete",
+        "descripcion": "Este chasis solo flojea en una cosa, y es que su ventana lateral es acrílica por lo que no tenemos cristal templado, así que cuidadito con los arañazos. Cuenta con iluminación LED de 7 colores en todo su frontal y en la zona interior. En su panel I/O tenemos dos botones para el control de velocidad de los ventiladores, de los cuales tenemos dos preinstalados de 120 mm.",
+        "imagen": "noxhummer.jpg",
+        "categoria": ""
+    },
+    {
+        "id": 32,
+        "nombre": "Gabinete Thermaltake Core V1",
+        "precio": 44100,
+        "descuento": 0,
+        "categoriaProducto": "gabinete",
+        "descripcion": "Como ves es un chasis de pequeñísimas dimensiones capaz de albergar mucho en su interior. Dispone de dos cámaras para separar cableado y componentes con un diseño muy particular pero muy personalizable. Tiene dos paneles intercambiables para elegir que queremos ver.",
+        "imagen": "thermaltake.jpg",
+        "categoria": ""
+    },
+    {
+        "id": 33,
+        "nombre": "Gabinete Antec P7",
+        "precio": 44100,
+        "descuento": 0,
+        "categoriaProducto": "gabinete",
+        "descripcion": "Ya nos gustó bastante la Antec P6 hasta el punto de recomendarla, y ahora no podemos dejar atrás esta nueva iteración con un aspectos mejorado, mucho más actual, refinado y con un frontal sobrio y muy elegante. Incluye una ventana de cristal templado ahumado, frontal completamente y un panel de puertos bastante original.",
+        "imagen": "antecp7.jpg",
+        "categoria": ""
+    },
+    {
+        "id": 34,
+        "nombre": "Monitor ViewSonic VA2719-SH",
+        "precio": 44100,
+        "descuento": 0,
+        "categoriaProducto": "monitor",
+        "descripcion": "Otro monitor bastante interesante es este que nos propone ViewSonic con un increíble precio para tener un panel IPS con tecnología Super Clear entregando 300 nits de brillo máximo. Incluye por supuesto tecnología Flicker Free, aunque no FreeSync, que sería ya una ventaja por este bajo coste.",
+        "imagen": "va2719.jpg",
+        "categoria": ""
+    },
+    {
+        "id": 35,
+        "nombre": "Monitor ASUS VZ279HE-W",
+        "precio": 44100,
+        "descuento": 0,
+        "categoriaProducto": "monitor",
+        "descripcion": "Este monitor ya lleva unas cuantas actualizaciones en su haber para estar siempre a la última en prestaciones y certificaciones de calidad pese a ser uno de los más económicos de la lista. Actualmente el mínimo que podemos pedir para un equipo que se precie es una pantalla de 27 pulgadas como esta, y además con marcos ultra delgados y un grosor de solamente 7 mm.",
+        "imagen": "vz279hew.jpg",
+        "categoria": ""
+    },
+    {
+        "id": 36,
+        "nombre": "Monitor HP 27fwa",
+        "precio": 44100,
+        "descuento": 0,
+        "categoriaProducto": "monitor",
+        "descripcion": "El siguiente monitor que vemos también es considerado de los básicos, estando en torno a los 200 euros con un panel de tipo IPS con 27 pulgadas. Al igual que el anterior, sus marcos se han reducido lo máximo posible hasta solo tener uno inferior físico.",
+        "imagen": "hp27fwa.jpg",
+        "categoria": ""
+    }
+]
