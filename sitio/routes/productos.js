@@ -9,6 +9,7 @@ router.get('/', controller.listar);
 router.get('/buscar',controller.buscar)
 
 router.get('/cargaProducto', controller.cargaProducto);
+router.post('/cargaProducto',controller.publicarProducto);
 
 router.get('/detalleProducto',controller.detalleProducto);
 

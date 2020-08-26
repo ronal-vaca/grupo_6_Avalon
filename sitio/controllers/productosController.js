@@ -43,5 +43,26 @@ module.exports={
             catProducto:catProducto,
             dbProducto:dbProducto
         })
+    },
+    publicarProducto: function(req,res){
+        let lastID = 1;
+
+        dbProducto.forEach(producto=>{
+            if(producto.id > lastID){
+                lastID = producto.id
+            }
+        })
+        let nuevoProducto={
+            id: lastID + 1,
+            nombre: req.body.nombre.trim(),
+            precio: Number(req.body.precio),
+            descuento: Number(req.body.descuento),
+            categoriaProducto: req.body.catergoria,
+            descripcion:req.body.descripcion
+        };
+        dbProducto.push(nuevoProducto);
+        fs.writeFileSync(path.join(__dirname,"..",'data',"productosDataBase.json"),JSON.stringify(dbProducto),'utf-8');
+        res.redirect('/productos');
+
     }
 }

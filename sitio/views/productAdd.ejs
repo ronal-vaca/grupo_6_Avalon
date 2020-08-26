@@ -21,9 +21,7 @@
           <div class="col-7">
             <h1 class="productosArticulo ">Articulo en venta</h1>
           </div>
-          <div class="col-5">
-            <button type="button" class="btn btn-dark btn-lg">Guardar</button>
-          </div>
+         
         </div>
         <!-- comienzo de la segunda linea -->
 
@@ -40,58 +38,49 @@
         </div>
         <!-- comienzo de la tercera linea -->
         <div class="row productosTerceraRow">
-          <form class="col-12">
+          <form class="col-12" method="POST" action="/cargaProducto">
             <div class="col-12 productosSpan">
               <span>Fotos- 0/10 - Puedes agregar un maximo de 10 fotos</span>
             </div>
             <div class="form-group productosCajaDeArchivo">
               <label for="exampleFormControlFile1"></label>
-              <input type="file" class="form-control-file productosAgregarFoto" id="exampleFormControlFile1">
+              <input type="file" class="form-control-file productosAgregarFoto" id="exampleFormControlFile1" name="imagen">
             </div>
             <div class="col-12">
               <p class="text-center">Los campos con * son obligatorios.</p>
             </div>
             <div class="col-12 productosMargen">
-              <input type="text" class="form-control is-invalid" placeholder="Titulo*">
+              <input type="text" class="form-control is-invalid" placeholder="Nombre*" name="nombre">
             </div>
             <div class="col-12 productosMargen">
-              <input type="number" class="form-control is-invalid" placeholder="Precio*">
+              <input type="number" class="form-control is-invalid" placeholder="Precio*" name="precio">
+            </div>
+            <div class="col-12 productosMargen">
+              <input type="number" class="form-control is-invalid" placeholder="Descuento" name="descuento">
             </div>
             <div class="col-12 productosMargen">
               <select name="categoria" class="custom-select">
-                <option selected>Categoria</option>
-                <option value="pc">PC</option>
-                <option value="componentes">Componentes</option>
-                <option value="juegos">Juegos</option>
-              </select>
-            </div>
-            <div class="col-12 productosMargen">
-              <select name="estado" class="custom-select">
-                <option selected>Estado</option>
-                <option value="nuevo">Nuevo</option>
-                <option value="usado">Usado</option>
-              </select>
-            </div>
-            <div class="col-12 productosMargen">
-              <select name="marca" class="custom-select">
-                <option selected>Marca</option>
-                <option value="intel">intel</option>
-                <option value="amd">amd</option>
-                <option value="otro">otro</option>
+                <option selected>Categoria de producto</option>
+                <option value="mouse">Mouse</option>
+                <option value="teclado">Teclado</option>
+                <option value="grafica">Grafica</option>
+                <option value="procesador">Procesador</option>
+                <option value="disco">Disco</option>
+                <option value="fuente">Fuente</option>
+                <option value="memoria">Memoria</option>
+                <option value="motherboard">Motherboard</option>
+                <option value="auricular">Auricular</option>
+                <option value="gabinete">Gabinete</option>
+                <option value="monitor">Monitor</option>
               </select>
             </div>
             <div class="col-12 productosMargen h-50">
-              <textarea class="form-control h-100 is-valid" placeholder="Descripcion*" required></textarea>
+              <textarea class="form-control h-100 is-valid" placeholder="Descripcion*" name="descripcion" required></textarea>
             </div>
             <div class="col-12 productosMargen">
-              <input type="text" class="form-control is-valid" placeholder="Ubicacion*">
             </div>
-            <div class="col-12 productosMargen">
-              <select name="disponibilidad" class="custom-select">
-                <option selected>Disponibilidad</option>
-                <option value="unico">articulo unico</option>
-                <option value="stock">articulo en stock</option>
-              </select>
+            <div class="col-5">
+              <button type="submit" class="btn btn-dark btn-lg">Guardar</button>
             </div>
           </form>
 
@@ -102,74 +91,38 @@
 
       <div class="col-lg-8 d-none d-lg-block d-xl-block">
         <div class="container productosContenedorSegundoDiv">
-          <div class="row">
-            <div class="col-12 productosVistaPrev">
-              <p>Vista Previa:</p>
+          <div class="container bigboss">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <img class="imagen-principal img-thumbnail" src="../images/unnamed.png" alt="">
+                </div>
+                <div class="col-12 col-md-6">
+                    <h2>Producto</h2>
+                    <p>codigo:485569</p>
+                    <ul class="iconos">
+                        <i class="vis fab fa-cc-visa"></i>
+                        <i class="master fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                    </ul>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia explicabo quibusdam unde! Labore, perspiciatis. Ab, quisquam temporibus est totam repellat veritatis nemo dolorum, dolores, animi ut nisi maxime dignissimos dolor.</p>
+                    <h3 class="ofertita">OFERTA!</h3>
+                    <button class="comprar">Comprar</button> 
+                    <h2 class="precio">$00.000</h2>
+                    <label>cantidad</label>
+                    <input type="number" value="">
+                    <p>garantia: 36 meses</p>
+                    <button class="carrito-de-compras"><i class="fas fa-cart-plus"></i> Agregar al carrito</button>
+                    <i class="facebook fab fa-facebook-square"></i>
+                    <i class="insta fab fa-instagram-square"></i>
+                    <i class="twit fab fa-twitter-square"></i>
+                </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-6 productosVistaPrevia">
-              <div>
-                <p class="font-weight-bold">Vista previa de tu publicacion</p>
-                <p>A medida que completes tu publicacion, podras ver una vista previa de tu producto en la tienda</p>
-              </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <img class="imagenes float-righ" src="../images/unnamed.png" alt="">
+                    <img class="imagenes float-left" src="../images/unnamed.png" alt="">
+                </div>
             </div>
-            <div class="col-6 margen">
-              <div class="row productosTextos">
-                <div class="col-12 ">
-                  <h3>Titulo</h3>
-                </div>
-              </div>
-              <div class="row productosTextos">
-                <div class="col-12">
-                  <h5>Precio</h5>
-                </div>
-              </div>
-              <div class="row productosTextos">
-                <div class="col-12">
-                  <p>Publicado hace unos segundos en ubicacion</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12 productosBotOn">
-                  <button type="button" class="btn btn-primary w-25"><i class="fas fa-shopping-cart"></i></button>
-                  <button class="btn btn-primary w-25" type="submit"><i class="fas fa-share"> </i> </button>
-                  <button class="btn btn-primary w-25" type="submit"><i class="fas fa-bookmark"></i></button>
-                </div>
-              </div>
-              <div class="row productosTextos">
-                <div class="col-12">
-                  <h5>Detalles</h5>
-                  <p>La descripcion aparecera aqui</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12 ">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105073.26495831858!2d-58.503510519545564!3d-34.615803637657514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20CABA!5e0!3m2!1ses-419!2sar!4v1597170210819!5m2!1ses-419!2sar" width="280" height="150" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                </div>
-              </div>
-              <div class="row productosTextos">
-                <div class="col-12 productosBordee">
-                  <p class="font-weight-bold m-0 ">Buenos Aires</p>
-                  <p>La ubicacion es aproximada</p>
-                </div>
-              </div>
-              <div class="row productosTextos">
-                <div class="col-12 p-0">
-                  <div class="col-12"><p class="m-0">Info del vendedor</p></div>
-                  <div class="col-12 mb-5 mt-2"> <img src="images/usuario.jpg" alt="" width="50px" height="50px" class="rounded-circle p-0"><span class="ml-3 font-weight-bold">Usuario</span> </div>
-                 
-                </div>
-              </div>
-              <div class="row productosTextos productosBordeTo">
-                <div class="col-12">
-                  <p>Envia un mensaje al vendedor</p>
-                  <button type="button" class="btn btn-primary btn-lg btn-block">¿Sigue estando disponible?</button>
-                  <button type="button" class="btn btn-primary btn-lg btn-block">Enviar</button>
-                </div>
-              </div>
-            </div>
-          </div>
 
         </div>
       </div>
