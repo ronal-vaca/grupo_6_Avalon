@@ -1,98 +1,90 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <%- include("./partials/head") %> 
-<body>
-  <%- include("./partials/header") %> 
-  <div class="container">
-    <div class="row">
-      <div class="col-2"></div>
-      <div class="col-8">
-          <div class="card mb-3" style="max-width: 700px; border-width: 2px; margin-top: 20px;">
-            <h3 style="background-color:#900d0d; color:white;">Carrito de compras</h3>
-            <div class="row no-gutters">
-                <h5 class="card-title">Precio $ 1.575</h5> 
-                    <div>
-                        <ul>
-                            <button type="button" class="btn btn-primary">Eliminar del carrito</button>
-                            <div class="btn-group">
-                            <button type="button" class="btn btn-danger">Cantidad</button>
-                            <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="sr-only">Toggle Dropdown</span>
-                            </button>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">1</a>
-                                    <a class="dropdown-item" href="#">2</a>
-                                    <a class="dropdown-item" href="#">3</a>
-                                <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#"></a>
-                                </div>
-                            </div>
-                            <button type="button" class="btn btn-primary">Comprar ahora</button>
-                        </ul>
-                    </div>
-            </div>
-          </div>
-                    <div class="card mb-3" style="max-width: 700px; border-width: 2px;">
-        <div class="row no-gutters">
-          <div class="col-md-4">
-              <img src="/images/imagenProducto/tecladoCorsair.jpg" class="card-img" alt="..." style="max-width: 300px;">
-          </div>
-          <div class="col-md-8">
-              <div class="card-body">
-                  <h5 class="card-title">Teclado gamer Redragon Kumara K552 QWERTY OUTEMU</h5>
-                  <p class="card-text">La gran calidad del Redragon Kumara K552 y su precio económico lo vuelven un atractivo ideal para que te diviertas frente a la pantalla. Su ergonomía, su base antidelizante y su rápido tiempo de respuesta permite que tus juegos favoritos se sientan más cerca que nunca, al alcance de tus manos.
-      
-            Distinción a todo color
-            Su retroiluminación le dá un toque diferente a tu equipo y resalta su composición cuando es utilizado en espacios poco iluminados.</div>
-                  <h5 class="card-title">Precio $ 7.000</h5>
-            <div>
-              <ul>
-                    <button type="button" class="btn btn-primary">Eliminar del carrito</button>
-                <div class="btn-group">
-                    <button type="button" class="btn btn-danger">Cantidad</button>
-                    <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <span class="sr-only">Toggle Dropdown</span>
-                    </button>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">1</a>
-                    <a class="dropdown-item" href="#">2</a>
-                    <a class="dropdown-item" href="#">3</a>
-                  <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#"></a>
-                  </div>
-                </div>
-                    <button type="button" class="btn btn-primary">Comprar ahora</button>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card mb-3" style="max-width: 700px; border-width: 2px;">
-          <div class="row no-gutters">
-            <div class="col-md-12">
-              <div class="card-body">
-                <h5 class="card-title" style="float:right;">Precio Total $ 8.575</h5>     
-              </div>
-            </div>
-          </div>
-      </div>
-      <div class="card mb-3" style="max-width: 700px; border-width: 2px;">
-          <div class="row no-gutters">
-            <div class="col-md-12">
-              <div class="card-body">
-                <button type="button" class="btn btn-primary"><a href="/" style="color: white;">Seguir comprando</a></button>  
-              </div>
-            </div>
-          </div>
-      </div>
+
+<link rel="stylesheet" href="/stylesheets/Uno.css">
+
+<body >
+
+<%- include("./partials/header") %> 
+
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-2"></div>
+
+      <div class="col-8" id="TituloCarro">
+
+        <h1>Carrito de compras</h1>
+
       </div>
 
-      <div class="col-2"></div>
-    </div>
-    
+    <div class="col-2"></div>
+
   </div>
+
 </div>
-    
+
+<% dbProducto.forEach(producto => { %>
+
+  <%let AddProducto = function(id.producto,producto.id) { if (producto.id == idProducto) { %>
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-2"></div>
+
+          <div class="col-4" id="Producto1">
+
+            <img src="/images/imagenProducto/<%- producto.imagen %>" class="card-img"  alt="..." style="max-width: 300px;">
+             
+          </div>
+
+          <div class="col-4" id="Producto1">
+
+          <div class="card-body" id="textoProdCarrito">
+
+            <h1 class="card-title" id="nombreProdCarrito"><%- producto.nombre %> </h1>
+            <p class="card-text" id="descProdCarrito"><%- producto.descripcion %></p>
+            <h1 class="card-title" id="precioProdCarrito">Precio $<%- producto.precio %></h5> 
+                
+          </div>
+        
+        </div>
+
+        <div class="col-2"></div>
+
+      </div>
+
+    </div>
+
+  <% } %>
+  <% } %>
+
+<% }) %>
+
+<!--aca va a estar la suma de los precios de los productos agregados en el carrito -->
+
+<% if (AddProducto = true) { %>
+
+ <div class="container">
+
+    <div class="row">
+
+      <div class="col-2"></div>
+      <div class="col-8"></div>
+      <div class="col-2"></div>
+
+    </div>
+
+  </div>
+
+<% } %>
+
+
 <%- include("./partials/footer") %> 
 </body>
 </html>

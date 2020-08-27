@@ -700,7 +700,24 @@ li{
     height: 200px;
 }
 
+/* CARRITO DE COMPRAS */
 
+#Producto1{
+    border: 1px solid grey;
+}
 
-
-  
+#TituloCarro{
+    border: 1px solid grey;
+    margin-top: 20px;
+    background-color:rgb(250, 45, 28);
+    color:white;
+}
+#nombreProdCarrito{
+    font-size:35px;
+}
+#descProdCarrito{
+    font-size:20px;
+}
+#precioProdCarrito{
+    font-size:25px;
+}
