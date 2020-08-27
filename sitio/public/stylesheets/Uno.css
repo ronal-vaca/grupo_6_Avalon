@@ -58,7 +58,7 @@ PRODUCTOS
     height: 200px;
     overflow: hidden;
 }
-.tarjetaDeProducto .btnComprar{
+.tarjetaDeProducto .margenDeBoton{
     margin-left: 5px;
 }
 
