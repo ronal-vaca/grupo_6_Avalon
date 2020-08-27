@@ -704,11 +704,11 @@ li{
 /* CARRITO DE COMPRAS */
 
 #Producto1{
-    border: 1px solid grey;
+    border: 0.5px solid black;
 }
 
 #TituloCarro{
-    border: 1px solid grey;
+    border: 0.5px solid black;
     margin-top: 20px;
     background-color:rgb(250, 45, 28);
     color:white;
@@ -721,4 +721,11 @@ li{
 }
 #precioProdCarrito{
     font-size:25px;
+}
+#BotonSeguir{
+    border: 0.5px solid black;
+    margin-bottom: 20px;
+}
+#SeguirComprando{
+    color:white;
 }

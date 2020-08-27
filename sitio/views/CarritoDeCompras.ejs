@@ -9,23 +9,27 @@
 
 <%- include("./partials/header") %> 
 
-<div class="container">
+<section>
 
-  <div class="row">
+  <div class="container">
 
-    <div class="col-2"></div>
+    <div class="row">
 
-      <div class="col-8" id="TituloCarro">
+      <div class="col-2"></div>
 
-        <h1>Carrito de compras</h1>
+        <div class="col-8" id="TituloCarro">
 
-      </div>
+          <h1>Carrito de compras</h1>
 
-    <div class="col-2"></div>
+        </div>
+
+      <div class="col-2"></div>
+
+    </div>
 
   </div>
 
-</div>
+</section>
 
 <% dbProducto.forEach(producto => { %>
 
@@ -37,13 +41,13 @@
 
         <div class="col-2"></div>
 
-          <div class="col-4" id="Producto1">
+        <div class="col-4" id="Producto1">
 
             <img src="/images/imagenProducto/<%- producto.imagen %>" class="card-img"  alt="..." style="max-width: 300px;">
              
-          </div>
+        </div>
 
-          <div class="col-4" id="Producto1">
+        <div class="col-4" id="Producto1">
 
           <div class="card-body" id="textoProdCarrito">
 
@@ -61,29 +65,62 @@
 
     </div>
 
+    <div class="container">
+
+      <div class="row">
+    
+        <div class="col-2"></div>
+    
+        <div class="col-8" id="Producto1">
+    
+          <button type="button" class="btn btn-outline-danger"><img src="/images/IconosCarrito/TachoDeBasuraCarri.png" alt="..." style="max-width: 15px;"></button>
+    
+          <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+    
+            <div class="btn-group" role="group">
+    
+              <button id="btnGroupDrop1" type="button" class="btn btn-outline-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cantidad</button>
+    
+                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                  <a class="dropdown-item" href="#">1</a>
+                  <a class="dropdown-item" href="#">2</a>
+                </div>
+    
+            </div>
+    
+          </div>
+    
+          <button type="button" class="btn btn-outline-danger">Comprar ahora</button>
+    
+        </div>
+    
+        <div class="col-2"></div>
+    
+      </div>
+    
+    </div>
+
   <% } %>
 
 <% }) %>
 
-<!--aca va a estar la suma de los precios de los productos agregados en el carrito 
- let AddProducto = function 
+<div class="container">
 
-% if (AddProducto = true) { %
+  <div class="row">
+    
+    <div class="col-2"></div>
 
- <div class="container">
+    <div class="col-8" id="BotonSeguir">
 
-    <div class="row">
-
-      <div class="col-2"></div>
-      <div class="col-8"></div>
-      <div class="col-2"></div>
+      <button type="button" class="btn btn-outline-danger"><a href="/">Seguir comprando</a></button>
 
     </div>
 
-  </div> 
+    <div class="col-2"></div>
 
-% } %-->
+  </div>
 
+</div>
 
 <%- include("./partials/footer") %> 
 </body>
