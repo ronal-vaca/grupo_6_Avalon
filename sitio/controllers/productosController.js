@@ -32,8 +32,11 @@ module.exports={
         });
     },
     carrito:function(req, res) {
+        let idProducto = req.params.id;
         res.render('CarritoDeCompras', {
-          title: "Carrito de compras"
+          title: "Carrito de compras",
+          dbProducto:dbProducto,
+          idProducto:idProducto
         });
     },
     catProducto:function(req,res){
