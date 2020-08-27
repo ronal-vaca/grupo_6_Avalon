@@ -57,7 +57,7 @@ module.exports={
             nombre: req.body.nombre.trim(),
             precio: Number(req.body.precio),
             descuento: Number(req.body.descuento),
-            categoriaProducto: req.body.catergoria,
+            categoriaProducto: req.body.categoriaProducto,
             descripcion:req.body.descripcion,
             imagen: (req.files[0])?req.files[0].filename:"productoMuestra.png"
         };
