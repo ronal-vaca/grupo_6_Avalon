@@ -358,6 +358,13 @@
         "descripcion": "El siguiente monitor que vemos también es considerado de los básicos, estando en torno a los 200 euros con un panel de tipo IPS con 27 pulgadas. Al igual que el anterior, sus marcos se han reducido lo máximo posible hasta solo tener uno inferior físico.",
         "imagen": "hp27fwa.jpg",
         "categoria": ""
+    },
+    {
+        "id": 37,
+        "nombre": "Teclado gamer Redragon Kumara K552",
+        "precio": 6500,
+        "descuento": 564654,
+        "descripcion": "65465465465465",
+        "imagen": "imagen1598480359526.jpg"
     }
-
 ]

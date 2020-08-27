@@ -16,19 +16,32 @@
         <!-- comienzo primera linea -->
         <div class="row  productosPrimeraRow">
           <div class="col-12 ">
-            <b class="productosB">Publica en avalon!</b>
+            <b class="productosB">Marketplace</b>
           </div>
-          <div class="col-12 mb-0">
-            <h1 class="productosArticulo font-weight-bold mt-2 ">Carga de producto</h1>
+          <div class="col-7">
+            <h1 class="productosArticulo ">Articulo en venta</h1>
           </div>
+         
         </div>
         <!-- comienzo de la segunda linea -->
 
+        <div class="row productosSegundaRow">
+          <div class="col-1 productosImagenUsuario">
+            <img src="/images/usuario.jpg" alt="" width="50px" height="50px" class="rounded-circle m-1">
+          </div>
+          <div class="col-11 ">
+            <p class="productosPe1">Nombre de usuario </p>
+            <p class="productosPe2">Publicacion en market. <i class="fas fa-globe-americas"></i> Publico</p>
+          </div>
+
+
+        </div>
         <!-- comienzo de la tercera linea -->
         <div class="row productosTerceraRow">
           <form class="col-12" method="POST" action="./cargaProducto" enctype="multipart/form-data">
             <div class="col-12 productosSpan mb-2">
               <span>Fotos- 0/10 - Puedes agregar un maximo de 10 fotos</span>
+              <h1>TITULO</h1>
             </div>
             <div class="form-group productosCajaDeArchivo">
               <label for="exampleFormControlFile1"></label>
@@ -67,8 +80,8 @@
             </div>
             <div class="col-12 productosMargen">
             </div>
-            <div class="col-12">
-              <button type="submit" class="btn btn-dark btn-lg btn-block">Guardar</button>
+            <div class="col-5">
+              <button type="submit" class="btn btn-dark btn-lg">Guardar</button>
             </div>
           </form>
 

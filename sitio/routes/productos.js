@@ -25,7 +25,8 @@ router.post('/cargaProducto',upload.any(),controller.publicarProducto);
 
 router.get('/detalleProducto',controller.detalleProducto);
 
-router.get('/carrito', controller.carrito);
+router.get('/carrito/:id', controller.carrito);
 
 router.get('/:catProducto', controller.catProducto);
+
 module.exports = router;
