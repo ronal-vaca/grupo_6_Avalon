@@ -467,6 +467,7 @@ li{
     flex-direction: row;
     align-items: flex-start;
     padding: 5%;
+    padding-bottom: 0%;
    
   }
   .productosArticulo{
@@ -576,12 +577,12 @@ li{
   
   @media(min-width:375px){
     .productosContenedorSection{
-      margin-bottom: 110%;
+      margin-bottom: 80%;
     }
   }
   @media(min-width:768px){
     .productosContenedorSection{
-      margin-bottom: 50%;
+      margin-bottom: 40%;
     }
     .productosSpan{
       margin-top: 4%;
@@ -595,13 +596,13 @@ li{
   
   @media(min-width:1024px){
     .productosContenedorSection{
-      margin-bottom: 20%;
+      margin-bottom: 10%;
     }
   }
   
   @media(min-width:1440px){
     .productosContenedorSection{
-      margin-bottom: 10%;
+      margin-bottom: 5%;
     }
   }
 
