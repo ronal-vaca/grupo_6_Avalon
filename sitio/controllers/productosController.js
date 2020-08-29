@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path')
-let dbProducto = require('../data/database')
+let dbProducto = require('../data/database');
+const { rawListeners } = require('process');
 
 
 module.exports={
@@ -24,7 +25,7 @@ module.exports={
         })
     },
     cargaProducto:function(req, res) {
-        res.render('productAdd', { title: 'Avalon Productos' });
+        res.render('productAdd', { title: 'Carga de producto' });
     },
     detalleProducto: function(req, res) {
         res.render('detalleProducto', {
