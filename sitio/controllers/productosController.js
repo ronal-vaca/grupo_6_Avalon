@@ -67,5 +67,31 @@ module.exports={
         dbProducto.push(nuevoProducto);
         fs.writeFileSync(path.join(__dirname,"..",'data',"productosDataBase.json"),JSON.stringify(dbProducto),'utf-8');
         res.redirect('/productos');
+    },
+    vistaEditar:function(req,res,next){
+        let idProducto = req.params.id;
+
+        res.render('EditarProducto',{
+            title:"Edicion de producto",
+            idProducto:idProducto,
+            dbProducto:dbProducto
+        })
+
+    },
+    guardarEditar:function(req,res,next){
+        let idProducto = req.params.id;
+        dbProducto.forEach(function(producto){
+            if(producto.id == idProducto){
+                producto.id = Number(idProducto);
+                producto.nombre = req.body.nombre;
+                producto.precio = Number(req.body.precio);
+                producto.descuento = Number(req.body.descuento);
+                producto.categoriaProducto = req.body.categoriaProducto;
+                producto.descripcion = req.body.descripcion;
+                producto.imagen = (req.files[0])?req.files[0].filename:"productoMuestra.png"
+            }
+        })
+        fs.writeFileSync(path.join(__dirname,'..','data','productosDataBase.json'),JSON.stringify(dbProducto),'utf-8')
+        res.redirect('/productos')
     }
 }

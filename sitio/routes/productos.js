@@ -27,6 +27,10 @@ router.get('/detalleProducto',controller.detalleProducto);
 
 router.get('/carrito/:id', controller.carrito);
 
+router.get('/EditarProducto/:id', controller.vistaEditar)
+
+router.put('/EditarProducto/:id', upload.any(),controller.guardarEditar)
+
 router.get('/:catProducto', controller.catProducto);
 
 module.exports = router;
