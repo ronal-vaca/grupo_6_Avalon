@@ -89,7 +89,7 @@ module.exports={
                 producto.descuento = Number(req.body.descuento);
                 producto.categoriaProducto = req.body.categoriaProducto;
                 producto.descripcion = req.body.descripcion;
-                producto.imagen = (req.files[0])?req.files[0].filename:"productoMuestra.png"
+                producto.imagen = (req.files[0]?req.files[0].filename:producto.imagen)
             }
         })
         fs.writeFileSync(path.join(__dirname,'..','data','productosDataBase.json'),JSON.stringify(dbProducto),'utf-8')
