@@ -26,17 +26,16 @@ router.get('/buscar',controller.buscar)
 router.get('/cargaProducto', controller.cargaProducto);
 router.post('/cargaProducto',upload.any(),controller.publicarProducto);
 
-
-
-
-
 /*ruta al detalle del producto */
 router.get('/detalleProducto',controller.detalleProducto);
 
 /*ruta al carrito de compras */
 router.get('/carrito/:id', controller.carrito);
 
-/*ruta del home de la parte de "Nuestros Productos"*/
+router.get('/EditarProducto/:id', controller.vistaEditar)
+
+router.put('/EditarProducto/:id', upload.any(),controller.guardarEditar)
+
 router.get('/:catProducto', controller.catProducto);
 
 module.exports = router;

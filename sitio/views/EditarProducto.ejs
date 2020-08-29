@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('./partials/head') %> 
+
+<link rel="stylesheet" href="/stylesheets/Uno.css">
+
+<body>
+
+    <%- include('./partials/header') %> 
+
+  <!-- Sectiooon -->
+  <section class="container-fluid productosContenedorSection">
+    <div class="row">
+      <div class="col-12 col-lg-4 productosPrimerDiv">
+        <!-- comienzo primera linea -->
+        <div class="row  productosPrimeraRow">
+          <div class="col-12 ">
+            <b class="productosB">Publica en avalon!</b>
+          </div>
+          <div class="col-12 mb-0">
+            <h1 class="productosArticulo font-weight-bold mt-2 ">Edicion de producto</h1>
+          </div>
+        </div>
+
+        <!-- comienzo de la tercera linea -->
+        <div class="row productosTerceraRow">
+            <% dbProducto.forEach(producto => { %>
+            <% if (producto.id == idProducto) { %>
+          <form class="col-12" action="/productos/editProducto/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <div class="col-12 productosSpan mb-2">
+              <span>Fotos- 0/10 - Puedes agregar un maximo de 10 fotos</span>
+            </div>
+            <div class="form-group productosCajaDeArchivo">
+              <label for="exampleFormControlFile1"></label>
+              <input type="file" class="form-control-file productosAgregarFoto" id="exampleFormControlFile1" name="imagen">
+            </div>
+            <div class="col-12">
+              <p class="text-center">Los campos con * son obligatorios.</p>
+            </div>
+            <div class="col-12 productosMargen">
+              <input type="text" class="form-control is-invalid" placeholder="Nombre*" name="nombre" value="<%= producto.nombre %> ">
+            </div>
+            <div class="col-12 productosMargen">
+              <input type="text" class="form-control is-invalid" placeholder="Precio*" name="precio" value="<%= producto.precio %> ">
+            </div>
+            <div class="col-12 productosMargen">
+              <input type="text" class="form-control is-invalid" placeholder="Descuento" name="descuento" value="<%= producto.descuento %> ">
+            </div>
+            <div class="col-12 productosMargen">
+              <select name="categoriaProducto" class="custom-select">
+                <% if (producto.categoriaProducto == "mouse") { %>
+                   <option selected value="mouse">Mouse</option>
+                   <% } else if (producto.categoriaProducto == "teclado") { %>
+                    <option selected value="teclado">Teclado</option>
+                    <% } else if (producto.categoriaProducto == "grafica") { %>
+                    <option selected value="grafica">Grafica</option>
+                    <% } else if (producto.categoriaProducto == "procesador") { %>
+                    <option selected value="procesador">Procesador</option>
+                    <% } else if (producto.categoriaProducto == "disco") { %>
+                    <option selected value="disco">Disco</option>
+                    <% } else if (producto.categoriaProducto == "fuente") { %>
+                    <option selected value="fuente">Fuente</option>
+                    <% } else if (producto.categoriaProducto == "memoria") { %>
+                    <option selected value="memoria">Memoria</option>
+                    <% } else if (producto.categoriaProducto == "motherboard") { %>
+                    <option selected value="motherboard">Motherboard</option>
+                    <% } else if (producto.categoriaProducto == "auricular") { %>
+                    <option selected value="auricular">Auricular</option>
+                    <% } else if (producto.categoriaProducto == "gabinete") { %>
+                    <option selected value="gabinete">Gabinete</option>
+                    <% } else { %>
+                    <option selected value="monitor">Monitor</option>
+                <% } %>
+                <option value="mouse">Mouse</option>
+                <option value="teclado">Teclado</option>
+                <option value="grafica">Grafica</option>
+                <option value="procesador">Procesador</option>
+                <option value="disco">Disco</option>
+                <option value="fuente">Fuente</option>
+                <option value="memoria">Memoria</option>
+                <option value="motherboard">Motherboard</option>
+                <option value="auricular">Auricular</option>
+                <option value="gabinete">Gabinete</option>
+                <option value="monitor">Monitor</option>
+              </select>
+            </div>
+            <div class="col-12 productosMargen h-50">
+              <textarea class="form-control h-100 is-valid" placeholder="Descripcion*" name="descripcion" required><%= producto.descripcion %> </textarea>
+            </div>
+            <div class="row container">
+                <div class="col-6"></div>
+                <div class="col-3">
+                    <a href="/productos" class="btn btn-dark">Cancelar</a>
+                </div>
+                <div class="col-3">
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+            
+          </form>
+          <% } %>
+          <% }) %>
+        </div>
+      </div>
+
+      <!-- segundo Div -->
+
+      <div class="col-lg-8 d-none d-lg-block d-xl-block">
+        <div class="container productosContenedorSegundoDiv">
+          <div class="container bigboss">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <img class="imagen-principal img-thumbnail" src="/images/unnamed.png" alt="">
+                </div>
+                <div class="col-12 col-md-6">
+                    <h2>Producto</h2>
+                    <p>codigo:485569</p>
+                    <ul class="iconos">
+                        <i class="vis fab fa-cc-visa"></i>
+                        <i class="master fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                    </ul>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia explicabo quibusdam unde! Labore, perspiciatis. Ab, quisquam temporibus est totam repellat veritatis nemo dolorum, dolores, animi ut nisi maxime dignissimos dolor.</p>
+                    <h3 class="ofertita">OFERTA!</h3>
+                    <button class="comprar">Comprar</button> 
+                    <h2 class="precio">$00.000</h2>
+                    <label>cantidad</label>
+                    <input type="number" value="">
+                    <p>garantia: 36 meses</p>
+                    <button class="carrito-de-compras"><i class="fas fa-cart-plus"></i> Agregar al carrito</button>
+                    <i class="facebook fab fa-facebook-square"></i>
+                    <i class="insta fab fa-instagram-square"></i>
+                    <i class="twit fab fa-twitter-square"></i>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <img class="imagenes float-righ" src="/images/unnamed.png" alt="">
+                    <img class="imagenes float-left" src="/images/unnamed.png" alt="">
+                </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <%- include('./partials/footer') %> 
+
+
+</body>
+
+</html>
