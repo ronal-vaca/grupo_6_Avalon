@@ -27,7 +27,7 @@
         <div class="row productosTerceraRow">
             <% dbProducto.forEach(producto => { %>
             <% if (producto.id == idProducto) { %>
-          <form class="col-12" action="/productos/editProducto/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+          <form class="col-12" action="/productos/EditarProducto/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
             <div class="col-12 productosSpan mb-2">
               <span>Fotos- 0/10 - Puedes agregar un maximo de 10 fotos</span>
             </div>

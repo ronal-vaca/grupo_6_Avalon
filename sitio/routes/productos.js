@@ -32,8 +32,8 @@ router.get('/detalleProducto',controller.detalleProducto);
 /*ruta al carrito de compras */
 router.get('/carrito/:id', controller.carrito);
 
+/*ruta de edicion de producto */
 router.get('/EditarProducto/:id', controller.vistaEditar)
-
 router.put('/EditarProducto/:id', upload.any(),controller.guardarEditar)
 
 router.get('/:catProducto', controller.catProducto);
