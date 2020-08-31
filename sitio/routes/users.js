@@ -9,6 +9,8 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/iniciarSesion', controller.iniciarSesion);
+
 router.get('/registro', controller.registro);
+router.post('/registro', controller.agregoUsuario);
 
 module.exports = router;

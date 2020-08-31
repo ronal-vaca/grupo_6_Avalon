@@ -8,16 +8,16 @@
     <section class="container cajaFormulario">
         
         <article class="formulario">
-            <form action="POST">
+            <form action="/users/registro" method="POST">
                 <i class="far fa-user icono"></i>
                 <h5>Registro de usuario</h5>
                 <div class="row">
                     <div class="col-1"><i class="fas fa-envelope"></i></div>
-                    <div class="col-11"><input class="form-control" type="text" placeholder="Email"></div>
+                    <div class="col-11"><input class="form-control" type="text" placeholder="Email" name="email"></div>
                 </div>
                 <div class="row">
                     <div class="col-1"><i class="fas fa-lock"></i></i></div>
-                    <div class="col-11"><input class="form-control" type="password" placeholder="Contraseña"></div>
+                    <div class="col-11"><input class="form-control" type="password" placeholder="Contraseña" name="password"></div>
                 </div>
                 <div class="row">
                     <div class="col-1"><i class="fas fa-lock"></i></div>
@@ -29,19 +29,19 @@
                 <h6>Información Personal</h6>
                 <div class="row">
                     <div class="col-1"><i class="fas fa-user"></i></div>
-                    <div class="col-11"><input class="form-control" type="text" placeholder="Nombre"></div>
+                    <div class="col-11"><input class="form-control" type="text" placeholder="Nombre" name="nombre"></div>
                 </div>   
                 <div class="row">
                     <div class="col-1"><i class="fas fa-user"></i></div>
-                    <div class="col-11"><input class="form-control" type="text" placeholder="Apellido"></div>
+                    <div class="col-11"><input class="form-control" type="text" placeholder="Apellido" name="apellido"></div>
                 </div>
                 <div class="row">
                     <div class="col-1"><i class="fas fa-id-card"></i></div>
-                    <div class="col-11"><input class="form-control" type="text" placeholder="DNI"></div>
+                    <div class="col-11"><input class="form-control" type="text" placeholder="DNI" name="DNI"></div>
                 </div> 
                 <div class="row">
                     <div class="col-1"><i class="fas fa-phone-alt"></i></div>
-                    <div class="col-11"><input class="form-control" type="text" placeholder="Telefono"></div>
+                    <div class="col-11"><input class="form-control" type="text" placeholder="Telefono" name="telefono"></div>
                 </div>               
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </form>

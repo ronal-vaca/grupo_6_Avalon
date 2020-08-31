@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "email": "admin@hotmail.com",
+    "password": "administrador",
+    "nombre": "Armando Esteban",
+    "apellido": "Quito",
+    "DNI": 1234578,
+    "telefono": 12345667890
+  }
+]
