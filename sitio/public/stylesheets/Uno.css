@@ -619,7 +619,7 @@ li{
 
 
 
-/* ESTILOS.CSS */
+/* DETALLE DE PRODUCTO.CSS */
 
   .bigboss{
     margin-top: 50px ;
@@ -667,7 +667,7 @@ li{
     bottom: 10px;
     color: blue;
 }
-.insta{
+.instag{
     font-size: 40px;
     margin-top: 10px;
     bottom: 10px;
@@ -678,6 +678,12 @@ li{
     margin-top: 10px;
     bottom: 10px;
     color: deepskyblue;
+}
+.google{
+    font-size: 40px;
+    margin-top: 10px;
+    bottom: 10px;
+    color: black;
 }
 .vis{
     color: blu;
@@ -709,6 +715,9 @@ li{
 .logo{
     width: 200px;
     height: 200px;
+}
+.redesSociales{
+    margin-top: px;
 }
 
 /* CARRITO DE COMPRAS */

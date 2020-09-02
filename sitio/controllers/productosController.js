@@ -28,8 +28,13 @@ module.exports={
         res.render('productAdd', { title: 'Carga de producto' });
     },
     detalleProducto: function(req, res) {
+        let id = req.params.id;
+        let producto = dbProducto.filter(producto=>{
+            return producto.id == id
+        })
         res.render('detalleProducto', {
-          title: "Detalle de producto"
+          title: "Detalle del Producto",
+          producto: producto[0]
         });
     },
     carrito:function(req, res) {

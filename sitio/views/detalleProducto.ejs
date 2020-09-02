@@ -4,30 +4,35 @@
     <link rel="stylesheet" href="../stylesheets/Uno.css">
 <body>
     <%- include('./partials/header') %> 
+
     <div class="container bigboss">
         <div class="row">
             <div class="col-12 col-md-6">
-                <img class="imagen-principal img-thumbnail" src="../images/unnamed.png" alt="">
+                <img class="imagen-principal img-thumbnail" src="/images/imagenProducto/<%= producto.imagen%>" class="img-fluid" alt="">
             </div>
             <div class="col-12 col-md-6">
-                <h2>Producto</h2>
-                <p>codigo:485569</p>
+                <h2><%= producto.nombre %> </h2>
+                <p>codigo: <%= producto.id %> </p>
                 <ul class="iconos">
                     <i class="vis fab fa-cc-visa"></i>
                     <i class="master fab fa-cc-mastercard"></i>
                     <i class="fab fa-cc-amex"></i>
                 </ul>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia explicabo quibusdam unde! Labore, perspiciatis. Ab, quisquam temporibus est totam repellat veritatis nemo dolorum, dolores, animi ut nisi maxime dignissimos dolor.</p>
-                <h3 class="ofertita">OFERTA!</h3>
+                <p><%= producto.descripcion %> </p>
+                <h3 class="ofertita"><%= producto.descuento %>% de descuento</h3>
                 <button class="comprar">Comprar</button> 
-                <h2 class="precio">$00.000</h2>
+                <h2 class="precio">$<%= producto.precio %> </h2>
                 <label>cantidad</label>
                 <input type="number" value="">
-                <p>garantia: 36 meses</p>
-                <button class="carrito-de-compras"><i class="fas fa-cart-plus"></i> Agregar al carrito</button>
-                <i class="facebook fab fa-facebook-square"></i>
-                <i class="insta fab fa-instagram-square"></i>
-                <i class="twit fab fa-twitter-square"></i>
+                <p>garantia: 12 meses</p>
+                <button class="carrito-de-compras"><i class="fas fa-cart-plus"></i>Agregar al carrito</button>
+                <section class="redesSociales">
+                  <i class="facebook fab fa-facebook-square"></i>
+                  <i class="twit fab fa-twitter-square"></i>
+                  <i class="google fab fa-google-plus-square"></i>
+                  <i class="instag fab fa-instagram-square"></i>
+                </section>
+                
             </div>
         </div>
         <div class="row">

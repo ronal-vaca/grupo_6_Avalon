@@ -27,7 +27,7 @@ router.get('/cargaProducto', controller.cargaProducto);
 router.post('/cargaProducto',upload.any(),controller.publicarProducto);
 
 /*ruta al detalle del producto */
-router.get('/detalleProducto',controller.detalleProducto);
+router.get('/detalleProducto/:id',controller.detalleProducto);
 
 /*ruta al carrito de compras */
 router.get('/carrito/:id', controller.carrito);
