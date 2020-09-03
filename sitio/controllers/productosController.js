@@ -99,5 +99,17 @@ module.exports={
         })
         fs.writeFileSync(path.join(__dirname,'..','data','productosDataBase.json'),JSON.stringify(dbProducto),'utf-8')
         res.redirect('/productos')
+    },
+    delete: (req,res)=>{
+        let productodelete = req.params.id;
+        let borrar;
+        dbProducto.forEach((producto)=>{
+            if(producto.id == productodelete){
+                borrar = dbProducto.indexOf(producto)
+            }
+        })
+        dbProducto.splice(borrar,1)
+        fs.writeFileSync(path.join(__dirname,'..','data','productosDataBase.json'),JSON.stringify(dbProducto),'utf-8')
+        res.redirect('/productos')
     }
 }
