@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const controller = require('../controllers/usersController');
-
+let loginValidator = require('../validators/loginValidator');
 
 
 router.get('/', function(req, res, next) {
@@ -9,6 +9,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/iniciarSesion', controller.iniciarSesion);
+router.post('/iniciarSesion', loginValidator, controller.processLogin);
 
 router.get('/registro', controller.registro);
 router.post('/registro', controller.agregoUsuario);

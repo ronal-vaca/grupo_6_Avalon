@@ -7,5 +7,14 @@
     "apellido": "Quito",
     "DNI": 1234578,
     "telefono": 12345667890
+  },
+  {
+    "id": 2,
+    "email": "emi_rivarola@hotmail.com",
+    "password": "$2b$10$2ZqfzJVBwguNNfoXGQHAt.0V4dEkw45IVKSwFxzX8gf79NoeO6NmG",
+    "nombre": "emiliano",
+    "apellido": "rivarola",
+    "DNI": 1231321,
+    "telefono": 321321
   }
 ]

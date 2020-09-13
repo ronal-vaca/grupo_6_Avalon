@@ -2,12 +2,42 @@ const fs = require('fs');
 const path = require('path')
 const bcrypt = require('bcrypt')
 let dbUsuarios = require('../data/databaseUsuarios')
+const {validationResult, body} = require('express-validator');
 
 module.exports={
     iniciarSesion:function(req, res){
         res.render('iniciarsesion',{
             title:"Iniciar sesion"
         });
+    },
+    processLogin:function(req,res){
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+            dbUsuarios.forEach(usuario=>{
+                if(usuario.email == req.body.email){
+                    req.session.user = {
+                        id:usuario.id,
+                        nick:usuario.nombre + ' ' + usuario.apellido,
+                        rol:usuario.rol,
+                        email:usuario.email,
+                        avatar:usuario.avatar
+                    }
+                }
+            })
+            if(req.body.recordar){
+                res.cookie('userMercadoLiebre',req.session.user,{maxAge:1000*60*2})
+            }
+            return res.redirect('/')
+        }else{
+            return res.render('iniciarsesion',{
+                title:"Ingreso de Usuarios",
+                css:'index.css',
+                errors: errors.mapped(),
+                old:req.body,
+                user:req.session.user
+
+            })
+        }
     },
     registro:function(req, res) {
         res.render('registro', {
