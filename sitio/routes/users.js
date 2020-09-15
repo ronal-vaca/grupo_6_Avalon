@@ -5,6 +5,7 @@ var router = express.Router();
 const controller = require('../controllers/usersController');
 //-------VALIDACIONES---------
 let loginValidator = require('../validators/loginValidator');
+let registerValidator = require('../validators/registerValidator');
 
 //-------MIDDLEWARES------
 router.get('/', function(req, res, next) {
@@ -17,6 +18,6 @@ router.get('/iniciarSesion', controller.iniciarSesion);                  //vista
 router.post('/iniciarSesion', loginValidator, controller.processLogin);  //validacion del login 
 
 router.get('/registro', controller.registro);
-router.post('/registro', controller.agregoUsuario);
+router.post('/registro', registerValidator, controller.processRegister);
 
 module.exports = router;

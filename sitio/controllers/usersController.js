@@ -24,6 +24,7 @@ module.exports={
                     }
                 }
             })
+            res.send(req.session)
             if(req.body.recordar){
                 res.cookie('userMercadoLiebre',req.session.user,{maxAge:1000*60*2})
             }
@@ -35,7 +36,6 @@ module.exports={
                 errors: errors.mapped(),
                 old:req.body,
                 user:req.session.user
-
             })
         }
     },
@@ -44,27 +44,43 @@ module.exports={
           title: "Registro"
         });
     },
-    agregoUsuario:function(req,res,next){
-        let lastID = 1;
+    processRegister:function(req,res,next){
+        let errors = validationResult(req);
+        let lastID = 0;
+        if(dbUsuarios.length > 0){
+            dbUsuarios.forEach(usuario=>{
+                if(usuario.id > lastID){
+                    lastID = usuario.id
+                }
+            })
+        } 
 
-        dbUsuarios.forEach(usuario=>{
-            if(usuario.id > lastID){
-                lastID = usuario.id
-            }    
-        })  
-        let nuevoUsuario={
-            id: lastID + 1,
-            email: (req.body.email).trim(),
-            password: bcrypt.hashSync(req.body.password, 10),
-            nombre: req.body.nombre.trim(),
-            apellido: req.body.apellido.trim(),
-            DNI:Number(req.body.DNI),
-            telefono: Number(req.body.telefono)
+        if(errors.isEmpty()){
+            let nuevoUsuario={
+                id: lastID + 1,
+                email: (req.body.email).trim(),
+                password: bcrypt.hashSync(req.body.password, 10),
+                nombre: req.body.nombre.trim(),
+                apellido: req.body.apellido.trim(),
+                DNI:Number(req.body.DNI),
+                telefono: Number(req.body.telefono)
+            }
+
+            dbUsuarios.push(nuevoUsuario);
+            
+            fs.writeFileSync(path.join(__dirname,"..",'data',"usuariosDataBase.json"),JSON.stringify(dbUsuarios),'utf-8');
+            return res.redirect('/');
+        }else{
+            res.render('registro',{
+                title:"registro",
+                errors:errors.mapped(),
+                old:req.body,
+                user:req.session.user
+            })
         }
-        console.log(nuevoUsuario)
-        dbUsuarios.push(nuevoUsuario);
-        fs.writeFileSync(path.join(__dirname,"..",'data',"usuariosDataBase.json"),JSON.stringify(dbUsuarios),'utf-8');
-        res.redirect('/');
+        
+
+
         
     }
 }
