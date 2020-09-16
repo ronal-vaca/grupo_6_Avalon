@@ -1,16 +1,11 @@
 /* STYLE */
 body {
-    font: 14px Helvetica;
+    font-family: helvetica;
+    font: 14px;
+    background-color: #f5f5f5;
 }
 
 /* INDEX.CSS */
-
-/*
-BANNER
-*/
-.banner{
-    margin-top: 20px;
-}
 
 /*
 filtro de productos
@@ -26,9 +21,6 @@ filtro de productos
 .filtroProductos article{
     padding: 0 15px;
 }
-.filtroProductos .cajaProductos{
-    padding: 0;
-}
 .filtroProductos a{
     margin: 1px;
     width: 100%;
@@ -37,11 +29,9 @@ filtro de productos
     width: 100%;
     margin-bottom: 10px;
 }
-/* .filtroProductos img:hover{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition: 0.4s;
-    width: 101%;
-} */
+.filtroProductos .cuadradoProducto{
+    padding: 0 5px;
+}
 /*
 /productos/  =   discos/ram/mouse/teclado etc
 */
@@ -49,6 +39,7 @@ filtro de productos
     border:1px solid silver;
     border-radius: 5px;
     padding: 5px;
+    background-color: white;
 }
 .tarjetaDeProducto h1{
     font-size: 15px;
@@ -65,36 +56,35 @@ filtro de productos
 /*
 BANNER SRVICIOS
 */
+
 .cajaServicios{
     background-color: black;
-    padding-left: 50px;
-    padding-bottom: 30px;
     width: 100%;
     margin: 0;
+    padding-bottom: 10px;
 }
-.cajaServicios h6{
-    margin-top: 20px;
+.cajaServicios .ajusteDeTituloServicio{
+    margin-top: 12px;
+    margin-bottom: 3px;
 }
-.cajaServicios .cajaTarjetas{
-    padding: 0 30px;
-}
+
 .cajaServicios .imgAvalon img{
     width: 100%;  
 }
+
 .cajaServicios .tarjeta{
     height: 100px; 
     width: 100%; 
     background-color: white;
     border-radius: 45px;
     border: 1px solid silver;
-    margin-top: 25px;
-}
-.cajaServicios .tarjeta .tarjetaDato{
-    padding: 0 0 0 25px;
+    margin-top: 10px;
+    margin-left: 0;
 }
 .cajaServicios .tarjeta .tarjetaDato p{
     font-size: 13px;
 }
+
 .cajaServicios .tarjeta .credito{
     border-radius: 0;
     width: 100px;
@@ -102,6 +92,7 @@ BANNER SRVICIOS
 .cajaServicios .tarjeta .creditoP{
     border-radius: 0 0 25px 0;
 }
+
 .cajaServicios .tarjeta img{
     border-radius: 50%;
     width: 80px;
@@ -135,13 +126,14 @@ BANNER SRVICIOS
     color: green;
 }
 .efectoBox .tarjetaContenido{
+    width: 100%;
     padding: 10px;
 }
 /*
 MARCAS
 */
 .marcas{
-    background-color: silver;
+    background-color: #252525;
     width: 100%;
     margin: 0;
 }
@@ -355,11 +347,11 @@ li{
     margin-left: 15px;
 }
 .cajaHeader nav ul li a{
-    color: black;
+    color: rgb(63, 63, 63);
 }
 .cajaHeader nav ul li a:hover{
     text-decoration: none;
-    border-bottom: 1px solid red;
+    color: black;
 }
 .navbar{
     padding: 0;
@@ -408,6 +400,7 @@ li{
     padding-top: 4px;
     height: 40px;
     width: 100%;
+    margin-bottom: 10px;
 }
 .cajaBuscador input{
     margin: 0;
@@ -417,12 +410,15 @@ li{
     width: 87%;
     outline: none;
     padding-left: 10px;
+    background-color: #ebebeb;
 }
 .cajaBuscador button{
     margin: 0;
     border: 0;
     margin-left: 5px;
     background-color: white;
+    background-color: #ebebeb;
+
 }
 .cajaBuscador button i{
     padding: 0;
@@ -632,7 +628,7 @@ li{
     margin: 5px;
 }
 .ofertita{
-    color: royalblue;
+    color: green;
 }
 .carrito-de-compras{
     background-color: black;
@@ -742,4 +738,79 @@ li{
 }
 #SeguirComprando{
     color:white;
+}
+
+
+
+/*FELIZ NAVIDAD atte Emi*/
+#rgbar {
+    background: #ff0059;
+    background: -webkit-linear-gradient(45deg,rgba(255,0,0,1) 0%,rgba(255,0,255,1) 18%,rgba(0,0,255,1) 30%,rgba(0,240,255,1) 45%,rgba(0,255,0,1) 63%,rgba(255,255,0,1) 80%,rgba(255,120,0,1) 90%,rgba(255,0,0,1) 100%);
+    background: -moz-linear-gradient(45deg,rgba(255,0,0,1) 0%,rgba(255,0,255,1) 18%,rgba(0,0,255,1) 30%,rgba(0,240,255,1) 45%,rgba(0,255,0,1) 63%,rgba(255,255,0,1) 80%,rgba(255,120,0,1) 90%,rgba(255,0,0,1) 100%);
+    background: -ms-linear-gradient(45deg,rgba(255,0,0,1) 0%,rgba(255,0,255,1) 18%,rgba(0,0,255,1) 30%,rgba(0,240,255,1) 45%,rgba(0,255,0,1) 63%,rgba(255,255,0,1) 80%,rgba(255,120,0,1) 90%,rgba(255,0,0,1) 100%);
+    background: -o-linear-gradient(45deg,rgba(255,0,0,1) 0%,rgba(255,0,255,1) 18%,rgba(0,0,255,1) 30%,rgba(0,240,255,1) 45%,rgba(0,255,0,1) 63%,rgba(255,255,0,1) 80%,rgba(255,120,0,1) 90%,rgba(255,0,0,1) 100%);
+    background: linear-gradient(45deg,rgba(255,0,0,1) 0%,rgba(255,0,255,1) 18%,rgba(0,0,255,1) 30%,rgba(0,240,255,1) 45%,rgba(0,255,0,1) 63%,rgba(255,255,0,1) 80%,rgba(255,120,0,1) 90%,rgba(255,0,0,1) 100%);
+    background-size: 400% 400%;
+    animation: rgbBg 20s linear infinite;
+    -moz-animation: rgbBg 20s linear infinite;
+    -webkit-animation: rgbBg 20s linear infinite;
+    height: 3px;
+    position: relative;
+}
+
+#rgbar.active {
+    position: fixed;
+    top: 63px;
+    width: 100%;
+    z-index: 150
+}
+
+#rgbar::before {
+    content: '';
+    width: 0;
+    transition: all ease .4s;
+    -moz-transition: all ease .4s;
+    -webkit-transition: all ease .4s
+}
+
+#rgbar.act::before {
+    background: var(--accent);
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transition: all ease .4s;
+    -moz-transition: all ease .4s;
+    -webkit-transition: all ease .4s
+}
+@keyframes rgbBg {
+    0% {
+        background-position: 400% 0%
+    }
+
+    100% {
+        background-position: 0% 400%
+    }
+}
+
+@-moz-keyframes rgbBg {
+    0% {
+        background-position: 400% 0%
+    }
+
+    100% {
+        background-position: 0% 400%
+    }
+}
+
+@-webkit-keyframes rgbBg {
+    0% {
+        background-position: 400% 0%
+    }
+
+    100% {
+        background-position: 0% 400%
+    }
 }

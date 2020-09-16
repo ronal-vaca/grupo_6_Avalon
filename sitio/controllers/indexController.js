@@ -15,7 +15,9 @@ module.exports={
         title: "Avalon",
         ofertas: ofertas,
         masVendido: masVendido,
-        mejorProducto: mejorProducto
+        mejorProducto: mejorProducto,
+        user:req.session.user
       });
+
     }
 }

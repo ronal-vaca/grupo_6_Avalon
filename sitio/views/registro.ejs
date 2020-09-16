@@ -13,37 +13,44 @@
                 <h5>Registro de usuario</h5>
                 <div class="row">
                     <div class="col-1"><i class="fas fa-envelope"></i></div>
-                    <div class="col-11"><input class="form-control" type="text" placeholder="Email" name="email"></div>
+                    <div class="col-11"><input class="form-control <%= (typeof old != 'undefined' && old.email && !errors.email)?"is-valid":(typeof errors != 'undefined' && errors.email)?"is-invalid": ""  %>" value="<%= (typeof old != 'undefined' && old.email)?old.email:'' %>" type="text" placeholder="Email" name="email" required>
+                        <small class="text-danger"><%= (typeof errors != 'undefined' && errors.email)?errors.email.msg: "" %> </small>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-1"><i class="fas fa-lock"></i></i></div>
-                    <div class="col-11"><input class="form-control" type="password" placeholder="Contraseña" name="password"></div>
+                    <div class="col-11"><input class="form-control <%= (typeof errors != 'undefined' && errors.password)?"is-invalid": ""  %>" type="password" placeholder="Contraseña" name="password" required>
+                    <small class="text-danger"><%= (typeof errors != 'undefined' && errors.password)?errors.password.msg: "" %> </small>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-1"><i class="fas fa-lock"></i></div>
-                    <div class="col-11"><input class="form-control is-invalid" type="password" placeholder="Repetir contraseña"  id="validationServer03" aria-describedby="validationServer03Feedback" required>
-                    <div id="validationServer03Feedback" class="invalid-feedback">Las contraseñas no coinciden</div>    
+                    <div class="col-11"><input class="form-control <%= (typeof errors != 'undefined' && errors.password2)?"is-invalid": ""  %>" type="password" placeholder="Repetir contraseña" name="password2" required>
+                        <small class="text-danger"><%= (typeof errors != 'undefined' && errors.password2)?errors.password2.msg: "" %> </small>
                     </div>
-                    
                 </div>
                 <h6>Información Personal</h6>
                 <div class="row">
                     <div class="col-1"><i class="fas fa-user"></i></div>
-                    <div class="col-11"><input class="form-control" type="text" placeholder="Nombre" name="nombre"></div>
+                    <div class="col-11"><input class="form-control <%= (typeof old != 'undefined' && old.nombre)?"is-valid":(typeof errors != 'undefined' && errors.nombre)?"is-invalid": ""  %>" value="<%= (typeof old != 'undefined' && old.nombre)?old.nombre:'' %>" type="text" placeholder="Nombre" name="nombre" required>
+                    <small class="text-danger"><%= (typeof errors != 'undefined' && errors.nombre)?errors.nombre.msg: "" %> </small>
+                    </div>  
                 </div>   
                 <div class="row">
                     <div class="col-1"><i class="fas fa-user"></i></div>
-                    <div class="col-11"><input class="form-control" type="text" placeholder="Apellido" name="apellido"></div>
+                    <div class="col-11"><input class="form-control <%= (typeof old != 'undefined' && old.apellido)?"is-valid":(typeof errors != 'undefined' && errors.apellido)?"is-invalid": ""  %>" value="<%= (typeof old != 'undefined' && old.apellido)?old.apellido:'' %>" type="text" placeholder="Apellido" name="apellido" required>
+                    <small class="text-danger"><%= (typeof errors != 'undefined' && errors.apellido)?errors.apellido.msg: "" %> </small>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-1"><i class="fas fa-id-card"></i></div>
-                    <div class="col-11"><input class="form-control" type="text" placeholder="DNI" name="DNI"></div>
+                    <div class="col-11"><input class="form-control" type="text" placeholder="DNI" name="DNI" required></div>
                 </div> 
                 <div class="row">
                     <div class="col-1"><i class="fas fa-phone-alt"></i></div>
-                    <div class="col-11"><input class="form-control" type="text" placeholder="Telefono" name="telefono"></div>
+                    <div class="col-11"><input class="form-control" type="text" placeholder="Telefono" name="telefono" required></div>
                 </div>               
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="submit" class="btn btn-primary">Registrarse</button>
             </form>
 
             <p>
@@ -53,7 +60,7 @@
               </p>
               <div class="collapse" id="collapseExample">
                 <div class="card card-body">
-                    Registrandote podras realizar las compras que desees en nuestro sitio web. Tambien los utilizaremos para la confeccion de los productos. No utulizaremos tus datos para ningun otro fin, ni para enviarte informacion que no hayas solicitado. Para mas informacion mira nuestras politicas de privacidad. <br><b>RECORDA:</b>
+                    Registrandote podras realizar las compras que desees en nuestro sitio web. Tambien los utilizaremos para la confeccion de los productos. No utilizaremos tus datos para ningun otro fin, ni para enviarte informacion que no hayas solicitado. Para mas informacion mira nuestras politicas de privacidad. <br><b>RECORDA:</b>
                     Es muy importante que coloques todos tus datos reales a la hora de registrar tu cuenta. Ante cualquier inconveniente vamos a estar comunicandonos con vos por telefono o via email.
                 </div>
               </div>
