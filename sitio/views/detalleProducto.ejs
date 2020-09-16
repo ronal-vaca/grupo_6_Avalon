@@ -8,64 +8,38 @@
     <div class="container bigboss">
         <div class="row">
             <div class="col-12 col-md-6">
-                <img class="imagen-principal img-thumbnail" src="/images/imagenProducto/<%= producto.imagen%>" class="img-fluid" alt="">
+                <img class="imagen-principal img-thumbnail" src="/images/imagenProducto/<%= producto.imagen%>" alt="">
             </div>
             <div class="col-12 col-md-6">
                 <h2><%= producto.nombre %> </h2>
                 <p>codigo: <%= producto.id %> </p>
-                <ul class="iconos">
-                    <i class="vis fab fa-cc-visa"></i>
-                    <i class="master fab fa-cc-mastercard"></i>
-                    <i class="fab fa-cc-amex"></i>
-                </ul>
+                <p style="font-weight: 600;">Descripcion:</p>
                 <p><%= producto.descripcion %> </p>
+                <h2 class="precio">$<%- (producto.precio - producto.precio * producto.descuento / 100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %></h2>
                 <h3 class="ofertita"><%= producto.descuento %>% de descuento</h3>
-                <button class="comprar">Comprar</button> 
-                <h2 class="precio">$<%= producto.precio %> </h2>
                 <label>cantidad</label>
-                <input type="number" value="">
-                <p>garantia: 12 meses</p>
-                <button class="carrito-de-compras"><i class="fas fa-cart-plus"></i>Agregar al carrito</button>
-                <section class="redesSociales">
-                  <i class="facebook fab fa-facebook-square"></i>
-                  <i class="twit fab fa-twitter-square"></i>
-                  <i class="google fab fa-google-plus-square"></i>
-                  <i class="instag fab fa-instagram-square"></i>
-                </section>
-                
+                <input style="width: 70px;" type="number" value="">
+                <p>garantia: 6 meses</p>
+                <a href="/productos/carrito/<%= producto.id %> " class="btn btn-primary btn-lg mb-2" style="color: white;"><i class="fas fa-cart-plus"></i> Agregar al carrito</a>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <img class="imagenes float-righ" src="../images/unnamed.png" alt="">
-                <img class="imagenes float-left" src="../images/unnamed.png" alt="">
-            </div>
-        </div>
+        <div class="mb-4 mt-3" style="border-bottom: 1px solid silver;"></div>
         <div class="row">
             <div class="col-12">
                 <p>
-                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                      Caracteristicas Tecnicas
-                    </a>
-                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                      Preguntas
-                    </button>
-                    
-                  </p>
-                  <div class="collapse" id="collapseExample">
-                    <div class="card card-body">
-                        <ul>
-                            <li>Caracteristica del producto</li>
-                            <li>Caracteristica del producto</li>
-                            <li>Caracteristica del producto</li>
-                            <li>Caracteristica del producto</li>
-                            <li>Caracteristica del producto</li>
-                            <li>Caracteristica del producto</li>
-                            <li>Caracteristica del producto</li>
-                            <li>Caracteristica del producto</li>
-                        </ul>
-                    </div>
-                  </div>
+                  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Caracteristicas Tecnicas
+                  </a>
+                </p>
+              <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <ul>
+                        <li>Caracteristica del producto</li>
+                        <li>Caracteristica del producto</li>
+                        <li>Caracteristica del producto</li>
+                    </ul>
+                </div>
+              </div>
             </div>
         </div>
         <hr>
