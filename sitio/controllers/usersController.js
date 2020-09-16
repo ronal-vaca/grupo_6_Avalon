@@ -24,7 +24,6 @@ module.exports={
                     }
                 }
             })
-            res.send(req.session)
             if(req.body.recordar){
                 res.cookie('userAvalon',req.session.user,{maxAge:1000*60*2})
             }
