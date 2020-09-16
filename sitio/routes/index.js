@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
-const controller = require('../controllers/indexController')
+
+const controller = require('../controllers/indexController');
 
 router.get('/', controller.home);
 
@@ -8,13 +9,9 @@ router.get('/', controller.home);
 
 const cookieCheck = require('../middlewares/cookieCheck');
 
-// ======> CONTROLADORES <======= //
-
-const controller = require('../controllers/indexController'); //requiero el controlador para que se haga cargo de la lógica
-
 // ======> RUTAS <======= //
 
-router.get('/', cookieCheck,controller.index);
+router.get('/', cookieCheck,controller.home);
 
 
 module.exports = router;

@@ -26,7 +26,7 @@ module.exports={
             })
             res.send(req.session)
             if(req.body.recordar){
-                res.cookie('userMercadoLiebre',req.session.user,{maxAge:1000*60*2})
+                res.cookie('userAvalon',req.session.user,{maxAge:1000*60*2})
             }
             return res.redirect('/')
         }else{
