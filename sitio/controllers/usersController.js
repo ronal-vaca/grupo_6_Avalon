@@ -7,7 +7,8 @@ const {validationResult, body} = require('express-validator');
 module.exports={
     iniciarSesion:function(req, res){
         res.render('iniciarsesion',{
-            title:"Iniciar sesion"
+            title:"Iniciar sesion",
+            user:req.session.user
         });
     },
     processLogin:function(req,res){
@@ -17,16 +18,15 @@ module.exports={
                 if(usuario.email == req.body.email){
                     req.session.user = {
                         id:usuario.id,
-                        nick:usuario.nombre + ' ' + usuario.apellido,
+                        nick:usuario.apellido,
                         rol:usuario.rol,
                         email:usuario.email,
                         avatar:usuario.avatar
                     }
                 }
             })
-            res.send(req.session)
             if(req.body.recordar){
-                res.cookie('userMercadoLiebre',req.session.user,{maxAge:1000*60*2})
+                res.cookie('usuarioAvalon',req.session.user,{maxAge:1000*60*2})
             }
             return res.redirect('/')
         }else{
@@ -41,7 +41,8 @@ module.exports={
     },
     registro:function(req, res) {
         res.render('registro', {
-          title: "Registro"
+          title: "Registro",
+          user:req.session.user
         });
     },
     processRegister:function(req,res,next){
@@ -63,13 +64,14 @@ module.exports={
                 nombre: req.body.nombre.trim(),
                 apellido: req.body.apellido.trim(),
                 DNI:Number(req.body.DNI),
-                telefono: Number(req.body.telefono)
+                telefono: Number(req.body.telefono),
+                rol:"user"
             }
 
             dbUsuarios.push(nuevoUsuario);
             
             fs.writeFileSync(path.join(__dirname,"..",'data',"usuariosDataBase.json"),JSON.stringify(dbUsuarios),'utf-8');
-            return res.redirect('/');
+            return res.redirect('/users/iniciarSesion');
         }else{
             res.render('registro',{
                 title:"registro",
@@ -78,9 +80,12 @@ module.exports={
                 user:req.session.user
             })
         }
-        
-
-
-        
+    },
+    cerrarsesion:function(req,res){
+        req.session.destroy();
+        if(req.cookies.usuarioAvalon){
+            res.cookie('usuarioAvalon','',{maxAge:-1})
+        }
+        res.redirect('/')
     }
 }

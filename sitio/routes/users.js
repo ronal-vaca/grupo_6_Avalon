@@ -20,4 +20,7 @@ router.post('/iniciarSesion', loginValidator, controller.processLogin);  //valid
 router.get('/registro', controller.registro);
 router.post('/registro', registerValidator, controller.processRegister);
 
+
+router.get('/cerrarsesion', controller.cerrarsesion);
+
 module.exports = router;

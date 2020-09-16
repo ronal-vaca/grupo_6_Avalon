@@ -18,10 +18,12 @@
                                 <h1><%- producto.nombre %> </h1>
                                 <p>$<%- (producto.precio - producto.precio * producto.descuento / 100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %></p>
                                 <div class="d-flex justify-content-around">
-                                    <a href="/productos/EditarProducto/<%= producto.id %>" class="btn btn-info"><i class="fas fa-edit"></i></a>
-                                    <form action="/productos/delete/<%= producto.id %>?_method=delete" method="POST">
-                                        <button class="btn btn-danger"> <i class="fas fa-trash-alt"></i></button>
-                                    </form>
+                                    <% if (user.rol == "admin") { %>
+                                        <a href="/productos/EditarProducto/<%= producto.id %>" class="btn btn-info"><i class="fas fa-edit"></i></a>
+                                        <form action="/productos/delete/<%= producto.id %>?_method=delete" method="POST">
+                                            <button class="btn btn-danger"> <i class="fas fa-trash-alt"></i></button>
+                                        </form>
+                                    <% } %>
                                     <a href="/productos/detalleProducto/<%= producto.id %>" class="btn btn-primary ">Ver</a>
                                     <a href="/productos/carrito/<%-producto.id%>" class="btn btn-primary ">Comprar</a>
                                 </div>    

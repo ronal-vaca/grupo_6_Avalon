@@ -15,26 +15,46 @@
           </div>
         </nav>  
       </div><!--botones de navegacion-->
-      <div class="col-6 col-lg-3 order-lg-1 cajaLogo">
+      <div class="col-5 col-lg-2 order-lg-1 cajaLogo">
         <a href="/"><h4>AVALON</h4></a>
       </div><!--logo-->
-      <div class="col-3 col-lg-1 order-lg-3 cajaIconos">
-        <div class="dropdown m">
-          <a href="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i></a>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="/users/iniciarsesion">Iniciar sesion</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/users/registro">Registrarse</a>
+      <div class="col-4 col-lg-2 order-lg-3 cajaIconos">
+        <% if (typeof user == "undefined") { %>
+          <div class="dropdown m">
+            <span><%= (user)?user.nick:"" %></span><a href="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i></a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="/users/iniciarsesion">Iniciar sesion</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/users/registro">Registrarse</a>
+            </div>
           </div>
-        </div>
-        <div class="dropdown m">
-          <a href="" type="button"  id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-shopping-cart"></i></a>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <a class="dropdown-item" href="/productos/carrito">Ir al carrito</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/productos/cargaProducto">Agregrar un producto</a>
+          <div class="dropdown m">
+            <a href="" type="button"  id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-shopping-cart"></i></a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton1">
+              <a class="dropdown-item" href="/productos/carrito">Ir al carrito</a>
+            </div>
           </div>
-        </div>
+        <% }else{ %>
+          <div class="dropdown m">
+            <span class="nombreUsuario"><%= (user)?user.nick:"Invitado" %></span><a href="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user" style="color: green;"></i></a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="/users/perfil">Perfil</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/users/cerrarsesion">Cerrar Sesion</a>
+            </div>
+          </div>
+          <div class="dropdown m">
+            <a href="" type="button"  id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-shopping-cart"></i></a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton1">
+              <a class="dropdown-item" href="/productos/carrito">Ir al carrito</a>
+              
+              <% if (user.rol == "admin") { %>
+                <a class="dropdown-item" href="/productos/cargaProducto">Agregrar un producto</a>
+              <% } %>
+            </div>
+          </div>
+        <% } %>
+        
       </div><!--iconos usuario carrito-->
     </div>
     <div class="row">

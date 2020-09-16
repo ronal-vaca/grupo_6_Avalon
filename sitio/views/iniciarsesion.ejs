@@ -25,13 +25,8 @@
                     <div class="col-11">
                         <input class="form-control" type="password" placeholder="Contraseña" name="pass">
                         <small class="text-danger"><%= (typeof errors != 'undefined' && errors.pass)?errors.pass.msg: "" %> </small>
-                    </div>
-                    
+                    </div>               
                 </div>
-               
-               
-
-
                 <button type="submit" class="btn btn-primary">Ingresar</button><br>
                 <a href="/users/registro" class="btn btn-outline-info">Crear Cuenta</a>
             </form>

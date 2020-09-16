@@ -367,6 +367,7 @@ li{
 }
 .cajaLogo{
     text-align: center;
+    padding-right: 0;
 }
 .cajaLogo a{
     color: black;
@@ -430,10 +431,16 @@ li{
     .cajaBuscador input{
         width: 87%;
     }
+    .nombreUsuario{
+        display: none;
+    }
 }
 @media(min-width:768px){
     .cajaBuscador input{
         width: 93%;
+    }
+    .nombreUsuario{
+        display: inline;
     }
 }
 @media(min-width:992px){

@@ -8,7 +8,8 @@ module.exports={
     listar:function(req, res){
         res.render('productos',{
             title:"Nuestros productos",
-            dbProducto:dbProducto
+            dbProducto:dbProducto,
+            user:req.session.user
         });
     },
     buscar:function(req,res){
@@ -21,11 +22,15 @@ module.exports={
         })
         res.render('productos',{
             title:"Resultados de la busqueda",
-            dbProducto:resultados
+            dbProducto:resultados,
+            user:req.session.user
         })
     },
     cargaProducto:function(req, res) {
-        res.render('productAdd', { title: 'Carga de producto' });
+        res.render('productAdd', { 
+            title: 'Carga de producto',
+            user:req.session.user 
+        });
     },
     detalleProducto: function(req, res) {
         let id = req.params.id;
@@ -34,7 +39,8 @@ module.exports={
         })
         res.render('detalleProducto', {
           title: "Detalle del Producto",
-          producto: producto[0]
+          producto: producto[0],
+          user:req.session.user
         });
     },
     carrito:function(req, res) {
@@ -42,7 +48,8 @@ module.exports={
         res.render('CarritoDeCompras', {
           title: "Carrito de compras",
           dbProducto:dbProducto,
-          idProducto:idProducto
+          idProducto:idProducto,
+          user:req.session.user
         });
     },
     catProducto:function(req,res){
@@ -50,7 +57,8 @@ module.exports={
         res.render('catProductos',{
             title:"Avalon",
             catProducto:catProducto,
-            dbProducto:dbProducto
+            dbProducto:dbProducto,
+            user:req.session.user
         })
     },
     publicarProducto: function(req,res,next){
@@ -80,7 +88,8 @@ module.exports={
         res.render('EditarProducto',{
             title:"Edicion de producto",
             idProducto:idProducto,
-            dbProducto:dbProducto
+            dbProducto:dbProducto,
+            user:req.session.user
         })
 
     },
