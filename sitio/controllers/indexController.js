@@ -18,5 +18,6 @@ module.exports={
         mejorProducto: mejorProducto,
         user:req.session.user
       });
+
     }
 }
