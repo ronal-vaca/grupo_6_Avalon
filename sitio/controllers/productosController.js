@@ -12,6 +12,13 @@ module.exports={
             user:req.session.user
         });
     },
+    listarAdmn:function(req, res){
+        res.render('productosAdmin',{
+            title:"Productos",
+            dbProducto:dbProducto,
+            user:req.session.user
+        });
+    },
     buscar:function(req,res){
         let buscar = req.query.buscar;
         let resultados = [];
@@ -91,7 +98,6 @@ module.exports={
             dbProducto:dbProducto,
             user:req.session.user
         })
-
     },
     guardarEditar:function(req,res,next){
         let idProducto = req.params.id;

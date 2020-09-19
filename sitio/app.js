@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session')
+var cookieCheck = require('./middlewares/cookieCheck');
 
 const methodOverride = require("method-override")
 
@@ -26,6 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(methodOverride('_method'));
 app.use(session({secret:"Avalon"}));
+app.use(cookieCheck);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

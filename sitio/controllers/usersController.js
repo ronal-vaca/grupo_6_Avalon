@@ -25,8 +25,8 @@ module.exports={
                     }
                 }
             })
-            if(req.body.recordar){
-                res.cookie('usuarioAvalon',req.session.user,{maxAge:1000*60*2})
+            if(req.body.recordar != undefined){
+                res.cookie('usuarioAvalon',req.session.user,{maxAge:30000})//tiempo de la cookie 30 segundos
             }
             return res.redirect('/')
         }else{
@@ -60,6 +60,7 @@ module.exports={
             let nuevoUsuario={
                 id: lastID + 1,
                 email: (req.body.email).trim(),
+                avatar:(req.files[0])?req.files[0].filename:"default.png",
                 password: bcrypt.hashSync(req.body.password, 10),
                 nombre: req.body.nombre.trim(),
                 apellido: req.body.apellido.trim(),
