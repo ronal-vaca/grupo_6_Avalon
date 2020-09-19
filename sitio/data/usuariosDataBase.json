@@ -1,1 +1,22 @@
-[{"id":1,"email":"admin@hotmail.com","password":"$2b$10$NeSGmeQbAoGaBkEXz9CJ8etcF3GgTyAJrEwWJnB/bIbpKwt23IyvC","nombre":"admin","apellido":"admin","DNI":1234567890,"telefono":1234567890,"rol":"admin"},{"id":2,"email":"emi_rivarola@hotmail.com","password":"$2b$10$yvf76ltmYT09bXwb4m.BNOupsdDJFGuiooso3C7/ZPliW16Wrr.wG","nombre":"emiliano","apellido":"rivarola","DNI":123123123,"telefono":123123123,"rol":"user"},{"id":3,"email":"emi@hotmail.com","avatar":"avatar1600550514661.jpeg","password":"$2b$10$AR6UPVdLV/Qy3bs3P6CRpOdLZIAfm8pQt1qMSQoeiYLmsTJ2Jopi2","nombre":"emiliano","apellido":"rivarola","DNI":1231321,"telefono":321321,"rol":"user"},{"id":4,"email":"jony@hotmail.com","avatar":"default.png","password":"$2b$10$zvTiQygmFyrDnoZccLMtHObHWeRf.5fhn8pFZLH377H5f.XAZoHJ6","nombre":"1231231","apellido":"3213213213","DNI":321321,"telefono":321321,"rol":"user"}]
+[
+  {
+    "id": 1,
+    "email": "admin@hotmail.com",
+    "password": "$2b$10$NeSGmeQbAoGaBkEXz9CJ8etcF3GgTyAJrEwWJnB/bIbpKwt23IyvC",
+    "nombre": "admin",
+    "apellido": "admin",
+    "DNI": 1234567890,
+    "telefono": 1234567890,
+    "rol": "admin"
+  },
+  {
+    "id": 2,
+    "email": "emi_rivarola@hotmail.com",
+    "password": "$2b$10$yvf76ltmYT09bXwb4m.BNOupsdDJFGuiooso3C7/ZPliW16Wrr.wG",
+    "nombre": "emiliano",
+    "apellido": "rivarola",
+    "DNI": 123123123,
+    "telefono": 123123123,
+    "rol": "user"
+  }
+]
