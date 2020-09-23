@@ -11,7 +11,7 @@ Cambiamos las cosas demaciado, somos un poco indecisos y eso no esta tan bueno.
 ## Hacer menos 
 Tal vez damos muchas vueltas cuando decidimos cosas, deberiamos considerar el confiar mas en nuetro instinto.
 
-<img src="Desing/retro2.jpg" >
+<img src="Desing/retro2" >
 ## Seguir Haciendo
 Comunicacion, trello, compañerismo
 ## Hacer mas 
@@ -23,7 +23,7 @@ Elegir nuestras tareas sin debatir sobre ellas
 ## Hacer menos 
 Utilizar el chat grupal para cualquier tema
 
-<img src="Desing/retro3.jpg" >
+<img src="Desing/retro3" >
 ## Seguir Haciendo
 Comunicacion, trello, compañerismo
 ## Hacer mas 
