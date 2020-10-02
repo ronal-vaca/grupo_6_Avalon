@@ -16,7 +16,10 @@
                 <p style="font-weight: 600;">Descripcion:</p>
                 <p><%= producto.descripcion %> </p>
                 <h2 class="precio">$<%- (producto.precio - producto.precio * producto.descuento / 100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %></h2>
-                <h3 class="ofertita"><%= producto.descuento %>% de descuento</h3>
+                <% if (producto.descuento != 0) { %>
+                 <h3 class="ofertita"><%= producto.descuento %>% de descuento</h3>
+                <% } %>
+                
                 <label>cantidad</label>
                 <input style="width: 70px;" type="number" value="">
                 <p>garantia: 6 meses</p>

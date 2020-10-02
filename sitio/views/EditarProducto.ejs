@@ -33,19 +33,19 @@
             </div>
             <div class="form-group productosCajaDeArchivo">
               <label for="exampleFormControlFile1"></label>
-              <input type="file" class="form-control-file productosAgregarFoto" id="exampleFormControlFile1" name="imagen">
+              <input type="file" class="form-control-file productosAgregarFoto" id="files" name="imagen">
             </div>
             <div class="col-12">
               <p class="text-center">Los campos con * son obligatorios.</p>
             </div>
             <div class="col-12 productosMargen">
-              <input type="text" class="form-control is-invalid" placeholder="Nombre*" name="nombre" value="<%= producto.nombre %> ">
+              <input type="text" class="form-control is-invalid" placeholder="Nombre*" id="nombre" name="nombre" value="<%= producto.nombre %> ">
             </div>
             <div class="col-12 productosMargen">
-              <input type="text" class="form-control is-invalid" placeholder="Precio*" name="precio" value="<%= producto.precio %> ">
+              <input type="text" class="form-control is-invalid" placeholder="Precio*" id="precio" name="precio" value="<%= producto.precio %> ">
             </div>
             <div class="col-12 productosMargen">
-              <input type="text" class="form-control is-invalid" placeholder="Descuento" name="descuento" value="<%= producto.descuento %> ">
+              <input type="text" class="form-control is-invalid" placeholder="Descuento" id="descuento" name="descuento" value="<%= producto.descuento %> ">
             </div>
             <div class="col-12 productosMargen">
               <select name="categoriaProducto" class="custom-select">
@@ -85,8 +85,8 @@
                 <option value="monitor">Monitor</option>
               </select>
             </div>
-            <div class="col-12 productosMargen h-50">
-              <textarea class="form-control h-100 is-valid" placeholder="Descripcion*" name="descripcion" required><%= producto.descripcion %> </textarea>
+            <div class="col-12 productosMargen">
+              <textarea class="form-control is-valid" rows="6" id="descripcion" placeholder="Descripcion*" name="descripcion" required><%= producto.descripcion %> </textarea>
             </div>
             <div class="row container">
                 <div class="col-6"></div>
@@ -99,56 +99,98 @@
             </div>
             
           </form>
-          <% } %>
-          <% }) %>
+          
         </div>
       </div>
 
       <!-- segundo Div -->
 
-      <div class="col-lg-8 d-none d-lg-block d-xl-block">
+      <div class="col-lg-8 d-none d-lg-block">
         <div class="container productosContenedorSegundoDiv">
-          <div class="container bigboss">
-            <div class="row">
-                <div class="col-12 col-md-6">
-                    <img class="imagen-principal img-thumbnail" src="/images/unnamed.png" alt="">
-                </div>
-                <div class="col-12 col-md-6">
-                    <h2>Producto</h2>
-                    <p>codigo:485569</p>
-                    <ul class="iconos">
-                        <i class="vis fab fa-cc-visa"></i>
-                        <i class="master fab fa-cc-mastercard"></i>
-                        <i class="fab fa-cc-amex"></i>
-                    </ul>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia explicabo quibusdam unde! Labore, perspiciatis. Ab, quisquam temporibus est totam repellat veritatis nemo dolorum, dolores, animi ut nisi maxime dignissimos dolor.</p>
-                    <h3 class="ofertita">OFERTA!</h3>
-                    <button class="comprar">Comprar</button> 
-                    <h2 class="precio">$00.000</h2>
-                    <label>cantidad</label>
-                    <input type="number" value="">
-                    <p>garantia: 36 meses</p>
-                    <button class="carrito-de-compras"><i class="fas fa-cart-plus"></i> Agregar al carrito</button>
-                    <i class="facebook fab fa-facebook-square"></i>
-                    <i class="insta fab fa-instagram-square"></i>
-                    <i class="twit fab fa-twitter-square"></i>
-                </div>
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <style>
+                .thumb {
+                  width: 100%;
+                  border: 1px solid #000;
+                  margin: 10px 5px 0 0;
+                }
+              </style>
+                <output id="list"><img src="/images/imagenProducto/<%= producto.imagen %> " alt=""> </output>
             </div>
-            <div class="row">
-                <div class="col-12 col-md-6">
-                    <img class="imagenes float-righ" src="/images/unnamed.png" alt="">
-                    <img class="imagenes float-left" src="/images/unnamed.png" alt="">
-                </div>
+            <div class="col-12 col-md-6">
+                <h2 id="nombreMuestra">Titulo del producto</h2>
+                <p>Codigo de producto</p>
+                <p style="font-weight: 600;" >Descripcion:</p>
+                <p id="descripcionMuestra">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, possimus repudiandae? Reiciendis beatae vero amet ad facere totam, eius necessitatibus.</p>
+                <h2 class="precio" id="precioMuestra">$PRECIO</h2>
+                <h3 class="ofertita" id="descuentoMuestra">% DESCUENTO</h3>
+                <label>cantidad</label>
+                <input style="width: 70px;" type="number" value="">
+                <p>garantia: 6 meses</p>
+                <div class="btn btn-primary btn-lg mb-2" style="color: white;"><i class="fas fa-cart-plus"></i> Agregar al carrito</div>
             </div>
-
+          </div>
         </div>
       </div>
-    </div>
 
   </section>
-
+    <% } %>
+    <% }) %>
 
   <%- include('./partials/footer') %> 
+  <script type="text/javascript">
+    $(document).ready(function () {
+        $("#nombre").keyup(function () {
+            var value = $(this).val();
+            $("#nombreMuestra").html(value);
+        });
+    });
+    $(document).ready(function () {
+        $("#precio").keyup(function () {
+            var value = $(this).val();
+            $("#precioMuestra").html("$"+value);
+        });
+    });
+    $(document).ready(function () {
+        $("#descuento").keyup(function () {
+            var value = $(this).val();
+            $("#descuentoMuestra").html("%"+value);
+        });
+    });
+    $(document).ready(function () {
+        $("#descripcion").keyup(function () {
+            var value = $(this).val();
+            $("#descripcionMuestra").html(value);
+        });
+    });
+    $(document).ready(function () {
+      function archivo(evt) {
+                  var files = evt.target.files; // FileList object
+             
+                  // Obtenemos la imagen del campo "file".
+                  for (var i = 0, f; f = files[i]; i++) {
+                    //Solo admitimos imágenes.
+                    if (!f.type.match('image.*')) {
+                        continue;
+                    }
+             
+                    var reader = new FileReader();
+             
+                    reader.onload = (function(theFile) {
+                        return function(e) {
+                          // Insertamos la imagen
+                         document.getElementById("list").innerHTML = ['<img class="thumb" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
+                        };
+                    })(f);
+             
+                    reader.readAsDataURL(f);
+                  }
+              }
+             
+              document.getElementById('files').addEventListener('change', archivo, false);
+    });
+  </script>
 
 
 </body>

@@ -9,6 +9,7 @@
 
     <%- include('./partials/header') %> 
 
+    
   <!-- Sectiooon -->
   <section class="container-fluid productosContenedorSection">
     <div class="row">
@@ -32,19 +33,19 @@
             </div>
             <div class="form-group productosCajaDeArchivo">
               <label for="exampleFormControlFile1"></label>
-              <input type="file" class="form-control-file productosAgregarFoto" id="exampleFormControlFile1" name="imagen">
+              <input type="file" class="form-control-file productosAgregarFoto" id="files" name="imagen">
             </div>
             <div class="col-12">
               <p class="text-center">Los campos con * son obligatorios.</p>
             </div>
             <div class="col-12 productosMargen">
-              <input type="text" class="form-control is-invalid" placeholder="Nombre*" name="nombre">
+              <input type="text" class="form-control is-invalid" placeholder="Nombre*" id="nombre" name="nombre">
             </div>
             <div class="col-12 productosMargen">
-              <input type="number" class="form-control is-invalid" placeholder="Precio*" name="precio">
+              <input type="number" class="form-control is-invalid" placeholder="Precio*" id="precio" name="precio">
             </div>
             <div class="col-12 productosMargen">
-              <input type="number" class="form-control is-invalid" placeholder="Descuento" name="descuento">
+              <input type="number" class="form-control is-invalid" placeholder="Descuento" id="descuento" name="descuento">
             </div>
             <div class="col-12 productosMargen">
               <select name="categoriaProducto" class="custom-select">
@@ -62,22 +63,46 @@
                 <option value="monitor">Monitor</option>
               </select>
             </div>
-            <div class="col-12 productosMargen h-50">
-              <textarea class="form-control h-100 is-valid" placeholder="Descripcion*" name="descripcion" required></textarea>
-            </div>
             <div class="col-12 productosMargen">
+              <textarea class="form-control is-valid" rows="6" placeholder="Descripcion*" name="descripcion" id="descripcion" required></textarea>
             </div>
             <div class="col-12">
               <button type="submit" class="btn btn-dark btn-lg btn-block">Guardar</button>
             </div>
           </form>
-
         </div>
       </div>
 
       <!-- segundo Div -->
-
-      <div class="col-lg-8 d-none d-lg-block d-xl-block">
+      <div class="col-lg-8 d-none d-lg-block">
+        <div class="container productosContenedorSegundoDiv">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <style>
+                .thumb {
+                  width: 100%;
+                  border: 1px solid #000;
+                  margin: 10px 5px 0 0;
+                }
+              </style>
+                <output id="list"></output>
+            </div>
+            <div class="col-12 col-md-6">
+                <h2 id="nombreMuestra">Titulo del producto</h2>
+                <p>Codigo de producto</p>
+                <p style="font-weight: 600;" >Descripcion:</p>
+                <p id="descripcionMuestra">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, possimus repudiandae? Reiciendis beatae vero amet ad facere totam, eius necessitatibus.</p>
+                <h2 class="precio" id="precioMuestra">$PRECIO</h2>
+                <h3 class="ofertita" id="descuentoMuestra">% DESCUENTO</h3>
+                <label>cantidad</label>
+                <input style="width: 70px;" type="number" value="">
+                <p>garantia: 6 meses</p>
+                <div class="btn btn-primary btn-lg mb-2" style="color: white;"><i class="fas fa-cart-plus"></i> Agregar al carrito</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="col-lg-8 d-none d-lg-block d-xl-block">
         <div class="container productosContenedorSegundoDiv">
           <div class="container bigboss">
             <div class="row">
@@ -113,13 +138,65 @@
             </div>
 
         </div>
-      </div>
+      </div>-->
     </div>
-
   </section>
 
-
+  
   <%- include('./partials/footer') %> 
+  <script type="text/javascript">
+    $(document).ready(function () {
+        $("#nombre").keyup(function () {
+            var value = $(this).val();
+            $("#nombreMuestra").html(value);
+        });
+    });
+    $(document).ready(function () {
+        $("#precio").keyup(function () {
+            var value = $(this).val();
+            $("#precioMuestra").html("$"+value);
+        });
+    });
+    $(document).ready(function () {
+        $("#descuento").keyup(function () {
+            var value = $(this).val();
+            $("#descuentoMuestra").html("%"+value);
+        });
+    });
+    $(document).ready(function () {
+        $("#descripcion").keyup(function () {
+            var value = $(this).val();
+            $("#descripcionMuestra").html(value);
+        });
+    });
+    $(document).ready(function () {
+      function archivo(evt) {
+                  var files = evt.target.files; // FileList object
+             
+                  // Obtenemos la imagen del campo "file".
+                  for (var i = 0, f; f = files[i]; i++) {
+                    //Solo admitimos imágenes.
+                    if (!f.type.match('image.*')) {
+                        continue;
+                    }
+             
+                    var reader = new FileReader();
+             
+                    reader.onload = (function(theFile) {
+                        return function(e) {
+                          // Insertamos la imagen
+                         document.getElementById("list").innerHTML = ['<img class="thumb" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
+                        };
+                    })(f);
+             
+                    reader.readAsDataURL(f);
+                  }
+              }
+             
+              document.getElementById('files').addEventListener('change', archivo, false);
+    });
+  </script>
+
 
 
 </body>
