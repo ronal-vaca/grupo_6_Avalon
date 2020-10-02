@@ -56,3 +56,54 @@ posponer reuniones
 
 no cumplir con los dias de reunion
 
+
+<img src="Desing/retro4.jpg" >
+
+## Seguir Haciendo
+
+Comunicacion, trello, compañerismo
+
+## Hacer mas 
+
+Reunirnos mas, ser puntuales
+
+## Empezar a hacer
+
+Determinar una  organizacion grupal que provoque buenos resultados en los sprints
+
+## Dejar de hacer
+
+posponer reuniones
+
+## Hacer menos 
+
+no cumplir con los dias de reunion
+
+
+<img src="Desing/retro5.jpg" >
+
+## Seguir Haciendo
+
+Comunicacion, trello, compañerismo
+
+## Hacer mas 
+
+Reunirnos mas, ser puntuales
+
+## Empezar a hacer
+
+Determinar una  organizacion grupal que provoque buenos resultados en los sprints
+
+## Dejar de hacer
+
+posponer reuniones
+
+## Hacer menos 
+
+no cumplir con los dias de reunion
+
+
+
+
+
+
