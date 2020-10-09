@@ -1,3 +1,5 @@
+let db= require('../database/models')
+
 const fs = require('fs');
 const path = require('path')
 let dbProducto = require('../data/database');
@@ -5,6 +7,13 @@ const { rawListeners } = require('process');
 
 
 module.exports={
+    listame:(req,res)=>{
+        //select * from Producto
+        db.Productos.findAll()
+            .then(productos=>{
+                res.send(productos)
+            })
+    },
     listar:function(req, res){
         res.render('productos',{
             title:"Nuestros productos",

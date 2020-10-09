@@ -2,6 +2,7 @@
   {
     "id": 1,
     "email": "admin@hotmail.com",
+    "avatar": "default.png",
     "password": "$2b$10$NeSGmeQbAoGaBkEXz9CJ8etcF3GgTyAJrEwWJnB/bIbpKwt23IyvC",
     "nombre": "admin",
     "apellido": "admin",
@@ -12,6 +13,7 @@
   {
     "id": 2,
     "email": "emi_rivarola@hotmail.com",
+    "avatar": "default.png",
     "password": "$2b$10$yvf76ltmYT09bXwb4m.BNOupsdDJFGuiooso3C7/ZPliW16Wrr.wG",
     "nombre": "emiliano",
     "apellido": "rivarola",

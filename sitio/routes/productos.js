@@ -18,27 +18,29 @@ let storage = multer.diskStorage({
 
 let upload = multer({storage:storage})
 
-/*ruta de todos los productos */
+/*ruta de todos los productos*/
 router.get('/', controller.listar);
+
+router.get('/listame', controller.listame)
 
 /*ruta para el admin*/ 
 router.get('/admn', controller.listarAdmn)
 
-/*ruta del buscador */
+/*ruta del buscador*/
 router.get('/buscar',controller.buscar)
 
 /*rutas de carga de producto*/ 
 router.get('/cargaProducto',sessionUserCheck, controller.cargaProducto);
 router.post('/cargaProducto',upload.any(),controller.publicarProducto);
 
-/*ruta al detalle del producto */
+/*ruta al detalle del producto*/
 router.get('/detalleProducto/:id',controller.detalleProducto);
 
 /*ruta al carrito de compras */
 router.get('/carrito',sessionUserCheck, controller.carrito);
 router.get('/carrito/:id',sessionUserCheck, controller.carrito);
 
-/*ruta de edicion de producto */
+/*ruta de edicion de producto*/
 router.get('/EditarProducto/:id',sessionUserCheck, controller.vistaEditar)
 router.put('/EditarProducto/:id', upload.any(),controller.guardarEditar)
 
