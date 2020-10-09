@@ -21,7 +21,7 @@ let upload = multer({storage:storage})
 /*ruta de todos los productos*/
 router.get('/', controller.listar);
 
-router.get('/listame', controller.listame)
+
 
 /*ruta para el admin*/ 
 router.get('/admn', controller.listarAdmn)

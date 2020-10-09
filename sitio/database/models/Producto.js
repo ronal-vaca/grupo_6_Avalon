@@ -38,10 +38,23 @@ module.exports = (sequelize,dataTypes)=>{
     }
     let config = {
         tableName : "productos",
-        timestamps:false
+        timestamps:false,
+        underscored:true
     }
 
     const Producto = sequelize.define(alias,cols,config);
+   
+    Producto.associate = function(models){
+        Producto.belongsTo(models.Categorias,{
+            as:"Categorias",
+            foreignKey:"categoria_id"
+        })
+        Producto.hasMany(models.Historiales,{
+            as:"historialProducto",
+            foreignKey:"id_producto"
+        })
+     
+    }
 
     return Producto
 }

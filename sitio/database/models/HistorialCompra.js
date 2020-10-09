@@ -23,6 +23,14 @@ module.exports = (sequelize,dataTypes)=>{
             type:dataTypes.INTEGER(7),
             allowNull:false
         },
+        id_producto:{
+            type:dataTypes.INTEGER(11),
+            allowNull:false
+        },
+        id_usuario:{
+            type:dataTypes.INTEGER(11),
+            allowNull:false
+        }
     }
     let config = {
         tableName: "HistorialDeCompras",
@@ -32,5 +40,15 @@ module.exports = (sequelize,dataTypes)=>{
 
     const HistorialCompra = sequelize.define(alias,cols,config)
 
+    HistorialCompra.associate = function(models){
+        HistorialCompra.belongsTo(models.Usuarios,{
+            as:"usuario",
+            foreignKey:"id_usuario"
+        })
+        HistorialCompra.belongsTo(models.Productos,{
+            as:"producto",
+            foreignKey:"id_producto"
+        })
+    }
     return HistorialCompra
 }
