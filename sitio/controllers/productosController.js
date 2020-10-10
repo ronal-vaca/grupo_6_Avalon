@@ -95,25 +95,15 @@ module.exports = {
             user: req.session.user
         })
     },
-<<<<<<< HEAD
     publicarProducto: function (req, res, next) {
-        let lastID = 1;
-=======
-    publicarProducto: function(req,res,next){
         /* let lastID = 1;
->>>>>>> eaa05c28935fc8ed58b86b50b883c28ad3c1c5df
 
         dbProducto.forEach(producto => {
             if (producto.id > lastID) {
                 lastID = producto.id
             }
-<<<<<<< HEAD
-        })
-        let nuevoProducto = {
-=======
         }) */
         /* let nuevoProducto={
->>>>>>> eaa05c28935fc8ed58b86b50b883c28ad3c1c5df
             id: lastID + 1,
             nombre: req.body.nombre.trim(),
             precio: Number(req.body.precio),
@@ -123,28 +113,23 @@ module.exports = {
             imagen: (req.files[0]) ? req.files[0].filename : "productoMuestra.png"
         };
         dbProducto.push(nuevoProducto);
-<<<<<<< HEAD
-        fs.writeFileSync(path.join(__dirname, "..", 'data', "productosDataBase.json"), JSON.stringify(dbProducto), 'utf-8');
-        res.redirect('/productos');
-=======
         fs.writeFileSync(path.join(__dirname,"..",'data',"productosDataBase.json"),JSON.stringify(dbProducto),'utf-8'); */
         db.Productos.create({
             nombre: req.body.nombre.trim(),
             precio: Number(req.body.precio),
             descuento: Number(req.body.descuento),
-            descripcion:req.body.descripcion,
-            imagen: (req.files[0])?req.files[0].filename:"productoMuestra.png",
+            descripcion: req.body.descripcion,
+            imagen: (req.files[0]) ? req.files[0].filename : "productoMuestra.png",
             categoria_id: req.body.categoriaProducto
         })
-        .then(result => {
-            console.log(result)
-            res.redirect('/productos')
-        })
-        .catch(errors=>{
-            console.log(errors)
-        })
+            .then(result => {
+                console.log(result)
+                res.redirect('/productos')
+            })
+            .catch(errors => {
+                console.log(errors)
+            })
         /* res.redirect('/productos'); */
->>>>>>> eaa05c28935fc8ed58b86b50b883c28ad3c1c5df
     },
     vistaEditar: function (req, res, next) {
         let idProducto = req.params.id;
@@ -157,20 +142,31 @@ module.exports = {
         })
     },
     guardarEditar: function (req, res, next) {
-        let idProducto = req.params.id;
-        dbProducto.forEach(function (producto) {
-            if (producto.id == idProducto) {
-                producto.id = Number(idProducto);
-                producto.nombre = req.body.nombre;
-                producto.precio = Number(req.body.precio);
-                producto.descuento = Number(req.body.descuento);
-                producto.categoriaProducto = req.body.categoriaProducto;
-                producto.descripcion = req.body.descripcion;
-                producto.imagen = (req.files[0] ? req.files[0].filename : producto.imagen)
+        db.Productos.update({
+            nombre: req.body.nombre,
+           
+        }, {
+            where: {
+                id: req.params.id
             }
         })
-        fs.writeFileSync(path.join(__dirname, '..', 'data', 'productosDataBase.json'), JSON.stringify(dbProducto), 'utf-8')
-        res.redirect('/productos')
+        res.redirect("/");
+
+
+        /* let idProducto = req.params.id;
+         dbProducto.forEach(function (producto) {
+             if (producto.id == idProducto) {
+                 producto.id = Number(idProducto);
+                 producto.nombre = req.body.nombre;
+                 producto.precio = Number(req.body.precio);
+                 producto.descuento = Number(req.body.descuento);
+                 producto.categoriaProducto = req.body.categoriaProducto;
+                 producto.descripcion = req.body.descripcion;
+                 producto.imagen = (req.files[0] ? req.files[0].filename : producto.imagen)
+             }
+         })
+         fs.writeFileSync(path.join(__dirname, '..', 'data', 'productosDataBase.json'), JSON.stringify(dbProducto), 'utf-8')
+         res.redirect('/productos')*/
     },
     delete: (req, res) => {
         let productodelete = req.params.id;
