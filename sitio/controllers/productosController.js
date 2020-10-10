@@ -97,11 +97,24 @@ module.exports = {
     },
     catProducto: function (req, res) {
         let catProducto = req.params.catProducto
-        res.render('catProductos', {
+        /* res.render('catProductos', {
             title: "Avalon",
             catProducto: catProducto,
             dbProducto: dbProducto,
             user: req.session.user
+        }) */
+        db.Productos.findAll()
+        .then(resultado=>{
+            console.log(resultado)
+            res.render('catProductos', {
+                title: "Avalon",
+                catProducto: catProducto,
+                dbProducto: resultado,
+                user: req.session.user
+            })
+        .catch(errors=>{
+            console.log(errors)
+        })
         })
     },
     publicarProducto: function(req,res,next){
