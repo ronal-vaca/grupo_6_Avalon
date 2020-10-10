@@ -21,7 +21,7 @@ module.exports = (sequelize,dataTypes)=>{
             defaultValue:'NULL'
         },
         descripcion:{
-            type:dataTypes.STRING(500),
+            type:dataTypes.STRING(950),
             allowNull:false,
             defaultValue:'NULL'
         },
