@@ -119,8 +119,8 @@
             <div class="col-12 col-lg-4">
               <h4>Ofertas</h4>
               <% ofertas.forEach(oferta => { %>
-               <div class="card efectoBox">
-                <div class="row no-gutters efectoBoxH">
+               <div class="card efectoBox" style="height: 180px;">
+                <div class="row no-gutters efectoBoxH d-flex align-items-center" style="height: 180px;">
                   <div class="col-5 col-md-2 col-lg-5">
                     <figure class="d-flex justify-content-center d-flex align-items-center">
                       <a href="/productos/detalleProducto/<%= oferta.id %> ">
@@ -142,8 +142,8 @@
             <div class="col-12 col-lg-4">
               <h4>Mejores Productos</h4>
               <% mejorProducto.forEach(producto => { %>
-               <div class="card efectoBox">
-                <div class="row no-gutters efectoBoxH">
+               <div class="card efectoBox" style="height: 180px;">
+                <div class="row no-gutters efectoBoxH d-flex align-items-center" style="height: 180px;">
                   <div class="col-5 col-md-2 col-lg-5">
                     <figure class="d-flex justify-content-center d-flex align-items-center">
                       <a href="/productos/detalleProducto/<%= producto.id %>">
@@ -162,8 +162,8 @@
             <div class="col-12 col-lg-4">
               <h4>Mas Vendidos</h4>
               <% masVendido.forEach(producto => { %>
-               <div class="card efectoBox">
-                <div class="row no-gutters efectoBoxH">
+               <div class="card efectoBox" style="height: 180px;">
+                <div class="row no-gutters efectoBoxH d-flex align-items-center" style="height: 180px;">
                   <div class="col-5 col-md-2 col-lg-5">
                     <figure class="d-flex justify-content-center d-flex align-items-center">
                       <a href="/productos/detalleProducto/<%= producto.id %>">

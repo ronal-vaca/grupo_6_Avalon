@@ -31,10 +31,8 @@
 
 </section>
 
-<% dbProducto.forEach(producto => { %>
-
-  <% if (producto.id == idProducto) { %>
-
+<% dbProducto.forEach(carrito => { %>
+  <% if (carrito.id_usuario == user.id) { %>
     <div class="container">
 
       <div class="row">
@@ -43,7 +41,7 @@
 
         <div class="col-4" id="Producto1">
 
-            <img src="/images/imagenProducto/<%- producto.imagen %>" class="card-img"  alt="..." style="max-width: 300px;">
+            <img src="/images/imagenProducto/<%- carrito.producto.imagen %>" class="card-img"  alt="..." style="max-width: 300px;">
              
         </div>
 
@@ -51,9 +49,9 @@
 
           <div class="card-body" id="textoProdCarrito">
 
-            <h1 class="card-title" id="nombreProdCarrito"><%- producto.nombre %> </h1>
-            <p class="card-text" id="descProdCarrito"><%- producto.descripcion %></p>
-            <h1 class="card-title" id="precioProdCarrito">Precio $<%- producto.precio %></h5> 
+            <h1 class="card-title" id="nombreProdCarrito"><%- carrito.producto.nombre %> </h1>
+            <p class="card-text" id="descProdCarrito"></p>
+            <h1 class="card-title" id="precioProdCarrito">Precio $<%- carrito.producto.precio %></h5> 
 
           </div>
         
@@ -72,9 +70,9 @@
         <div class="col-2"></div>
     
         <div class="col-8" id="Producto1">
-    
-          <button type="button" class="btn btn-outline-danger"><img src="/images/IconosCarrito/TachoDeBasuraCarri.png" alt="..." style="max-width: 15px;"></button>
-    
+          <form action="/productos/borrarProdCarrito/<%= carrito.id %>?_method=delete" method="POST">
+            <button type="submit" class="btn btn-outline-danger"><img src="/images/IconosCarrito/TachoDeBasuraCarri.png" alt="..." style="max-width: 15px;"></button>
+          </form>
           <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
     
             <div class="btn-group" role="group">
@@ -99,9 +97,7 @@
       </div>
     
     </div>
-
   <% } %>
-
 <% }) %>
 
 <div class="container">

@@ -40,6 +40,8 @@ filtro de productos
     border-radius: 5px;
     padding: 5px;
     background-color: white;
+    height: 355px;
+    margin-bottom: 10px;
 }
 .tarjetaDeProducto h1{
     font-size: 15px;

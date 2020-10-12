@@ -1,5 +1,5 @@
 module.exports = (sequelize,dataTypes)=>{
-    let alias = "Historiales"
+    let alias = "Carritos"
     let cols = {
         id:{
             type: dataTypes.INTEGER(11),
@@ -7,22 +7,12 @@ module.exports = (sequelize,dataTypes)=>{
             autoIncrement: true,
             primaryKey: true
         },
-        fecha:{
-            type:dataTypes.DATEONLY(),
-            allowNull:false
-        },
-        precio:{
-            type:dataTypes.INTEGER(7),
-            allowNull:false
-        },
         cantidad:{
             type:dataTypes.INTEGER(11),
-            allowNull:false
+            allowNull:false,
+            defaultValue:'0'
         },
-        precio_total:{
-            type:dataTypes.INTEGER(7),
-            allowNull:false
-        },
+
         id_producto:{
             type:dataTypes.INTEGER(11),
             allowNull:false
@@ -33,22 +23,22 @@ module.exports = (sequelize,dataTypes)=>{
         }
     }
     let config = {
-        tableName: "historialdecompras",
-        timestamps: true,
+        tableName: "carrito",
+        timestamps: false,
         underscored: true
     }
 
-    const HistorialCompra = sequelize.define(alias,cols,config)
+    const Carrito = sequelize.define(alias,cols,config)
 
-    HistorialCompra.associate = function(models){
-        HistorialCompra.belongsTo(models.Usuarios,{
+    Carrito.associate = function(models){
+        Carrito.belongsTo(models.Usuarios,{
             as:"usuario",
             foreignKey:"id_usuario"
         })
-        HistorialCompra.belongsTo(models.Productos,{
+        Carrito.belongsTo(models.Productos,{
             as:"producto",
             foreignKey:"id_producto"
         })
     }
-    return HistorialCompra
+    return Carrito
 }

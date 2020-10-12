@@ -1,8 +1,9 @@
 let db = require('../database/models')
+const { Op } = require("sequelize");
 
 const fs = require('fs');
 const path = require('path')
-let dbProducto = require('../data/database');
+/* let dbProducto = require('../data/database');//json */
 const { rawListeners } = require('process');
 
 
@@ -47,7 +48,7 @@ module.exports = {
           });*/
     },
     buscar: function (req, res) {
-        let buscar = req.query.buscar;
+        /* let buscar = req.query.buscar;
         let resultados = [];
         dbProducto.forEach(function (producto) {
             if (producto.nombre.toLowerCase().includes(buscar.toLowerCase())) {
@@ -58,6 +59,21 @@ module.exports = {
             title: "Resultados de la busqueda",
             dbProducto: resultados,
             user: req.session.user
+        }) */
+        
+        db.Productos.findAll({
+            where:{
+                nombre:{
+                    [Op.substring]:req.query.buscar
+                }
+            }
+        })
+        .then(resultado=>{
+            res.render('productos', {
+                title: "Resultados de la busqueda",
+                dbProducto: resultado,
+                user: req.session.user
+            })
         })
     },
     cargaProducto: function (req, res) {
@@ -86,15 +102,6 @@ module.exports = {
             });
         })
     },
-    carrito: function (req, res) {
-        let idProducto = req.params.id;
-        res.render('CarritoDeCompras', {
-            title: "Carrito de compras",
-            dbProducto: dbProducto,
-            idProducto: idProducto,
-            user: req.session.user
-        });
-    },
     catProducto: function (req, res) {
         let catProducto = req.params.catProducto
         /* res.render('catProductos', {
@@ -105,7 +112,6 @@ module.exports = {
         }) */
         db.Productos.findAll()
         .then(resultado=>{
-            console.log(resultado)
             res.render('catProductos', {
                 title: "Avalon",
                 catProducto: catProducto,
@@ -115,6 +121,39 @@ module.exports = {
         .catch(errors=>{
             console.log(errors)
         })
+        })
+    },
+    carrito: function (req, res) {
+        /* let idProducto = req.params.id; */
+        /* res.render('CarritoDeCompras', {
+            title: "Carrito de compras",
+            dbProducto: dbProducto,
+            idProducto: idProducto,
+            user: req.session.user
+        }); */
+        db.Carritos.findAll({include:[{association:"producto"},{association:"usuario"}]})
+        .then(resultado=>{
+            /* res.send(resultado) */
+            res.render('CarritoDeCompras', {
+                title: "Carrito de compras",
+                dbProducto: resultado,
+                /* idProducto: idProducto, */
+                user: req.session.user
+            });
+        })
+    },
+    agregarAlCarrito: function(req,res,next){
+        db.Carritos.create({
+            cantidad:req.body.cantidad,
+            id_producto:req.params.id,
+            id_usuario:req.session.user.id
+        })
+        .then(result => {
+            console.log(result)
+            res.redirect('/productos')
+        })
+        .catch(errors=>{
+            console.log(errors)
         })
     },
     publicarProducto: function(req,res,next){
@@ -211,6 +250,14 @@ module.exports = {
             console.log(errores)
         })
         
+    },
+    borrarProdCarrito: (req,res,next)=>{
+        db.Carritos.destroy({
+            where:{
+                id:req.params.id
+            }
+        })
+        res.redirect('/productos/carrito')
     },
     delete: (req, res) => {
         let productodelete = req.params.id;

@@ -9,6 +9,7 @@ let registerValidator = require('../validators/registerValidator');
 
 //-------MIDDLEWARES------
 const multerAvatar = require('../middlewares/multerAvatar');
+let sessionUserCheck = require('../middlewares/sessionUserCheck');
 
 
 
@@ -20,6 +21,8 @@ router.post('/iniciarSesion', loginValidator, controller.processLogin);  //valid
 router.get('/registro', controller.registro);
 router.post('/registro',  multerAvatar.any(),registerValidator, controller.processRegister);
 
+router.get('/perfil',sessionUserCheck, controller.perfil);
+router.put('/editarPerfil/:id',multerAvatar.any(),controller.editarPerfil);
 
 router.get('/cerrarsesion', controller.cerrarsesion);
 
