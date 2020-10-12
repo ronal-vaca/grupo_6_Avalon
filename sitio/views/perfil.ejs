@@ -62,6 +62,9 @@
             </div> 
             <button type="submit" class="btn btn-primary">Actualizar</button>
         </form>
+        <form action="/users/darDeBaja/<%= usuario.id %>?_method=delete" method="POST">
+            <button type="submit" class="btn btn-danger">Dar de baja</button>
+        </form>
     </article>
 </section> 
 

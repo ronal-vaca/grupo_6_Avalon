@@ -68,6 +68,7 @@ module.exports={
     },
     processRegister:function(req,res,next){
         let errors = validationResult(req);
+        
         /* let lastID = 0;
         if(dbUsuarios.length > 0){
             dbUsuarios.forEach(usuario=>{
@@ -76,7 +77,6 @@ module.exports={
                 }
             })
         }  */
-
         if(errors.isEmpty()){
             /* let nuevoUsuario={
                 id: lastID + 1,
@@ -101,7 +101,7 @@ module.exports={
                     password: bcrypt.hashSync(req.body.password, 10),
                     nombre: req.body.nombre.trim(),
                     apellido: req.body.apellido.trim(),
-                    dni:Number(req.body.DNI),
+                    dni:Number(req.body.dni),
                     telefono: Number(req.body.telefono),
                     rol:"user"
                 }
@@ -231,5 +231,13 @@ module.exports={
             res.send(error)
             console.log(error)
         })
+    },
+    darDeBaja:(req,res)=>{
+        db.Usuarios.destroy({
+            where:{
+                id:req.params.id
+            }
+        })
+        res.redirect('/users/iniciarSesion');
     }
 }

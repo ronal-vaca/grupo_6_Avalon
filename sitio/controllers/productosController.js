@@ -6,7 +6,6 @@ const path = require('path')
 /* let dbProducto = require('../data/database');//json */
 const { rawListeners } = require('process');
 
-const { Op } = require("sequelize");
 
 
 module.exports = {
@@ -277,6 +276,6 @@ module.exports = {
                 id:req.params.id
             }
         })
-        res.redirect('/productos/admn')
+        res.redirect('/productos/admn');
     }
 }
