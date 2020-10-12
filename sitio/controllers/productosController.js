@@ -5,6 +5,8 @@ const path = require('path')
 let dbProducto = require('../data/database');
 const { rawListeners } = require('process');
 
+const { Op } = require("sequelize");
+
 
 module.exports = {
     listar: (req, res) => {
@@ -46,7 +48,7 @@ module.exports = {
               user:req.session.user
           });*/
     },
-    buscar: function (req, res) {
+    /* buscar: function (req, res) {
         let buscar = req.query.buscar;
         let resultados = [];
         dbProducto.forEach(function (producto) {
@@ -59,7 +61,25 @@ module.exports = {
             dbProducto: resultados,
             user: req.session.user
         })
+    },*/
+    buscar: function(req,res) {
+        db.Productos.findAll({
+            where:{
+                nombre:{
+                    [Op.substring]:req.query.buscar
+                }
+            }
+        })
+        .then(resultado=>{
+            res.render('productos', {
+                title: "Resultados de la busqueda",
+                dbProducto: resultado,
+                user: req.session.user
+            })
+        })
+
     },
+
     cargaProducto: function (req, res) {
         res.render('productAdd', {
             title: 'Carga de producto',

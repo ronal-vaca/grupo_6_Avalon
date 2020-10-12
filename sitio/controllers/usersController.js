@@ -123,6 +123,60 @@ module.exports={
             })
         }
     },
+    /*Usuario: function (req, res) {
+        return res.render('Perfil', {
+            title: "Editar Perfil",
+            user: req.session.user
+        });
+    },*/
+    perfil:(req,res)=>{ 
+        if(req.session.user){
+            db.Usuarios.findByPk(req.session.user.id)
+            .then(user => {
+                return res.render('perfil',{
+                    title:"Perfil de Usuario",
+                    usuario:user,
+                    })
+                })
+        }else{
+            return res.redirect('/')
+        }
+    },
+    editarPerfil:(req,res)=>{
+        if(req.files[0]){
+            if(fs.existsSync(path.join(__dirname,'../public/images/imagenAvatar/'+req.session.user.avatar))){
+                fs.unlinkSync(path.join(__dirname,'../public/images/imagenAvatar/'+req.session.user.avatar))
+                res.locals.user.avatar = req.files[0].filename
+            }
+
+        }
+        db.Usuarios.update(
+            {
+                email: (req.body.email).trim(),
+                avatar:(req.files[0])?req.files[0].filename:req.session.user.avatar,
+                nombre: req.body.nombre.trim(),
+                apellido: req.body.apellido.trim(),
+                dni:Number(req.body.DNI),
+                telefono: Number(req.body.telefono),
+                provincia:req.body.provincia.trim(),
+                localidad:req.body.localidad.trim(),
+                direccion: req.body.direccion.trim()
+            },
+            {
+                where:{
+                    id:req.params.id
+                }
+            }
+        )
+        .then( result => {
+          console.log(req.session.user)
+          return res.redirect('/users/perfil')
+          })
+        .catch(error => {
+            res.send(error)
+            console.log(error)
+        })
+    },
     cerrarsesion:function(req,res){
         req.session.destroy();
         if(req.cookies.usuarioAvalon){

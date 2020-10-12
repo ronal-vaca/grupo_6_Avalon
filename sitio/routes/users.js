@@ -9,11 +9,13 @@ let registerValidator = require('../validators/registerValidator');
 
 //-------MIDDLEWARES------
 const multerAvatar = require('../middlewares/multerAvatar');
-
+let sessionUserCheck = require('../middlewares/sessionUserCheck');
 
 
 
 //-------RUTAS------------
+router.get('/perfil',sessionUserCheck, controller.perfil);
+router.put('/editarPerfil/:id',multerAvatar.any(),controller.editarPerfil);
 router.get('/iniciarSesion', controller.iniciarSesion);                  //vista del login
 router.post('/iniciarSesion', loginValidator, controller.processLogin);  //validacion del login 
 
