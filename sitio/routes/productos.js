@@ -46,6 +46,6 @@ router.put('/EditarProducto/:id', upload.any(),controller.guardarEditar)
 
 router.get('/:catProducto', controller.catProducto);
 
-router.delete('/delete/:id', controller.delete)
+router.delete('/delete/:id',sessionUserCheck, controller.delete)
 
 module.exports = router;

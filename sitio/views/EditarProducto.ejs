@@ -49,40 +49,40 @@
             </div>
             <div class="col-12 productosMargen">
               <select name="categoriaProducto" class="custom-select">
-                <% if (producto.categoriaProducto == "mouse") { %>
-                   <option selected value="mouse">Mouse</option>
-                   <% } else if (producto.categoriaProducto == "teclado") { %>
-                    <option selected value="teclado">Teclado</option>
-                    <% } else if (producto.categoriaProducto == "grafica") { %>
-                    <option selected value="grafica">Grafica</option>
-                    <% } else if (producto.categoriaProducto == "procesador") { %>
-                    <option selected value="procesador">Procesador</option>
-                    <% } else if (producto.categoriaProducto == "disco") { %>
-                    <option selected value="disco">Disco</option>
-                    <% } else if (producto.categoriaProducto == "fuente") { %>
-                    <option selected value="fuente">Fuente</option>
-                    <% } else if (producto.categoriaProducto == "memoria") { %>
-                    <option selected value="memoria">Memoria</option>
-                    <% } else if (producto.categoriaProducto == "motherboard") { %>
-                    <option selected value="motherboard">Motherboard</option>
-                    <% } else if (producto.categoriaProducto == "auricular") { %>
-                    <option selected value="auricular">Auricular</option>
-                    <% } else if (producto.categoriaProducto == "gabinete") { %>
-                    <option selected value="gabinete">Gabinete</option>
+                <% if (producto.categoria_id == "1") { %>
+                   <option selected value="1">Mouse</option>
+                   <% } else if (producto.categoria_id == "2") { %>
+                    <option selected value="2">Teclado</option>
+                    <% } else if (producto.categoria_id == "3") { %>
+                    <option selected value="3">Grafica</option>
+                    <% } else if (producto.categoria_id == "4") { %>
+                    <option selected value="4">Procesador</option>
+                    <% } else if (producto.categoria_id == "5") { %>
+                    <option selected value="5">Disco</option>
+                    <% } else if (producto.categoria_id == "6") { %>
+                    <option selected value="6">Fuente</option>
+                    <% } else if (producto.categoria_id == "7") { %>
+                    <option selected value="7">Memoria</option>
+                    <% } else if (producto.categoria_id == "8") { %>
+                    <option selected value="8">Motherboard</option>
+                    <% } else if (producto.categoria_id == "9") { %>
+                    <option selected value="9">Auricular</option>
+                    <% } else if (producto.categoria_id == "10") { %>
+                    <option selected value="10">Gabinete</option>
                     <% } else { %>
-                    <option selected value="monitor">Monitor</option>
+                    <option selected value="11">Monitor</option>
                 <% } %>
-                <option value="mouse">Mouse</option>
-                <option value="teclado">Teclado</option>
-                <option value="grafica">Grafica</option>
-                <option value="procesador">Procesador</option>
-                <option value="disco">Disco</option>
-                <option value="fuente">Fuente</option>
-                <option value="memoria">Memoria</option>
-                <option value="motherboard">Motherboard</option>
-                <option value="auricular">Auricular</option>
-                <option value="gabinete">Gabinete</option>
-                <option value="monitor">Monitor</option>
+                <option value="1">Mouse</option>
+                <option value="2">Teclado</option>
+                <option value="3">Grafica</option>
+                <option value="4">Procesador</option>
+                <option value="5">Disco</option>
+                <option value="6">Fuente</option>
+                <option value="7">Memoria</option>
+                <option value="8">Motherboard</option>
+                <option value="9">Auricular</option>
+                <option value="10">Gabinete</option>
+                <option value="11">Monitor</option>
               </select>
             </div>
             <div class="col-12 productosMargen">
@@ -116,7 +116,7 @@
                   margin: 10px 5px 0 0;
                 }
               </style>
-                <output id="list"><img src="/images/imagenProducto/<%= producto.imagen %> " alt=""> </output>
+                <output id="list"><img style="width: 100%;" src="/images/imagenProducto/<%= producto.imagen %> " alt=""> </output>
             </div>
             <div class="col-12 col-md-6">
                 <h2 id="nombreMuestra">Titulo del producto</h2>
@@ -127,7 +127,7 @@
                 <h3 class="ofertita" id="descuentoMuestra">% DESCUENTO</h3>
                 <label>cantidad</label>
                 <input style="width: 70px;" type="number" value="">
-                <p>garantia: 6 meses</p>
+                <p>garantia: 12 meses</p>
                 <div class="btn btn-primary btn-lg mb-2" style="color: white;"><i class="fas fa-cart-plus"></i> Agregar al carrito</div>
             </div>
           </div>
