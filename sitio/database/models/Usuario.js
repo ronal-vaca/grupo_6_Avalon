@@ -42,7 +42,19 @@ module.exports = (sequelize, dataTypes) => {
             type:dataTypes.STRING(45),
             allowNull:false,
             defaultValue:'user'
-        }
+        },
+        provincia : {
+            type:dataTypes.STRING(150),
+            allowNull:true
+        },
+        localidad : {
+            type:dataTypes.STRING(150),
+            allowNull:true
+        },
+        direccion : {
+            type:dataTypes.STRING(100),
+            allowNull:true
+        },
     }
 
     let config = {

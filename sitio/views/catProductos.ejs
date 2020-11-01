@@ -17,18 +17,20 @@
         <div class="row" style="margin-bottom: 50px;">
             <% dbProducto.forEach(producto => { %>
                 
-                <% if (producto.categoriaProducto == catProducto) { %>
+                <% if (producto.categoria_id == catProducto) { %>
                     <div class="col-md-6 col-lg-3">
                         <div class="tarjetaDeProducto">
                             <figure class="d-flex justify-content-center d-flex align-items-center">
                                 <img src="/images/imagenProducto/<%- producto.imagen %>" class="img-fluid" alt="...">
                             </figure>
-                            <div class="card-body" style="padding: 5px 20px;">
+                            <div class="card-body" style="padding: 5px 5px;">
                                 <h1><%- producto.nombre %> </h5>
                                 <p>$<%- (producto.precio - producto.precio * producto.descuento / 100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %></p>
-                                <div class="d-flex justify-content-end">
+                                <div class="d-flex justify-content-around">
                                     <a href="/productos/detalleProducto/<%= producto.id %>" class="btn btn-primary">Ver</a>
-                                    <a href="/productos/carrito/<%-producto.id%>" class="btn btn-primary btnComprar margenDeBoton">Comprar</a>
+                                    <form action="/productos/carrito/<%= producto.id %>/agregar" method="POST">
+                                        <button class="btn btn-primary ">Agregar al carrito</button>
+                                    </form>
                                 </div>    
                             </div>
                         </div>

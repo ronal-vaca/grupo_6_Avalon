@@ -30,6 +30,16 @@ module.exports = (sequelize,dataTypes)=>{
             allowNull:false,
             defaultValue:'NULL'
         },
+        masvendido:{
+            type:dataTypes.INTEGER(11),
+            allowNull:true,
+            defaultValue:'0'
+        },
+        mejorproducto:{
+            type:dataTypes.INTEGER(11),
+            allowNull:true,
+            defaultValue:'0'
+        },
         categoria_id:{
             type:dataTypes.INTEGER(11),
             allowNull:false,

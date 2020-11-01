@@ -11,6 +11,7 @@
                 <img class="imagen-principal img-thumbnail" src="/images/imagenProducto/<%= producto.imagen%>" alt="">
             </div>
             <div class="col-12 col-md-6">
+              <form action="/productos/carrito/<%= producto.id %>/agregar" method="POST">
                 <h2><%= producto.nombre %> </h2>
                 <p>codigo: <%= producto.id %> </p>
                 <p style="font-weight: 600;">Descripcion:</p>
@@ -21,9 +22,11 @@
                 <% } %>
                 
                 <label>cantidad</label>
-                <input style="width: 70px;" type="number" value="">
+                <input style="width: 70px;" type="number" value="" name="cantidad">
                 <p>Garantia: 12 meses</p>
-                <a href="/productos/carrito/<%= producto.id %> " class="btn btn-primary btn-lg mb-2" style="color: white;"><i class="fas fa-cart-plus"></i> Agregar al carrito</a>
+                <!-- <a href="/productos/carrito/<%= producto.id %> " class="btn btn-primary btn-lg mb-2" style="color: white;"><i class="fas fa-cart-plus"></i> Agregar al carrito</a> -->
+                <button type="submit" class="btn btn-primary btn-lg mb-2"><i class="fas fa-cart-plus"></i> Agregar al carrito</button>
+              </form>
             </div>
         </div>
         <div class="mb-4 mt-3" style="border-bottom: 1px solid silver;"></div>

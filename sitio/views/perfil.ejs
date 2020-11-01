@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('./partials/head') %> 
+<link rel="stylesheet" href="../stylesheets/Uno.css">
+
+<body>
+  
+<%- include('./partials/header') %>  
+
+<section class="container cajaFormulario">
+        
+    <article class="formulario">
+        <form action="/users/editarPerfil/<%= usuario.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <figure style="width: 100%;">
+            <img style="width:120px; height: 120px;object-fit: cover; object-position: top; border-radius: 50%;" id="imagenPrevisualizacion" src="/images/imagenAvatar/<%= usuario.avatar %> " alt="">
+            </figure>
+            <h5>Perfil de usuario</h5>
+            <div class="row">
+                <div class="col-1"><i class="fas fa-envelope"></i></div>
+                <div class="col-11"><input class="form-control <%= (typeof old != 'undefined' && old.email && !errors.email)?"is-valid":(typeof errors != 'undefined' && errors.email)?"is-invalid": ""  %>" value="<%= usuario.email %>" type="text" placeholder="Email" name="email">
+                    <small class="text-danger"><%= (typeof errors != 'undefined' && errors.email)?errors.email.msg: "" %> </small>
+                </div>
+            </div>
+            
+            <h6>Información Personal</h6>
+            <div class="row">
+                <div class="col-1"><i class="fas fa-user"></i></div>
+                <div class="col-11"><input class="form-control <%= (typeof old != 'undefined' && old.nombre)?"is-valid":(typeof errors != 'undefined' && errors.nombre)?"is-invalid": ""  %>" value="<%= usuario.nombre %>" type="text" placeholder="Nombre" name="nombre">
+                <small class="text-danger"><%= (typeof errors != 'undefined' && errors.nombre)?errors.nombre.msg: "" %> </small>
+                </div>  
+            </div>   
+            <div class="row">
+                <div class="col-1"><i class="fas fa-user"></i></div>
+                <div class="col-11"><input class="form-control <%= (typeof old != 'undefined' && old.apellido)?"is-valid":(typeof errors != 'undefined' && errors.apellido)?"is-invalid": ""  %>" value="<%= usuario.apellido %>" type="text" placeholder="Apellido" name="apellido">
+                <small class="text-danger"><%= (typeof errors != 'undefined' && errors.apellido)?errors.apellido.msg: "" %> </small>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1"><i class="fas fa-id-card"></i></div>
+                <div class="col-11"><input class="form-control" type="text" placeholder="DNI" name="DNI" value="<%= usuario.dni %> "></div>
+            </div> 
+            <div class="row">
+                <div class="col-1"><i class="fas fa-phone-alt"></i></div>
+                <div class="col-11"><input class="form-control" type="text" placeholder="Telefono" name="telefono" value="<%= usuario.telefono %> "></div>
+            </div>
+            <div class="row">
+                <div class="col-1"><i class="fas fa-map-marked-alt"></i></div>
+                <div class="col-11"><input class="form-control" type="text" placeholder="Provincia" name="provincia" value="<%= usuario.provincia %> "></div>
+            </div>
+            <div class="row">
+                <div class="col-1"><i class="fas fa-map-marked-alt"></i></div>
+                <div class="col-11"><input class="form-control" type="text" placeholder="Localidad" name="localidad" value="<%= usuario.localidad %> "></div>
+            </div>
+            <div class="row">
+                <div class="col-1"><i class="fas fa-map-marked-alt"></i></div>
+                <div class="col-11"><input class="form-control" type="text" placeholder="Direccion" name="direccion" value="<%= usuario.direccion %> "></div>
+            </div>
+            <div class="row">
+                <div class="col-1"><i class="fas fa-portrait"></i></div>
+                <input type="file" style="margin-top: 18px; margin-left: 15px;" id="seleccionArchivos" name="avatar">
+                <small class="text-danger"><%= (typeof errorFormato != 'undefined')?errorFormato: "" %> </small>
+            </div> 
+            <button type="submit" class="btn btn-primary">Actualizar</button>
+        </form>
+        <form action="/users/darDeBaja/<%= usuario.id %>?_method=delete" method="POST">
+            <button type="submit" class="btn btn-danger">Dar de baja</button>
+        </form>
+    </article>
+</section> 
+
+
+
+<script type="text/javascript">
+    const $seleccionArchivos = document.querySelector("#seleccionArchivos"),
+  $imagenPrevisualizacion = document.querySelector("#imagenPrevisualizacion");
+
+// Escuchar cuando cambie
+$seleccionArchivos.addEventListener("change", () => {
+  // Los archivos seleccionados, pueden ser muchos o uno
+  const archivos = $seleccionArchivos.files;
+  // Si no hay archivos salimos de la función y quitamos la imagen
+  if (!archivos || !archivos.length) {
+    $imagenPrevisualizacion.src = "";
+    return;
+  }
+  // Ahora tomamos el primer archivo, el cual vamos a previsualizar
+  const primerArchivo = archivos[0];
+  // Lo convertimos a un objeto de tipo objectURL
+  const objectURL = URL.createObjectURL(primerArchivo);
+  // Y a la fuente de la imagen le ponemos el objectURL
+  $imagenPrevisualizacion.src = objectURL;
+});
+</script>
+<%- include('./partials/footer') %> 
+</body>
+</html>

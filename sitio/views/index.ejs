@@ -42,17 +42,17 @@
           <section class="filtroProductos">
             <h4>Nuestros Productos</h4>
             <div class="row">
-              <div class="col-6 col-md-4 col-lg-2 cuadradoProducto"><a href="/productos/disco"><img src="images/filtroProductos/almacenamiento.jpeg" class="efectoBox" alt=""></a></div>
-              <div class="col-6 col-md-4 col-lg-2 cuadradoProducto"><a href="/productos/procesador"><img src="images/filtroProductos/procesador.jpeg" class="efectoBox" alt=""></a></div>
-              <div class="col-6 col-md-4 col-lg-2 cuadradoProducto"><a href="/productos/fuente"><img src="images/filtroProductos/fuente.jpeg" class="efectoBox" alt=""></a></div>
-              <div class="col-6 col-md-4 col-lg-2 cuadradoProducto"><a href="/productos/motherboard"><img src="images/filtroProductos/motherboard.jpeg" class="efectoBox" alt=""></a></div>
-              <div class="col-6 col-md-4 col-lg-2 cuadradoProducto"><a href="/productos/gabinete"><img src="images/filtroProductos/gabinete.jpeg" class="efectoBox" alt=""></a></div>
-              <div class="col-6 col-md-4 col-lg-2 cuadradoProducto"><a href="/productos/memoria"><img src="images/filtroProductos/ram.jpeg" class="efectoBox" alt=""></a></div>
-              <div class="col-6 col-md-4 col-lg-2 cuadradoProducto"><a href="/productos/grafica"><img src="images/filtroProductos/placaVideo.jpeg" class="efectoBox" alt=""></a></div>
-              <div class="col-6 col-md-4 col-lg-2 cuadradoProducto"><a href="/productos/monitor"><img src="images/filtroProductos/monitor.jpeg" class="efectoBox" alt=""></a></div>
-              <div class="col-6 col-md-4 col-lg-2 cuadradoProducto"><a href="/productos/mouse"><img src="images/filtroProductos/mousee.jpeg" class="efectoBox" alt=""></a></div>
-              <div class="col-6 col-md-4 col-lg-2 cuadradoProducto"><a href="/productos/teclado"><img src="images/filtroProductos/teclado.jpeg" class="efectoBox" alt=""></a></div>
-              <div class="col-6 col-md-4 col-lg-2 cuadradoProducto"><a href="/productos/auricular"><img src="images/filtroProductos/auricularr.jpeg" class="efectoBox" alt=""></a></div>
+              <div class="col-6 col-md-4 col-lg-2 cuadradoProducto"><a href="/productos/5"><img src="images/filtroProductos/almacenamiento.jpeg" class="efectoBox" alt=""></a></div>
+              <div class="col-6 col-md-4 col-lg-2 cuadradoProducto"><a href="/productos/4"><img src="images/filtroProductos/procesador.jpeg" class="efectoBox" alt=""></a></div>
+              <div class="col-6 col-md-4 col-lg-2 cuadradoProducto"><a href="/productos/6"><img src="images/filtroProductos/fuente.jpeg" class="efectoBox" alt=""></a></div>
+              <div class="col-6 col-md-4 col-lg-2 cuadradoProducto"><a href="/productos/8"><img src="images/filtroProductos/motherboard.jpeg" class="efectoBox" alt=""></a></div>
+              <div class="col-6 col-md-4 col-lg-2 cuadradoProducto"><a href="/productos/10"><img src="images/filtroProductos/gabinete.jpeg" class="efectoBox" alt=""></a></div>
+              <div class="col-6 col-md-4 col-lg-2 cuadradoProducto"><a href="/productos/7"><img src="images/filtroProductos/ram.jpeg" class="efectoBox" alt=""></a></div>
+              <div class="col-6 col-md-4 col-lg-2 cuadradoProducto"><a href="/productos/3"><img src="images/filtroProductos/placaVideo.jpeg" class="efectoBox" alt=""></a></div>
+              <div class="col-6 col-md-4 col-lg-2 cuadradoProducto"><a href="/productos/11"><img src="images/filtroProductos/monitor.jpeg" class="efectoBox" alt=""></a></div>
+              <div class="col-6 col-md-4 col-lg-2 cuadradoProducto"><a href="/productos/1"><img src="images/filtroProductos/mousee.jpeg" class="efectoBox" alt=""></a></div>
+              <div class="col-6 col-md-4 col-lg-2 cuadradoProducto"><a href="/productos/2"><img src="images/filtroProductos/teclado.jpeg" class="efectoBox" alt=""></a></div>
+              <div class="col-6 col-md-4 col-lg-2 cuadradoProducto"><a href="/productos/9"><img src="images/filtroProductos/auricularr.jpeg" class="efectoBox" alt=""></a></div>
             </div>
           </section>
         </div>
@@ -119,8 +119,8 @@
             <div class="col-12 col-lg-4">
               <h4>Ofertas</h4>
               <% ofertas.forEach(oferta => { %>
-               <div class="card efectoBox">
-                <div class="row no-gutters efectoBoxH">
+               <div class="card efectoBox" style="height: 180px;">
+                <div class="row no-gutters efectoBoxH d-flex align-items-center" style="height: 180px;">
                   <div class="col-5 col-md-2 col-lg-5">
                     <figure class="d-flex justify-content-center d-flex align-items-center">
                       <a href="/productos/detalleProducto/<%= oferta.id %> ">
@@ -142,8 +142,8 @@
             <div class="col-12 col-lg-4">
               <h4>Mejores Productos</h4>
               <% mejorProducto.forEach(producto => { %>
-               <div class="card efectoBox">
-                <div class="row no-gutters efectoBoxH">
+               <div class="card efectoBox" style="height: 180px;">
+                <div class="row no-gutters efectoBoxH d-flex align-items-center" style="height: 180px;">
                   <div class="col-5 col-md-2 col-lg-5">
                     <figure class="d-flex justify-content-center d-flex align-items-center">
                       <a href="/productos/detalleProducto/<%= producto.id %>">
@@ -162,8 +162,8 @@
             <div class="col-12 col-lg-4">
               <h4>Mas Vendidos</h4>
               <% masVendido.forEach(producto => { %>
-               <div class="card efectoBox">
-                <div class="row no-gutters efectoBoxH">
+               <div class="card efectoBox" style="height: 180px;">
+                <div class="row no-gutters efectoBoxH d-flex align-items-center" style="height: 180px;">
                   <div class="col-5 col-md-2 col-lg-5">
                     <figure class="d-flex justify-content-center d-flex align-items-center">
                       <a href="/productos/detalleProducto/<%= producto.id %>">

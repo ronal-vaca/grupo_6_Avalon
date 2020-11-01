@@ -38,7 +38,9 @@ router.get('/detalleProducto/:id',controller.detalleProducto);
 
 /*ruta al carrito de compras */
 router.get('/carrito',sessionUserCheck, controller.carrito);
-router.get('/carrito/:id',sessionUserCheck, controller.carrito);
+/* router.get('/carrito/:id',sessionUserCheck, controller.carrito); */
+router.post('/carrito/:id/agregar',sessionUserCheck, controller.agregarAlCarrito)
+router.delete('/borrarProdCarrito/:id',sessionUserCheck, controller.borrarProdCarrito)
 
 /*ruta de edicion de producto*/
 router.get('/EditarProducto/:id',sessionUserCheck, controller.vistaEditar)
