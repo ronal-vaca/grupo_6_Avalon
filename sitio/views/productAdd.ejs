@@ -27,7 +27,7 @@
 
         <!-- comienzo de la tercera linea -->
         <div class="row productosTerceraRow">
-          <form class="col-12" method="POST" action="./cargaProducto" enctype="multipart/form-data">
+          <form class="col-12" method="POST" action="./cargaProducto" enctype="multipart/form-data" id="formulario">
             <div class="col-12 productosSpan mb-2">
               <span>Fotos- 0/10 - Puedes agregar un maximo de 10 fotos</span>
             </div>
@@ -40,12 +40,16 @@
             </div>
             <div class="col-12 productosMargen">
               <input type="text" class="form-control" placeholder="Nombre*" id="nombre" name="nombre" required>
-            </div>
+           <div id="errorNombre"></div> 
+          </div>
+            
             <div class="col-12 productosMargen">
               <input type="number" class="form-control" placeholder="Precio*" id="precio" name="precio" required>
+              <div id="errorPrecio"></div> 
             </div>
             <div class="col-12 productosMargen">
               <input type="number" class="form-control" placeholder="Descuento" id="descuento" name="descuento" required>
+              <div id="errorDescuento"></div> 
             </div>
             <div class="col-12 productosMargen">
               <select name="categoriaProducto" class="custom-select" required>
@@ -65,6 +69,7 @@
             </div>
             <div class="col-12 productosMargen">
               <textarea class="form-control" rows="6" placeholder="Descripcion*" name="descripcion" id="descripcion" required></textarea>
+              <div id="errorDescripcion"></div> 
             </div>
             <div class="col-12">
               <button type="submit" class="btn btn-dark btn-lg btn-block">Guardar</button>
@@ -144,6 +149,7 @@
 
   
   <%- include('./partials/footer') %> 
+  <script src="/javascripts/validacionProductos.js"></script>
   <script type="text/javascript">
     $(document).ready(function () {
         $("#nombre").keyup(function () {
