@@ -27,7 +27,7 @@
         <div class="row productosTerceraRow">
             <% dbProducto.forEach(producto => { %>
             <% if (producto.id == idProducto) { %>
-          <form class="col-12" action="/productos/EditarProducto/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+          <form class="col-12" action="/productos/EditarProducto/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="formulario">
             <div class="col-12 productosSpan mb-2">
               <span>Fotos- 0/10 - Puedes agregar un maximo de 10 fotos</span>
             </div>
@@ -40,12 +40,15 @@
             </div>
             <div class="col-12 productosMargen">
               <input type="text" class="form-control is-invalid" placeholder="Nombre*" id="nombre" name="nombre" value="<%= producto.nombre %> ">
+              <div id="errorNombre"></div> 
             </div>
             <div class="col-12 productosMargen">
               <input type="text" class="form-control is-invalid" placeholder="Precio*" id="precio" name="precio" value="<%= producto.precio %> ">
+              <div id="errorPrecio"></div> 
             </div>
             <div class="col-12 productosMargen">
               <input type="text" class="form-control is-invalid" placeholder="Descuento" id="descuento" name="descuento" value="<%= producto.descuento %> ">
+              <div id="errorDescuento"></div> 
             </div>
             <div class="col-12 productosMargen">
               <select name="categoriaProducto" class="custom-select">
@@ -87,6 +90,7 @@
             </div>
             <div class="col-12 productosMargen">
               <textarea class="form-control is-valid" rows="6" id="descripcion" placeholder="Descripcion*" name="descripcion" required><%= producto.descripcion %> </textarea>
+              <div id="errorDescripcion"></div> 
             </div>
             <div class="row container">
                 <div class="col-6"></div>
@@ -139,6 +143,7 @@
     <% }) %>
 
   <%- include('./partials/footer') %> 
+  <script src="/javascripts/validacionProductos.js"></script>
   <script type="text/javascript">
     $(document).ready(function () {
         $("#nombre").keyup(function () {

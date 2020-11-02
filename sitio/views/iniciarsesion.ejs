@@ -8,25 +8,25 @@
     <section class="container cajaFormulario">
         
         <article class="formulario">
-            <form action="/users/iniciarSesion" method="POST" id="idFormulario">
+            <form action="" method="POST" id="formulario">
                 <i class="far fa-user icono"></i>
                 <h5>Log In</h5>
                 <div class="row">
                     <div class="col-1"><i class="fas fa-envelope"></i></div>
                     <div class="col-11">
                         <!-- el ejs que esta adentro de la clase es para poner en rojo el contorno del input encaso de que haya error --><!-- el value es para evitar volver a escribir el email en caso de que la password sea erronea -->
-                        <input class="form-control <%= (typeof old != 'undefined' && old.email && !errors.email)?"is-valid":(typeof errors != 'undefined' && errors.email)?"is-invalid":'' %>" type="text" placeholder="Email" name="email" value="<%= (typeof old != 'undefined' && old.email)?old.email:'' %>" id="idEmail">
+                        <input class="form-control <%= (typeof old != 'undefined' && old.email && !errors.email)?"is-valid":(typeof errors != 'undefined' && errors.email)?"is-invalid":'' %>" type="text" placeholder="Email" name="email" value="<%= (typeof old != 'undefined' && old.email)?old.email:'' %>" id="Email">
                         <small class="text-danger" style="text-align: center;"><%= (typeof errors != 'undefined' && errors.email)?errors.email.msg: "" %> </small>
-                        <div id="errEmail" class=""></div>
+                        <div class="" id="errorEmail" ></div>
                     </div>
                     <div style="width: 50px;"></div>
                 </div>
                 <div class="row">
                     <div class="col-1"><i class="fas fa-lock"></i></i></div>
                     <div class="col-11">
-                        <input class="form-control" type="password" placeholder="Contraseña" name="pass" id="idPass">
+                        <input class="form-control" type="password" placeholder="Contraseña" name="pass" id="password">
                         <small class="text-danger"><%= (typeof errors != 'undefined' && errors.pass)?errors.pass.msg: "" %> </small>
-                        <div id="errPass" class=""></div>
+                        <div class="" id="errorPassword" ></div>
                     </div>               
                 </div>
                 <div class="form-group form-check">
@@ -40,7 +40,8 @@
         </article>
     </section>
 
-    <%- include('./partials/footer') %>
-    <script src="/javascripts/validacionLogin.js"></script>
+    <%- include('./partials/footer') %> 
+    
+    <script src="/javascripts/loginValidator.js"></script>
 </body>
 </html>
