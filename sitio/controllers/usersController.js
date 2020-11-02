@@ -3,8 +3,9 @@ let db= require('../database/models');
 const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcrypt');
-let dbUsuarios = require('../data/databaseUsuarios');
+//let dbUsuarios = require('../data/databaseUsuarios'); json viejo
 const {validationResult, body} = require('express-validator');
+
 
 module.exports={
     iniciarSesion:function(req, res){

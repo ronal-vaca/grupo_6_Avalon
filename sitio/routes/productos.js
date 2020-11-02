@@ -6,6 +6,7 @@ const multer = require('multer');
 const path = require('path');
 
 let sessionUserCheck = require('../middlewares/sessionUserCheck');
+let subidaValidator = require('../validators/subidaValidator');
 
 let storage = multer.diskStorage({
     destination:(req,file,callback)=>{
@@ -31,7 +32,7 @@ router.get('/buscar',controller.buscar)
 
 /*rutas de carga de producto*/ 
 router.get('/cargaProducto',sessionUserCheck, controller.cargaProducto);
-router.post('/cargaProducto',upload.any(),controller.publicarProducto);
+router.post('/cargaProducto',upload.any(),subidaValidator,controller.publicarProducto);
 
 /*ruta al detalle del producto*/
 router.get('/detalleProducto/:id',controller.detalleProducto);

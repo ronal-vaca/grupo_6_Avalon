@@ -32,24 +32,25 @@
               <span>Fotos- 0/10 - Puedes agregar un maximo de 10 fotos</span>
             </div>
             <div class="form-group productosCajaDeArchivo">
-              <label for="exampleFormControlFile1"></label>
-              <input type="file" class="form-control-file productosAgregarFoto" id="files" name="imagen">
+              <input type="file" class="form-control-file" id="files" name="imagen" onchange="validarImagen(this);">
             </div>
             <div class="col-12">
               <p class="text-center">Los campos con * son obligatorios.</p>
             </div>
             <div class="col-12 productosMargen">
-              <input type="text" class="form-control" placeholder="Nombre*" id="nombre" name="nombre" required>
+              <input type="text" class="form-control <%= (typeof errors != 'undefined' && errors.nombre)?"is-invalid": ""  %>" placeholder="Nombre*" id="nombre" name="nombre" >
+              <small class="text-danger"><%= (typeof errors != 'undefined' && errors.nombre)?errors.nombre.msg: "" %> </small>
             </div>
             <div class="col-12 productosMargen">
-              <input type="number" class="form-control" placeholder="Precio*" id="precio" name="precio" required>
+              <input type="number" class="form-control <%= (typeof errors != 'undefined' && errors.precio)?"is-invalid": ""  %>" placeholder="Precio*" id="precio" name="precio" >
+              <small class="text-danger"><%= (typeof errors != 'undefined' && errors.precio)?errors.precio.msg: "" %> </small>
             </div>
             <div class="col-12 productosMargen">
               <input type="number" class="form-control" placeholder="Descuento" id="descuento" name="descuento" required>
             </div>
             <div class="col-12 productosMargen">
               <select name="categoriaProducto" class="custom-select" required>
-                <option selected>Categoria de producto</option>
+                <option value="">Categoria de producto</option>
                 <option value="1">Mouse</option>
                 <option value="2">Teclado</option>
                 <option value="3">Grafica</option>
@@ -64,7 +65,8 @@
               </select>
             </div>
             <div class="col-12 productosMargen">
-              <textarea class="form-control" rows="6" placeholder="Descripcion*" name="descripcion" id="descripcion" required></textarea>
+              <textarea class="form-control <%= (typeof errors != 'undefined' && errors.descripcion)?"is-invalid": ""  %>" rows="6" placeholder="Descripcion*" name="descripcion" id="descripcion" ></textarea>
+              <small class="text-danger"><%= (typeof errors != 'undefined' && errors.descripcion)?errors.descripcion.msg: "" %> </small>
             </div>
             <div class="col-12">
               <button type="submit" class="btn btn-dark btn-lg btn-block">Guardar</button>
@@ -144,6 +146,7 @@
 
   
   <%- include('./partials/footer') %> 
+  <script src="/javascripts/validarImagen.js"></script>
   <script type="text/javascript">
     $(document).ready(function () {
         $("#nombre").keyup(function () {
@@ -200,5 +203,6 @@
 
 
 </body>
+
 
 </html>

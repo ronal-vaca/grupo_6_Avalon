@@ -6,12 +6,13 @@
     <%- include('./partials/header') %> 
     
     <div class="container">
-        <% if (catProducto.charAt(catProducto.length -1) == "r" ) { %>
-         <h1 style="text-align: center; margin: 30px 0;">Todo Sobre <%- catProducto.charAt(0).toUpperCase() + catProducto.slice(1) + "es" %> </h1>
-        <% }else{ %>
-            <h1 style="text-align: center; margin: 30px 0;">Todo Sobre <%- catProducto.charAt(0).toUpperCase() + catProducto.slice(1) + "s" %> </h1>
-        <% } %>
-         
+        <% categoria.forEach(cate => { %>
+            <% if (cate.charAt(cate.length -1) == "r" ) { %>
+                <h1 style="text-align: center; margin: 30px 0;"><%- cate.charAt(0).toUpperCase() + cate.slice(1) + "es" %> </h1>
+            <% }else{ %>
+                <h1 style="text-align: center; margin: 30px 0;"><%- cate.charAt(0).toUpperCase() + cate.slice(1) + "s" %> </h1>
+            <% } %>
+        <% }) %>
         
 
         <div class="row" style="margin-bottom: 50px;">

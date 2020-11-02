@@ -515,25 +515,24 @@ li{
     margin-top: 0%;
   }
   .productosCajaDeArchivo{
+    overflow: hidden;
     border:solid black 1px;
     border-radius: 5px;
     width: 95%;
-      margin-left: 3%;
-      height: 20%;
-      display: flex;
-      align-items: center;
+    margin-left: 3%;
+    height: 20%;
+    display: flex;
+    align-items: center;
   }
   .productosMargen{
     margin-bottom: 10px;
-  }
-  .productosAgregarFoto{
-    margin-left: 25%;
   }
   .productosContenedorSegundoDiv{
      margin-top: 15%;
      border: solid 1px black;
      border-radius: 5px;
      padding: 2%;
+     word-wrap: break-word;
   }
   .productosVistaPrev{
     font-size: 25px;

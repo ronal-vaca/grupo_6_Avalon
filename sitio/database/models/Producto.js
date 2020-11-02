@@ -63,7 +63,6 @@ module.exports = (sequelize,dataTypes)=>{
             as:"historialProducto",
             foreignKey:"id_producto"
         })
-     
     }
 
     return Producto

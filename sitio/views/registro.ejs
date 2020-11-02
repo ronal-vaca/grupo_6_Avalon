@@ -8,38 +8,43 @@
     <section class="container cajaFormulario">
         
         <article class="formulario">
-            <form action="/users/registro" method="POST" enctype="multipart/form-data">
+            <form action="/users/registro" method="POST" enctype="multipart/form-data" id="idFormulario">
                 <i class="far fa-user icono"></i>
                 <h5>Registro de usuario</h5>
                 <div class="row">
                     <div class="col-1"><i class="fas fa-envelope"></i></div>
-                    <div class="col-11"><input class="form-control <%= (typeof old != 'undefined' && old.email && !errors.email)?"is-valid":(typeof errors != 'undefined' && errors.email)?"is-invalid": ""  %>" value="<%= (typeof old != 'undefined' && old.email)?old.email:'' %>" type="text" placeholder="Email" name="email" >
+                    <div class="col-11"><input class="form-control <%= (typeof old != 'undefined' && old.email && !errors.email)?"is-valid":(typeof errors != 'undefined' && errors.email)?"is-invalid": ""  %>" value="<%= (typeof old != 'undefined' && old.email)?old.email:'' %>" type="text" placeholder="Email" name="email" id="idEmail">
                         <small class="text-danger"><%= (typeof errors != 'undefined' && errors.email)?errors.email.msg: "" %> </small>
+                        <div id="errEmail" class=""></div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-1"><i class="fas fa-lock"></i></i></div>
-                    <div class="col-11"><input class="form-control <%= (typeof errors != 'undefined' && errors.password)?"is-invalid": ""  %>" type="password" placeholder="Contraseña" name="password" >
+                    <div class="col-11"><input class="form-control <%= (typeof errors != 'undefined' && errors.password)?"is-invalid": ""  %>" type="password" placeholder="Contraseña" name="password" id="idPass">
                     <small class="text-danger"><%= (typeof errors != 'undefined' && errors.password)?errors.password.msg: "" %> </small>
+                    <div id="errPass"></div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-1"><i class="fas fa-lock"></i></div>
-                    <div class="col-11"><input class="form-control <%= (typeof errors != 'undefined' && errors.password2)?"is-invalid": ""  %>" type="password" placeholder="Repetir contraseña" name="password2" >
+                    <div class="col-11"><input class="form-control <%= (typeof errors != 'undefined' && errors.password2)?"is-invalid": ""  %>" type="password" placeholder="Repetir contraseña" name="password2" id="idPass2">
                         <small class="text-danger"><%= (typeof errors != 'undefined' && errors.password2)?errors.password2.msg: "" %> </small>
+                        <div id="errPass2"></div>
                     </div>
                 </div>
                 <h6>Información Personal</h6>
                 <div class="row">
                     <div class="col-1"><i class="fas fa-user"></i></div>
-                    <div class="col-11"><input class="form-control <%= (typeof old != 'undefined' && old.nombre)?"is-valid":(typeof errors != 'undefined' && errors.nombre)?"is-invalid": ""  %>" value="<%= (typeof old != 'undefined' && old.nombre)?old.nombre:'' %>" type="text" placeholder="Nombre" name="nombre" >
+                    <div class="col-11"><input class="form-control <%= (typeof old != 'undefined' && old.nombre)?"is-valid":(typeof errors != 'undefined' && errors.nombre)?"is-invalid": ""  %>" value="<%= (typeof old != 'undefined' && old.nombre)?old.nombre:'' %>" type="text" placeholder="Nombre" name="nombre" id="idNombre">
                     <small class="text-danger"><%= (typeof errors != 'undefined' && errors.nombre)?errors.nombre.msg: "" %> </small>
+                    <div id="errName"></div>
                     </div>  
                 </div>   
                 <div class="row">
                     <div class="col-1"><i class="fas fa-user"></i></div>
-                    <div class="col-11"><input class="form-control <%= (typeof old != 'undefined' && old.apellido)?"is-valid":(typeof errors != 'undefined' && errors.apellido)?"is-invalid": ""  %>" value="<%= (typeof old != 'undefined' && old.apellido)?old.apellido:'' %>" type="text" placeholder="Apellido" name="apellido" >
+                    <div class="col-11"><input class="form-control <%= (typeof old != 'undefined' && old.apellido)?"is-valid":(typeof errors != 'undefined' && errors.apellido)?"is-invalid": ""  %>" value="<%= (typeof old != 'undefined' && old.apellido)?old.apellido:'' %>" type="text" placeholder="Apellido" name="apellido" id="idApellido">
                     <small class="text-danger"><%= (typeof errors != 'undefined' && errors.apellido)?errors.apellido.msg: "" %> </small>
+                    <div id="errApe"></div>
                     </div>
                 </div>
                 <!-- <div class="row">
@@ -56,7 +61,7 @@
                 </div> -->
                 <div class="row">
                     <div class="col-1"><i class="fas fa-portrait"></i></div>
-                    <input type="file" style="margin-top: 18px; margin-left: 15px;" name="avatar">
+                    <input type="file" style="margin-top: 18px; margin-left: 15px;" name="avatar" onchange="validarImagen(this);">
                     <small class="text-danger"><%= (typeof errorFormato != 'undefined')?errorFormato: "" %> </small>
                 </div> 
                 <button type="submit" class="btn btn-primary">Registrarse</button>
@@ -76,5 +81,7 @@
         </article>
     </section>
     <%- include('./partials/footer') %> 
+    <script src="/javascripts/validarImagen.js"></script>
+    <script src="/javascripts/validacionRegistro.js"></script>
 </body>
 </html>

@@ -1,94 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head') %> 
-    <link rel="stylesheet" href="../stylesheets/Uno.css">
-<body>
-    <%- include('./partials/header') %> 
+  <%- include('./partials/head') %>
+  <link rel="stylesheet" href="../stylesheets/Uno.css" />
+  <body>
+    <%- include('./partials/header') %>
 
     <div class="container bigboss">
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <img class="imagen-principal img-thumbnail" src="/images/imagenProducto/<%= producto.imagen%>" alt="">
-            </div>
-            <div class="col-12 col-md-6">
-              <form action="/productos/carrito/<%= producto.id %>/agregar" method="POST">
-                <h2><%= producto.nombre %> </h2>
-                <p>codigo: <%= producto.id %> </p>
-                <p style="font-weight: 600;">Descripcion:</p>
-                <p><%= producto.descripcion %> </p>
-                <h2 class="precio">$<%- (producto.precio - producto.precio * producto.descuento / 100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %></h2>
-                <% if (producto.descuento != 0) { %>
-                 <h3 class="ofertita"><%= producto.descuento %>% de descuento</h3>
-                <% } %>
-                
-                <label>cantidad</label>
-                <input style="width: 70px;" type="number" value="" name="cantidad">
-                <p>Garantia: 12 meses</p>
-                <!-- <a href="/productos/carrito/<%= producto.id %> " class="btn btn-primary btn-lg mb-2" style="color: white;"><i class="fas fa-cart-plus"></i> Agregar al carrito</a> -->
-                <button type="submit" class="btn btn-primary btn-lg mb-2"><i class="fas fa-cart-plus"></i> Agregar al carrito</button>
-              </form>
-            </div>
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <img
+            class="imagen-principal img-thumbnail"
+            src="/images/imagenProducto/<%= producto.imagen%>"
+            alt=""
+          />
         </div>
-        <div class="mb-4 mt-3" style="border-bottom: 1px solid silver;"></div>
-        <div class="row">
-            <div class="col-12">
-                <p>
-                  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                    Caracteristicas Tecnicas
-                  </a>
-                </p>
-              <div class="collapse" id="collapseExample">
-                <div class="card card-body">
-                    <ul>
-                        <li>Caracteristica del producto</li>
-                        <li>Caracteristica del producto</li>
-                        <li>Caracteristica del producto</li>
-                    </ul>
-                </div>
-              </div>
-            </div>
+        <div class="col-12 col-md-6">
+          <form
+            action="/productos/carrito/<%= producto.id %>/agregar"
+            method="POST"
+            id="formulario"
+          >
+            <h2><%= producto.nombre %></h2>
+            <p>codigo: <%= producto.id %></p>
+            <p style="font-weight: 600">Descripcion:</p>
+            <p><%= producto.descripcion %></p>
+            <h2 class="precio">
+              $<%- (producto.precio - producto.precio * producto.descuento /
+              100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+              %>
+            </h2>
+            <% if (producto.descuento != 0) { %>
+            <h3 class="ofertita"><%= producto.descuento %>% de descuento</h3>
+            <% } %>
+
+            <label>cantidad</label>
+            <input
+              style="width: 70px"
+              type="number"
+              value=""
+              id="cantidad"
+              name="cantidad"
+            />
+            <div id="errCantidad" style="color: red"></div>
+
+            <p>Garantia: 12 meses</p>
+            <!-- <a href="/productos/carrito/<%= producto.id %> " class="btn btn-primary btn-lg mb-2" style="color: white;"><i class="fas fa-cart-plus"></i> Agregar al carrito</a> -->
+            <button type="submit" class="btn btn-primary btn-lg mb-2">
+              <i class="fas fa-cart-plus"></i> Agregar al carrito
+            </button>
+          </form>
         </div>
-        <hr>
-        <h2>Productos Similares</h2>
-        <div class="row">
-          <div class="col-12 col-md-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="../images/unnamed.png" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Producto</a>
-                </h4>
-                <h5>$00.000</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-              </div>
+      </div>
+      <div class="mb-4 mt-3" style="border-bottom: 1px solid silver"></div>
+      <div class="row">
+        <div class="col-12">
+          <p>
+            <a
+              class="btn btn-primary"
+              data-toggle="collapse"
+              href="#collapseExample"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+              Caracteristicas Tecnicas
+            </a>
+          </p>
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+              <ul>
+                <li>Caracteristica del producto</li>
+                <li>Caracteristica del producto</li>
+                <li>Caracteristica del producto</li>
+              </ul>
             </div>
           </div>
-            <div class="col-12 col-md-4">
-              <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="../images/unnamed.png" alt=""></a>
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="#">Producto</a>
-                  </h4>
-                  <h5>$00.000</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-md-4">
-              <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="../images/unnamed.png" alt=""></a>
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="#">Producto</a>
-                  </h4>
-                  <h5>$00.000</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                </div>
-              </div>
-            </div>
         </div>
+      </div>
+      <hr />
+      <h2>Quizas te interese</h2>
+      <div class="row">
+        <% similares.forEach(producto => { %>
+        <div class="col-12 col-md-2">
+          <!-- un producto -->
+          <div class="card" style="width: 180px; height: 275px;">
+            <a href="/productos/detalleProducto/<%= producto.id %>">
+              <figure class="d-flex justify-content-center d-flex align-items-center" style="height: 150px;border-bottom: 1px solid rgb(240, 240, 240); overflow: hidden;">
+                <img class="card-img-top" src="/images/imagenProducto/<%= producto.imagen%>" alt="" style="width: 100%;"/>
+              </figure>
+            </a>
+            <div class="card-body" style="padding: 20px 10px;">
+              <h1 class="card-title" style="font-size: small">
+                <a href="/productos/detalleProducto/<%= producto.id %>"
+                  ><%= producto.nombre %>
+                </a>
+              </h1>
+              <h4 style="margin: 0;">$<%- (producto.precio - producto.precio * producto.descuento /
+                100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+                %></h4>
+            </div>
+          </div>
+        </div>
+        <% }) %>
+      </div>
     </div>
-    <%- include('./partials/footer') %> 
-</body>
+    <%- include('./partials/footer') %>
+    <script src="/javascripts/validacionDetalle.js"></script>
+  </body>
 </html>

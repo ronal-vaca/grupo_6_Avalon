@@ -1,10 +1,12 @@
 let db = require('../database/models')
 const { Op } = require("sequelize");
 
+const Sequelize = require('sequelize')
 const fs = require('fs');
 const path = require('path')
 /* let dbProducto = require('../data/database');//json */
 const { rawListeners } = require('process');
+const {validationResult, body} = require('express-validator');
 
 
 
@@ -94,12 +96,22 @@ module.exports = {
             producto: producto[0],
             user: req.session.user
         }); */
-        db.Productos.findOne({where:{
-            id:id
-        }}).then(resultado=>{
+        /* db.Productos.findOne({where:{id:id}}) este es el que funciona
+        .then(resultado=>{
             res.render('detalleProducto', {
                 title: "Detalle del Producto",
                 producto: resultado,
+                user: req.session.user
+            });
+        }) */
+        let productoElegido = db.Productos.findOne({where:{id:id}})
+        let productosSimilares = db.Productos.findAll({ order: Sequelize.literal('rand()'), limit: 6 }) //obtengo 3 productos aleatorios de la base de datos para mostrar en la vista
+        Promise.all([productoElegido,productosSimilares])
+        .then(resultado=>{
+            res.render('detalleProducto', {
+                title: "Detalle del Producto",
+                producto: resultado[0],
+                similares: resultado[1],
                 user: req.session.user
             });
         })
@@ -112,11 +124,20 @@ module.exports = {
             dbProducto: dbProducto,
             user: req.session.user
         }) */
-        db.Productos.findAll()
+        db.Productos.findAll({include:[{association:"Categorias"}]})
         .then(resultado=>{
+            /* res.send(resultado) */
+            let categoria=[];
+            resultado.forEach(element => {
+                if(element.Categorias.id == catProducto){
+                    categoria.push(element.Categorias.nombre)
+                }
+            });
+            let categoria2 = [...new Set(categoria)];
             res.render('catProductos', {
                 title: "Avalon",
-                catProducto: catProducto,
+                catProducto: catProducto,//producto
+                categoria: categoria2,//categoria (mouse, teclado, monitor, etc...)
                 dbProducto: resultado,
                 user: req.session.user
             })
@@ -152,31 +173,15 @@ module.exports = {
         })
         .then(result => {
             console.log(result)
-            res.redirect('/productos')
+            res.redirect('/productos/admn')
         })
         .catch(errors=>{
             console.log(errors)
         })
     },
     publicarProducto: function(req,res,next){
-        /* let lastID = 1;
-
-        dbProducto.forEach(producto => {
-            if (producto.id > lastID) {
-                lastID = producto.id
-            }
-        }) */
-        /* let nuevoProducto={
-            id: lastID + 1,
-            nombre: req.body.nombre.trim(),
-            precio: Number(req.body.precio),
-            descuento: Number(req.body.descuento),
-            categoriaProducto: req.body.categoriaProducto,
-            descripcion: req.body.descripcion,
-            imagen: (req.files[0]) ? req.files[0].filename : "productoMuestra.png"
-        };
-        dbProducto.push(nuevoProducto);
-        fs.writeFileSync(path.join(__dirname,"..",'data',"productosDataBase.json"),JSON.stringify(dbProducto),'utf-8'); */
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
         db.Productos.create({
             nombre: req.body.nombre.trim(),
             precio: Number(req.body.precio),
@@ -192,7 +197,14 @@ module.exports = {
         .catch(errors=>{
             console.log(errors)
         })
-        /* res.redirect('/productos'); */
+        }else{
+            res.render("productAdd",{
+                title:'Carga de producto',
+                user: req.session.user,
+                old:req.body,
+                errors:errors.mapped()
+            })
+        }
     },
     vistaEditar: function (req, res, next) {
         let idProducto = req.params.id;
