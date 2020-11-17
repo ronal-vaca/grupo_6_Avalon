@@ -3,6 +3,8 @@ let db= require('../database/models');
 const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcrypt');
+const Axios = require('axios')
+var apiProvincias = require('../request/provincias')
 //let dbUsuarios = require('../data/databaseUsuarios'); json viejo
 const {validationResult, body} = require('express-validator');
 
@@ -132,18 +134,21 @@ module.exports={
     },*/
     perfil:(req,res)=>{ 
         if(req.session.user){
-            db.Usuarios.findByPk(req.session.user.id)
-            .then(user => {
+            let usuarios = db.Usuarios.findByPk(req.session.user.id)
+            let provincias = Axios('https://apis.datos.gob.ar/georef/api/provincias')
+            Promise.all([usuarios,provincias])
+            .then(resultado => {
                 return res.render('perfil',{
                     title:"Perfil de Usuario",
-                    usuario:user,
+                    provincias: resultado[1],
+                    usuario:resultado[0],
                     })
                 })
         }else{
             return res.redirect('/')
         }
     },
-    editarPerfil:(req,res)=>{
+    /* editarPerfil:(req,res)=>{
         if(req.files[0]){
             if(fs.existsSync(path.join(__dirname,'../public/images/imagenAvatar/'+req.session.user.avatar))){
                 fs.unlinkSync(path.join(__dirname,'../public/images/imagenAvatar/'+req.session.user.avatar))
@@ -177,7 +182,7 @@ module.exports={
             res.send(error)
             console.log(error)
         })
-    },
+    }, */
     cerrarsesion:function(req,res){
         req.session.destroy();
         if(req.cookies.usuarioAvalon){
@@ -185,7 +190,7 @@ module.exports={
         }
         res.redirect('/')
     },
-    perfil:(req,res)=>{ 
+    /* perfil:(req,res)=>{ 
         if(req.session.user){
             db.Usuarios.findByPk(req.session.user.id)
             .then(user => {
@@ -197,7 +202,7 @@ module.exports={
         }else{
             return res.redirect('/')
         }
-    },
+    }, */
     editarPerfil:(req,res)=>{
         if(req.files[0]){
             if(fs.existsSync(path.join(__dirname,'../public/images/imagenAvatar/'+req.session.user.avatar))){
@@ -214,8 +219,8 @@ module.exports={
                 apellido: req.body.apellido.trim(),
                 dni:Number(req.body.DNI),
                 telefono: Number(req.body.telefono),
-                provincia:req.body.provincia.trim(),
-                localidad:req.body.localidad.trim(),
+                provincia:req.body.provincia,
+                localidad:req.body.localidad,
                 direccion: req.body.direccion.trim()
             },
             {
@@ -225,7 +230,6 @@ module.exports={
             }
         )
         .then( result => {
-          console.log(req.session.user)
           return res.redirect('/users/perfil')
           })
         .catch(error => {
@@ -234,6 +238,10 @@ module.exports={
         })
     },
     darDeBaja:(req,res)=>{
+        req.session.destroy();
+        if(req.cookies.usuarioAvalon){
+            res.cookie('usuarioAvalon','',{maxAge:-1})
+        }
         db.Usuarios.destroy({
             where:{
                 id:req.params.id

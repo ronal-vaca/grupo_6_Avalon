@@ -81,10 +81,15 @@ module.exports = {
     },
 
     cargaProducto: function (req, res) {
-        res.render('productAdd', {
+        db.Categorias.findAll()
+        .then(respuesta=>{
+            res.render('productAdd', {
             title: 'Carga de producto',
+            categorias: respuesta,
             user: req.session.user
-        });
+            });
+        })
+        
     },
     detalleProducto: function (req, res) {
         let id = req.params.id;
@@ -108,8 +113,12 @@ module.exports = {
         let productosSimilares = db.Productos.findAll({ order: Sequelize.literal('rand()'), limit: 6 }) //obtengo 3 productos aleatorios de la base de datos para mostrar en la vista
         Promise.all([productoElegido,productosSimilares])
         .then(resultado=>{
+            let caracteristicas = resultado[0].caracteristicas.split(",")
+            let adicionales = resultado[0].adicionales.split(",")
             res.render('detalleProducto', {
                 title: "Detalle del Producto",
+                caracteristicas: caracteristicas,
+                adicionales: adicionales,
                 producto: resultado[0],
                 similares: resultado[1],
                 user: req.session.user
@@ -165,7 +174,7 @@ module.exports = {
             });
         })
     },
-    agregarAlCarrito: function(req,res,next){
+    agregarAlCarrito: function(req,res){
         db.Carritos.create({
             cantidad:req.body.cantidad,
             id_producto:req.params.id,
@@ -179,7 +188,21 @@ module.exports = {
             console.log(errors)
         })
     },
-    publicarProducto: function(req,res,next){
+    agregarAlCarritoAPC: function(req,res){
+        db.Carritos.create({
+            cantidad:req.body.cantidad,
+            id_producto:req.params.id,
+            id_usuario:req.session.user.id
+        })
+        .then(result => {
+            console.log(result)
+            /* res.redirect('/productos/admn') */
+        })
+        .catch(errors=>{
+            console.log(errors)
+        })
+    },
+    publicarProducto: function(req,res){
         let errors = validationResult(req);
         if(errors.isEmpty()){
         db.Productos.create({
@@ -188,7 +211,9 @@ module.exports = {
             descuento: Number(req.body.descuento),
             descripcion: req.body.descripcion,
             imagen: (req.files[0]) ? req.files[0].filename : "productoMuestra.png",
-            categoria_id: req.body.categoriaProducto
+            categoria_id: req.body.categoriaProducto,
+            caracteristicas: req.body.caract1 + ","+ req.body.caract2+ "," + req.body.caract3 + ","+ req.body.caract4 + "," + req.body.caract5 + "," + req.body.caract6,
+            adicionales: req.body.adicional1 + "," + req.body.adicional2 + "," + req.body.adicional3 + "," + req.body.adicional4 + "," + req.body.adicional5
         })
         .then(result => {
             console.log(result)
@@ -206,7 +231,7 @@ module.exports = {
             })
         }
     },
-    vistaEditar: function (req, res, next) {
+    vistaEditar: function (req, res) {
         let idProducto = req.params.id;
 
         /* res.render('EditarProducto', {
@@ -218,12 +243,15 @@ module.exports = {
         /* let idProducto = db.Productos.findByPk(req.params.id);
         let categorias = db.Categorias.findAll(); */
 
-        db.Productos.findAll()
+        let categorias = db.Categorias.findAll()
+        let productos = db.Productos.findAll()
+        Promise.all([categorias,productos])
             .then(resultado => {
                 res.render('EditarProducto', {
                     title: "Edicion de producto",
                     idProducto: idProducto,
-                    dbProducto: resultado,
+                    categorias: resultado[0],
+                    dbProducto: resultado[1],
                     user: req.session.user
                 })
             })
@@ -231,7 +259,7 @@ module.exports = {
                 console.log(error);
         })
     },
-    guardarEditar: function (req, res, next) {
+    guardarEditar: function (req, res) {
        /*  let idProducto = req.params.id;
         dbProducto.forEach(function (producto) {
             if (producto.id == idProducto) {
@@ -265,7 +293,7 @@ module.exports = {
         })
         
     },
-    borrarProdCarrito: (req,res,next)=>{
+    borrarProdCarrito: (req,res)=>{
         db.Carritos.destroy({
             where:{
                 id:req.params.id
@@ -273,8 +301,14 @@ module.exports = {
         })
         res.redirect('/productos/carrito')
     },
+    borrarProdCarritoAPC: (req,res)=>{
+        db.Carritos.destroy({
+            where:{
+                id:req.params.id
+            }
+        })
+    },
     delete: (req, res) => {
-        let productodelete = req.params.id;
         /* let borrar;
         dbProducto.forEach((producto) => {
             if (producto.id == productodelete) {
@@ -289,5 +323,26 @@ module.exports = {
             }
         })
         res.redirect('/productos/admn');
+    },
+    armatupc:function(req,res){
+        let socket = req.params.socket;
+        let productos = db.Productos.findAll()
+        let carrito = db.Carritos.findAll({include:[{association:"producto"},{association:"usuario"}]})
+        Promise.all([productos,carrito])
+        .then(data=>{
+            res.render('ArmaTuPC', {
+                title: "Armando tu PC",
+                socket: socket,
+                dbProducto: data[0],
+                carrito: data[1],
+                user: req.session.user
+            })
+        })
+    },
+    apiProd:function(req,res){
+        db.Productos.findAll()
+        .then(data=>{
+            res.json(data)
+        })
     }
 }

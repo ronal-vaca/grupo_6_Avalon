@@ -52,7 +52,8 @@
         </div>
       </div>
       <div class="mb-4 mt-3" style="border-bottom: 1px solid silver"></div>
-      <div class="row">
+      <% if (producto.categoria_id == 13) { %>
+       <div class="row">
         <div class="col-12">
           <p>
             <a
@@ -63,27 +64,60 @@
               aria-expanded="false"
               aria-controls="collapseExample"
             >
-              Caracteristicas Tecnicas
+              Especificaciones
             </a>
           </p>
           <div class="collapse" id="collapseExample">
-            <div class="card card-body">
-              <ul>
-                <li>Caracteristica del producto</li>
-                <li>Caracteristica del producto</li>
-                <li>Caracteristica del producto</li>
-              </ul>
-            </div>
+              <table class="table table-striped table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col">Mother</th>
+                    <th scope="col">Procesador</th>
+                    <th scope="col">Memoria RAM</th>
+                    <th scope="col">Disco / SSD</th>
+                    <th scope="col">Fuente</th>
+                    <th scope="col">Placa de video</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <% caracteristicas.forEach(caract => { %>
+                       <td> <%= caract %> </td>
+                    <% }) %>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="table table-striped table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col">Monitor</th>
+                    <th scope="col">Teclado</th>
+                    <th scope="col">Mouse</th>
+                    <th scope="col">Auricular</th>
+                    <th scope="col">Gabinete</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <% adicionales.forEach(adicional => { %>
+                     <td><%= adicional %> </td>
+                    <% }) %>
+                  </tr>
+                </tbody>
+              </table>
           </div>
         </div>
       </div>
-      <hr />
+      <% } %>
+      
+      <!-- <hr /> -->
       <h2>Quizas te interese</h2>
       <div class="row">
         <% similares.forEach(producto => { %>
-        <div class="col-12 col-md-2">
+        <div class="col-6 col-md-4 col-lg-2">
           <!-- un producto -->
-          <div class="card" style="width: 180px; height: 275px;">
+          <div class="card efectoBox" style="height: 285px;">
             <a href="/productos/detalleProducto/<%= producto.id %>">
               <figure class="d-flex justify-content-center d-flex align-items-center" style="height: 150px;border-bottom: 1px solid rgb(240, 240, 240); overflow: hidden;">
                 <img class="card-img-top" src="/images/imagenProducto/<%= producto.imagen%>" alt="" style="width: 100%;"/>
@@ -91,8 +125,8 @@
             </a>
             <div class="card-body" style="padding: 20px 10px;">
               <h1 class="card-title" style="font-size: small">
-                <a href="/productos/detalleProducto/<%= producto.id %>"
-                  ><%= producto.nombre %>
+                <a href="/productos/detalleProducto/<%= producto.id %>" style="text-decoration: none; color: black;">
+                  <%= producto.nombre %>
                 </a>
               </h1>
               <h4 style="margin: 0;">$<%- (producto.precio - producto.precio * producto.descuento /

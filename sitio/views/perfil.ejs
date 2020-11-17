@@ -45,11 +45,29 @@
             </div>
             <div class="row">
                 <div class="col-1"><i class="fas fa-map-marked-alt"></i></div>
-                <div class="col-11"><input class="form-control" type="text" placeholder="Provincia" name="provincia" value="<%= usuario.provincia %> "></div>
+                <!-- <div class="col-11"><input class="form-control" type="text" placeholder="Provincia" name="provincia" value=" usuario.provincia "></div> -->
+                <div class="col-11">
+                    <select class="form-control"  name="provincia" id="provinciasSel" onfocus="dameLocalidades()" style="margin-top: 15px;">
+                        <% if (usuario.dataValues.provincia == "") { %> <!-- si el usuario no tiene regustrado una provincia... -->
+                            <option value="">Elija una provincia</option> <!-- mostrar msj "Elija una provincia" -->
+                        <% provincias.data.provincias.forEach(element => { %><!-- hago un foreach para mostrar las provincias de arg -->
+                            <option value="<%= element.nombre %> "><%= element.nombre %> </option>
+                        <% }) %>
+                        <% }else{ %> <!-- si el usuario ya registra con una provincia registradaa entonces mostrar la provincia registrada -->
+                            <option value="<%= usuario.dataValues.provincia %>"><%= usuario.dataValues.provincia %> </option>
+                        <% provincias.data.provincias.forEach(element => { %><!-- hago un foreach para mostrar las provincias de arg -->
+                            <option value="<%= element.nombre %> "><%= element.nombre %> </option>
+                        <% }) %>
+                        <% } %>
+                </select></div>
             </div>
             <div class="row">
                 <div class="col-1"><i class="fas fa-map-marked-alt"></i></div>
-                <div class="col-11"><input class="form-control" type="text" placeholder="Localidad" name="localidad" value="<%= usuario.localidad %> "></div>
+                <div class="col-11">
+                    <select class="form-control"  name="localidad" id="localidadesSel" style="margin-top: 15px;">
+                        <option value="<%= usuario.dataValues.localidad %>"><%= usuario.dataValues.localidad %> </option>
+                    </select>
+                </div>
             </div>
             <div class="row">
                 <div class="col-1"><i class="fas fa-map-marked-alt"></i></div>
@@ -92,5 +110,6 @@ $seleccionArchivos.addEventListener("change", () => {
 });
 </script>
 <%- include('./partials/footer') %> 
+<script src="/javascripts/perfil.js"></script>
 </body>
 </html>

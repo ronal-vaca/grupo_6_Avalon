@@ -6,15 +6,27 @@
           <button class="navbar-toggler botonMnu" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
-              <li class="nav-item"><a href="">ARMA TU PC</a></li>
-              <li class="nav-item"><a href="">PC ARMADAS</a></li>
+
+              <li class="nav-item">
+              <div class="dropdown">
+                <a class="" href="" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  ARMA TU PC
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item diBackAMD" href="/productos/armatupc/amd"><figure><img src="/images/logos/amd.jpg"  alt=""></figure></a>
+                  <div class="dropdown-divider" style="margin: 3px 0;"></div>
+                  <a class="dropdown-item diBackINTEL" href="/productos/armatupc/intel"><figure><img src="/images/logos/Intel.jpg" alt=""></figure></a>
+                </div>
+              </div>
+              </li>
+              <li class="nav-item"><a href="/productos/13">PC ARMADAS</a></li>
               <% if (typeof user == "undefined") { %>
                 <li class="nav-item"><a href="/productos" href="#">PRODUCTOS</a></li>
               <% }else{ %>
                 <li class="nav-item"><a href="/productos/admn" href="#">PRODUCTOS</a></li>
               <% } %>
               
-              <li class="nav-item"><a href="">NOTEBOOKS</a></li>
+              <li class="nav-item"><a href="/productos/12">NOTEBOOKS</a></li>
               <li class="nav-item"><a href="/productos/11">MONITORES</a></li>
             </ul>
           </div>

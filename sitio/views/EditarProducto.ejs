@@ -28,12 +28,12 @@
             <% dbProducto.forEach(producto => { %>
             <% if (producto.id == idProducto) { %>
           <form class="col-12" action="/productos/EditarProducto/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="formulario">
-            <div class="col-12 productosSpan mb-2">
+<!--             <div class="col-12 productosSpan mb-2">
               <span>Fotos- 0/10 - Puedes agregar un maximo de 10 fotos</span>
-            </div>
+            </div> -->
             <div class="form-group productosCajaDeArchivo">
               <label for="exampleFormControlFile1"></label>
-              <input type="file" class="form-control-file productosAgregarFoto" id="files" name="imagen">
+              <input type="file" class="form-control-file productosAgregarFoto" id="files" name="imagen" onchange="validarImagen(this);">
             </div>
             <div class="col-12">
               <p class="text-center">Los campos con * son obligatorios.</p>
@@ -47,35 +47,21 @@
               <div id="errorPrecio"></div> 
             </div>
             <div class="col-12 productosMargen">
-              <input type="text" class="form-control is-invalid" placeholder="Descuento" id="descuento" name="descuento" value="<%= producto.descuento %> ">
+              <input type="text" class="form-control is-invalid" placeholder="Descuento*" id="descuento" name="descuento" value="<%= producto.descuento %> ">
               <div id="errorDescuento"></div> 
             </div>
             <div class="col-12 productosMargen">
               <select name="categoriaProducto" class="custom-select">
-                <% if (producto.categoria_id == "1") { %>
-                   <option selected value="1">Mouse</option>
-                   <% } else if (producto.categoria_id == "2") { %>
-                    <option selected value="2">Teclado</option>
-                    <% } else if (producto.categoria_id == "3") { %>
-                    <option selected value="3">Grafica</option>
-                    <% } else if (producto.categoria_id == "4") { %>
-                    <option selected value="4">Procesador</option>
-                    <% } else if (producto.categoria_id == "5") { %>
-                    <option selected value="5">Disco</option>
-                    <% } else if (producto.categoria_id == "6") { %>
-                    <option selected value="6">Fuente</option>
-                    <% } else if (producto.categoria_id == "7") { %>
-                    <option selected value="7">Memoria</option>
-                    <% } else if (producto.categoria_id == "8") { %>
-                    <option selected value="8">Motherboard</option>
-                    <% } else if (producto.categoria_id == "9") { %>
-                    <option selected value="9">Auricular</option>
-                    <% } else if (producto.categoria_id == "10") { %>
-                    <option selected value="10">Gabinete</option>
-                    <% } else { %>
-                    <option selected value="11">Monitor</option>
-                <% } %>
-                <option value="1">Mouse</option>
+                <% categorias.forEach(categoria => { %>
+                 <% if (producto.categoria_id == categoria.id) { %>
+                    <option selected value="<%= categoria.id %> "><%= categoria.nombre %> </option> <!--  -->
+                 <% } %>
+                <% }) %>
+
+                <% categorias.forEach(categoria => { %>
+                  <option value="<%= categoria.id %> "><%= categoria.nombre %> </option>
+                <% }) %>
+                <!-- <option value="1">Mouse</option>
                 <option value="2">Teclado</option>
                 <option value="3">Grafica</option>
                 <option value="4">Procesador</option>
@@ -85,7 +71,7 @@
                 <option value="8">Motherboard</option>
                 <option value="9">Auricular</option>
                 <option value="10">Gabinete</option>
-                <option value="11">Monitor</option>
+                <option value="11">Monitor</option> -->
               </select>
             </div>
             <div class="col-12 productosMargen">
@@ -123,12 +109,13 @@
                 <output id="list"><img style="width: 100%;" src="/images/imagenProducto/<%= producto.imagen %> " alt=""> </output>
             </div>
             <div class="col-12 col-md-6">
-                <h2 id="nombreMuestra">Titulo del producto</h2>
+
+                <h2 id="nombreMuestra"><%= producto.nombre %> </h2>
                 <p>Codigo de producto</p>
                 <p style="font-weight: 600;" >Descripcion:</p>
-                <p id="descripcionMuestra">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, possimus repudiandae? Reiciendis beatae vero amet ad facere totam, eius necessitatibus.</p>
-                <h2 class="precio" id="precioMuestra">$PRECIO</h2>
-                <h3 class="ofertita" id="descuentoMuestra">% DESCUENTO</h3>
+                <p id="descripcionMuestra"><%= producto.descripcion %> </p>
+                <h2 class="precio" id="precioMuestra">$<%= producto.precio %> </h2>
+                <h3 class="ofertita" id="descuentoMuestra">% <%= producto.descuento %> </h3>
                 <label>cantidad</label>
                 <input style="width: 70px;" type="number" value="">
                 <p>garantia: 12 meses</p>
@@ -144,6 +131,7 @@
 
   <%- include('./partials/footer') %> 
   <script src="/javascripts/validacionProductos.js"></script>
+  <script src="/javascripts/validarImagen.js"></script>
   <script type="text/javascript">
     $(document).ready(function () {
         $("#nombre").keyup(function () {

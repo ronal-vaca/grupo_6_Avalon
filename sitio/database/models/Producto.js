@@ -44,6 +44,20 @@ module.exports = (sequelize,dataTypes)=>{
             type:dataTypes.INTEGER(11),
             allowNull:false,
             defaultValue:'NULL'
+        },
+        caracteristicas:{
+            type:dataTypes.INTEGER(1000),
+            allowNull:false,
+            defaultValue:'Sin especificar'
+        },
+        adicionales:{
+            type:dataTypes.INTEGER(1000),
+            allowNull:false,
+            defaultValue:'Sin especificar'
+        },
+        socket:{
+            type:dataTypes.STRING(45),
+            allowNull: true
         }
     }
     let config = {

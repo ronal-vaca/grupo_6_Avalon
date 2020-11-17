@@ -43,12 +43,22 @@ router.get('/carrito',sessionUserCheck, controller.carrito);
 router.post('/carrito/:id/agregar',sessionUserCheck, controller.agregarAlCarrito)
 router.delete('/borrarProdCarrito/:id',sessionUserCheck, controller.borrarProdCarrito)
 
+/* rutas de armado de pc */
+router.delete('/borrarProdCarritoAPC/:id',sessionUserCheck, controller.borrarProdCarritoAPC)
+router.post('/carrito/:id/agregarAPC',sessionUserCheck, controller.agregarAlCarritoAPC)
+
 /*ruta de edicion de producto*/
 router.get('/EditarProducto/:id',sessionUserCheck, controller.vistaEditar)
 router.put('/EditarProducto/:id', upload.any(),controller.guardarEditar)
 
+/*ruta de arma tu pc*/
+router.get('/armatupc/:socket',sessionUserCheck, controller.armatupc)
+
 router.get('/:catProducto', controller.catProducto);
 
-router.delete('/delete/:id',sessionUserCheck, controller.delete)
+router.delete('/delete/:id',sessionUserCheck, controller.delete);
+
+/* una api para consumir datos de productos */
+router.get('/api/Productos', controller.apiProd)
 
 module.exports = router;

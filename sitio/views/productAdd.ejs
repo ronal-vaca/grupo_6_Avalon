@@ -28,14 +28,14 @@
         <!-- comienzo de la tercera linea -->
         <div class="row productosTerceraRow">
           <form class="col-12" method="POST" action="./cargaProducto" enctype="multipart/form-data" id="formulario">
-            <div class="col-12 productosSpan mb-2">
+            <!-- <div class="col-12 productosSpan mb-2">
               <span>Fotos- 0/10 - Puedes agregar un maximo de 10 fotos</span>
-            </div>
+            </div> -->
             <div class="form-group productosCajaDeArchivo">
               <input type="file" class="form-control-file" id="files" name="imagen" onchange="validarImagen(this);">
             </div>
             <div class="col-12">
-              <p class="text-center">Los campos con * son obligatorios.</p>
+              <p class="text-center" style="font-size: 13px;">Los campos con * son obligatorios.</p>
             </div>
             <div class="col-12 productosMargen">
               <input type="text" class="form-control" placeholder="Nombre*" id="nombre" name="nombre" required>
@@ -47,24 +47,19 @@
               <div id="errorPrecio"></div> 
             </div>
             <div class="col-12 productosMargen">
-              <input type="number" class="form-control" placeholder="Descuento" id="descuento" name="descuento" required>
+              <input type="number" class="form-control" placeholder="Descuento*" id="descuento" name="descuento" required>
               <div id="errorDescuento"></div> 
             </div>
             <div class="col-12 productosMargen">
-              <select name="categoriaProducto" class="custom-select" required>
-                <option value="">Categoria de producto</option>
-                <option value="1">Mouse</option>
-                <option value="2">Teclado</option>
-                <option value="3">Grafica</option>
-                <option value="4">Procesador</option>
-                <option value="5">Disco</option>
-                <option value="6">Fuente</option>
-                <option value="7">Memoria</option>
-                <option value="8">Motherboard</option>
-                <option value="9">Auricular</option>
-                <option value="10">Gabinete</option>
-                <option value="11">Monitor</option>
+              <select name="categoriaProducto" class="custom-select" id="select" onchange="PCArmada()" required>
+                <option value="Sin elegir">Categoria de producto</option>
+                <% categorias.forEach(categoria => { %>
+                  <option id="<%= categoria.id %>" value="<%= categoria.id %>"><%= categoria.nombre %> </option>     <!-- lista de productos -->
+                <% }) %>
               </select>
+            </div>
+            <div class="col-12 productosMargen" id="caractYadicionales">
+              <!-- <input type="text" class="form-control" name="caract1" id="caract1" placeholder="caracteristica"> -->
             </div>
             <div class="col-12 productosMargen">
               <textarea class="form-control" rows="6" placeholder="Descripcion*" name="descripcion" id="descripcion" required></textarea>
@@ -149,6 +144,8 @@
   
   <%- include('./partials/footer') %> 
   <script src="/javascripts/validacionProductos.js"></script>
+  <script src="/javascripts/validarImagen.js"></script>
+  <script src="/javascripts/ProductAdd.js"></script>
   <script type="text/javascript">
     $(document).ready(function () {
         $("#nombre").keyup(function () {

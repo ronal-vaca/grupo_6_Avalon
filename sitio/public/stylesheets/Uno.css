@@ -427,6 +427,40 @@ li{
     padding: 0;
 }
 
+.diBackAMD{
+    padding: 0;
+    width: 158px;
+    margin: 0px;
+
+}
+.diBackAMD figure{
+    margin: 0;
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+}
+.diBackAMD img{
+    position: absolute;
+    width: 100%;
+    top: -47px;
+}
+.diBackINTEL{
+    padding: 0;
+}
+.diBackINTEL figure{
+    margin: 0;
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+}
+.diBackINTEL img{
+    position: absolute;
+    width: 100%;
+    top: -47px;
+}
+
 
 
 @media(min-width:375px){
@@ -436,8 +470,20 @@ li{
     .nombreUsuario{
         display: none;
     }
+    .msjOrdenador{
+        display: block;
+    }
+    .miContenedor{
+        display: none;
+    }
 }
 @media(min-width:768px){
+    .msjOrdenador{
+        display: none;
+    }
+    .miContenedor{
+        display: block;
+    }
     .cajaBuscador input{
         width: 93%;
     }
@@ -520,7 +566,7 @@ li{
     border-radius: 5px;
     width: 95%;
     margin-left: 3%;
-    height: 20%;
+    height: 100px;
     display: flex;
     align-items: center;
   }
