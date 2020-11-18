@@ -59,9 +59,9 @@
                     <% } %><!-- fin del if user.id-->
                 <% }) %><!-- fin del forEach -->
                 
-                <div class="row" style="width: 100%; margin: 0px;">
+                <div class="row" style="width: 100%; margin: 0px;" id="cooler">
                     <div class="col-12 efectoBox" style="background-color: white; height: 100px; border: 1px solid silver; margin-bottom: 10px; padding:10px;">
-                        <div class="row" style="width: 100%; margin: 0px;">
+                        <div class="row" style="width: 100%; margin: 0px;"onclick="peticion1(14)">
                             <div class="col-3 d-flex justify-content-center d-flex align-items-center" style="height: 80px; border-right: 1px solid silver; margin-bottom: 10px; background-color: white;">
                                 <figure class="d-flex justify-content-center d-flex align-items-center" style="margin: 0px;">
                                     <img src="/images/imagenArmaPC/cooler.jpeg" alt="" style="width: 60px;">
@@ -74,6 +74,35 @@
                         </div>
                     </div>
                 </div>
+                <% carrito.forEach(element => { %>
+                    <% if (element.id_usuario == user.id) { %>
+                        <% if (element.producto.CategoriaId == 14) { %>
+                            <script type="text/javascript">
+                                document.getElementById('cooler').style.display = "none";
+                            </script>
+                            <div class="row" style="width: 100%; margin: 0px;" onclick="peticion1(14)">
+                                <div class="col-12 efectoBox" style="background-color: white; height: 100px; border: 1px solid silver; margin-bottom: 10px; padding:10px;">
+                                    <div class="row" style="width: 100%; margin: 0px;">
+                                        <div class="col-3 d-flex justify-content-center d-flex align-items-center" style="height: 80px; border-right: 1px solid silver; margin-bottom: 10px; background-color: white;">
+                                            <figure class="d-flex justify-content-center d-flex align-items-center" style="margin: 0px;">
+                                                <img src="/images/imagenProducto/<%= element.producto.imagen %> " alt="" style="width: 60px;">
+                                            </figure>
+                                        </div>
+                                        <div class="col-7" style=" background-color:white;height: 80px; margin-bottom: 10px;">
+                                            <h6 style="font-weight: 700; margin-top: 5px;"><%= element.producto.nombre %></h6>
+                                            <p style="color: green;">$<%= (element.producto.precio - element.producto.precio * element.producto.descuento /100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %></p>
+                                        </div>
+                                        <div class="col-2">
+                                            <form action="/productos/borrarProdCarritoAPC/<%= element.id %>?_method=delete" method="POST">
+                                                <button type="submit" class="btn btn-outline-danger" style="height: 36px; width: 36px;" onclick="desmarcar()">X</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <% } %> <!-- categoria -->
+                    <% } %><!-- fin del if user.id-->
+                <% }) %><!-- fin del forEach -->
                 <div class="row" style="width: 100%; margin: 0px;" id="mother">
                     <div class="col-12 efectoBox" style="background-color: white; height: 100px; border: 1px solid silver; margin-bottom: 10px; padding:10px;">
                         <div class="row" style="width: 100%; margin: 0px;" onclick="peticion('<%= socket %>',8)">
@@ -399,7 +428,7 @@
                                 </figure>
                             </div>
                             <div class="col-9" style=" background-color:white;height: 80px; margin-bottom: 10px;">
-                              <h6 style="font-weight: 700; margin-top: 5px;">Periferico 1 </h6>
+                              <h6 style="font-weight: 700; margin-top: 5px;">Teclado</h6>
                               <p style="color: green;">$PRECIO</p>
                             </div>
                         </div>
@@ -444,7 +473,7 @@
                                 </figure>
                             </div>
                             <div class="col-9" style=" background-color:white;height: 80px; margin-bottom: 10px;">
-                              <h6 style="font-weight: 700; margin-top: 5px;">Peroferico 2</h6>
+                              <h6 style="font-weight: 700; margin-top: 5px;">Mouse</h6>
                               <p style="color: green;">$PRECIO</p>
                             </div>
                         </div>
