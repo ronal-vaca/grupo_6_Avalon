@@ -15,15 +15,16 @@
 
     <div class="row">
 
-      <div class="col-2"></div>
+      <div class="col-1">
+      </div>
 
-        <div class="col-8" id="TituloCarro">
+        <div class="col-10" id="TituloCarro">
 
           <h1>Carrito de compras</h1>
 
         </div>
 
-      <div class="col-2"></div>
+      <div class="col-1"></div>
 
     </div>
 
@@ -37,15 +38,15 @@
 
       <div class="row">
 
-        <div class="col-2"></div>
+        <div class="col-1"></div>
 
-        <div class="col-4" id="Producto1">
+        <div class="col-2" id="Producto1"> <!-- IMAGEN DEL PROD CARRITO -->
 
-            <img src="/images/imagenProducto/<%- carrito.producto.imagen %>" class="card-img"  alt="..." style="max-width: 300px;">
+            <img src="/images/imagenProducto/<%- carrito.producto.imagen %>" class="card-img"  alt="..." style="max-width: 150px;">
              
         </div>
 
-        <div class="col-4" id="Producto1">
+        <div class="col-5" id="Producto1"> <!-- DETALLE DEL PROD CARRITO -->
 
           <div class="card-body" id="textoProdCarrito">
 
@@ -57,62 +58,80 @@
         
         </div>
 
-        <div class="col-2"></div>
+        <div class="col-4">
+          
+          <div class="row" style="height: 100%; "><!-- BOTONES -->
+        
+           <div class="col-9" id="Producto1" >  
 
-      </div>
+             <div class="row" style="margin-top:10%;"> 
 
-    </div>
-
-    <div class="container">
-
-      <div class="row">
-    
-        <div class="col-2"></div>
-    
-        <div class="col-8" id="Producto1">
-          <form action="/productos/borrarProdCarrito/<%= carrito.id %>?_method=delete" method="POST">
-            <button type="submit" class="btn btn-outline-danger"><img src="/images/IconosCarrito/TachoDeBasuraCarri.png" alt="..." style="max-width: 15px;"></button>
-          </form>
-          <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-    
-            <div class="btn-group" role="group">
-    
-              <button id="btnGroupDrop1" type="button" class="btn btn-outline-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cantidad</button>
-    
-                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                  <a class="dropdown-item" href="#">1</a>
-                  <a class="dropdown-item" href="#">2</a>
+                <div class="col-2">
+                <form action="/productos/borrarProdCarrito/<%= carrito.id %>?_method=delete" method="POST">
+                <button type="submit" class="btn btn-outline-danger"><img src="/images/IconosCarrito/TachoDeBasuraCarri.png" alt="..." style="max-width: 15px;"></button>
+                </form>
                 </div>
-    
+
+                <div class="col-5">
+                  <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                    <div class="btn-group" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-outline-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cantidad</button>
+                      <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <a class="dropdown-item" href="#">1</a>
+                        <a class="dropdown-item" href="#">2</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-5">
+                   <button type="button" class="btn btn-outline-danger" >Comprar ahora</button>
+                </div>
+
+              </div>
+        
             </div>
-    
+        
+            <div class="col-3"></div>
+        
           </div>
-    
-          <button type="button" class="btn btn-outline-danger">Comprar ahora</button>
-    
+        
+
         </div>
-    
-        <div class="col-2"></div>
-    
+        
+
       </div>
-    
+
     </div>
+
+   
   <% } %>
 <% }) %>
 
 <div class="container">
 
-  <div class="row">
+  <div class="row" >
     
-    <div class="col-2"></div>
+    <div class="col-1"></div>
 
-    <div class="col-8" id="BotonSeguir">
+    <div class="col-10" id="BotonSeguir">
 
-      <button type="button" class="btn btn-outline-danger"><a href="/">Seguir comprando</a></button>
+      <div class="row">
 
+        <div class="col-3"></div>
+       
+        <div class="col-3">
+        <button type="button" class="btn btn-outline-danger" ><a href="" style="color: #FF3C33;">Finalizar Compra</a></button>
+      </div>
+
+      <div class="col-3">
+         <button type="button" class="btn btn-outline-danger" ><a href="/" style="color: #FF3C33;">Seguir comprando</a></button>
+      </div>
+      </div>
+       <div class="col-3"></div>
     </div>
 
-    <div class="col-2"></div>
+    <div class="col-1"></div>
 
   </div>
 

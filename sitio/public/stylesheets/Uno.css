@@ -753,7 +753,7 @@ li{
 #TituloCarro{
     border: 0.5px solid black;
     margin-top: 20px;
-    background-color:rgb(250, 45, 28);
+    background-image:url("/images/IconosCarrito/FONDO1.png");
     color:white;
 }
 #nombreProdCarrito{
@@ -768,9 +768,10 @@ li{
 }
 #BotonSeguir{
     border: 0.5px solid black;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    
 }
-#SeguirComprando{
+.IrCompra{
     color:white;
 }
 
