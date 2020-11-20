@@ -12,11 +12,13 @@ const {validationResult, body} = require('express-validator');
 
 module.exports = {
     listar: (req, res) => {
-        db.Productos.findAll()
+        let productos = db.Productos.findAll()
+        let carrito = db.Carritos.findAll()
+        Promise.all([productos])
             .then(resultado => {
                 res.render('productos', {
                     title: "Nuestros productos",
-                    dbProducto: resultado,
+                    dbProducto: resultado[0],
                     user: req.session.user
                 })
             })
@@ -32,11 +34,12 @@ module.exports = {
         });
     },*/
     listarAdmn: function (req, res) {
-        db.Productos.findAll()
+        let productos = db.Productos.findAll()
+        Promise.all([productos])
             .then(resultado => {
                 res.render('productosAdmin', {
                     title: "Nuestros productos",
-                    dbProducto: resultado,
+                    dbProducto: resultado[0],
                     user: req.session.user
                 })
             })
@@ -63,17 +66,19 @@ module.exports = {
             dbProducto: resultados,
             user: req.session.user
         })*/
-        db.Productos.findAll({
+        let productos = db.Productos.findAll({
             where:{
                 nombre:{
                     [Op.substring]:req.query.buscar
                 }
             }
         })
+        let carrito = db.Carritos.findAll()
+        Promise.all([productos])
         .then(resultado=>{
             res.render('productos', {
                 title: "Resultados de la busqueda",
-                dbProducto: resultado,
+                dbProducto: resultado[0],
                 user: req.session.user
             })
         })
@@ -81,11 +86,12 @@ module.exports = {
     },
 
     cargaProducto: function (req, res) {
-        db.Categorias.findAll()
+        let categorias = db.Categorias.findAll()
+        Promise.all([categorias])
         .then(respuesta=>{
             res.render('productAdd', {
             title: 'Carga de producto',
-            categorias: respuesta,
+            categorias: respuesta[0],
             user: req.session.user
             });
         })
@@ -133,11 +139,12 @@ module.exports = {
             dbProducto: dbProducto,
             user: req.session.user
         }) */
-        db.Productos.findAll({include:[{association:"Categorias"}]})
+        let productos = db.Productos.findAll({include:[{association:"Categorias"}]})
+        Promise.all([productos])
         .then(resultado=>{
             /* res.send(resultado) */
             let categoria=[];
-            resultado.forEach(element => {
+            resultado[0].forEach(element => {
                 if(element.Categorias.id == catProducto){
                     categoria.push(element.Categorias.nombre)
                 }
@@ -147,7 +154,7 @@ module.exports = {
                 title: "Avalon",
                 catProducto: catProducto,//producto
                 categoria: categoria2,//categoria (mouse, teclado, monitor, etc...)
-                dbProducto: resultado,
+                dbProducto: resultado[0],
                 user: req.session.user
             })
         .catch(errors=>{
@@ -163,12 +170,13 @@ module.exports = {
             idProducto: idProducto,
             user: req.session.user
         }); */
-        db.Carritos.findAll({include:[{association:"producto"},{association:"usuario"}]})
+        let carrito = db.Carritos.findAll({include:[{association:"producto"},{association:"usuario"}]})
+        Promise.all([carrito])
         .then(resultado=>{
             /* res.send(resultado) */
             res.render('CarritoDeCompras', {
                 title: "Carrito de compras",
-                dbProducto: resultado,
+                dbProducto: resultado[0],
                 /* idProducto: idProducto, */
                 user: req.session.user
             });
@@ -341,6 +349,12 @@ module.exports = {
     },
     apiProd:function(req,res){
         db.Productos.findAll()
+        .then(data=>{
+            res.json(data)
+        })
+    },
+    apiCartCant:function(req,res){
+        db.Carritos.findAll()
         .then(data=>{
             res.json(data)
         })

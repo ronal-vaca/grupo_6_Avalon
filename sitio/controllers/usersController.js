@@ -136,12 +136,14 @@ module.exports={
         if(req.session.user){
             let usuarios = db.Usuarios.findByPk(req.session.user.id)
             let provincias = Axios('https://apis.datos.gob.ar/georef/api/provincias')
-            Promise.all([usuarios,provincias])
+            let carrito = db.Carritos.findAll()
+            Promise.all([usuarios,provincias,carrito])
             .then(resultado => {
                 return res.render('perfil',{
                     title:"Perfil de Usuario",
                     provincias: resultado[1],
-                    usuario:resultado[0],
+                    usuario: resultado[0],
+                    carritoCant: resultado[2]
                     })
                 })
         }else{

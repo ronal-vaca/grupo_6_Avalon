@@ -6,6 +6,7 @@ var logger = require('morgan');
 var session = require('express-session')
 const localsUserCheck = require('./middlewares/localsUserCheck');
 var cookieCheck = require('./middlewares/cookieCheck');
+var carritoCant = require('./middlewares/cartCant');
 
 const methodOverride = require("method-override")
 
@@ -31,6 +32,7 @@ app.use(methodOverride('_method'));
 app.use(session({secret:"Avalon"}));
 app.use(localsUserCheck);
 app.use(cookieCheck);
+app.use(carritoCant);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

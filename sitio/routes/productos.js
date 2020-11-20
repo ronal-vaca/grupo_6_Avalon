@@ -60,5 +60,7 @@ router.delete('/delete/:id',sessionUserCheck, controller.delete);
 
 /* una api para consumir datos de productos */
 router.get('/api/Productos', controller.apiProd)
+router.get('/api/apiCartCant', controller.apiCartCant)
+
 
 module.exports = router;
